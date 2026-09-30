@@ -53,6 +53,10 @@ async function studentLogin(rollNo, password, course) {
     }
 }
 
+
+
+
+
 function getStudent() {
     try {
         const value = localStorage.getItem('igtrStudent');

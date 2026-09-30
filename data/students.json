@@ -70,35 +70,174 @@
     "course": "Diploma in Computer Science"
   },
   {
-    "rollNo": "60555",
-    "name": "Demo Mechatronics Student 1",
-    "course": "Diploma in Mechatronics"
+    "rollNo": "80518L",
+    "name": "ANJANESH",
+    "course": "Diploma in Computer Science",
+    "batch": "5"
   },
   {
-    "rollNo": "80401",
-    "name": "Aditya Tomar",
+    "rollNo": "80519L",
+    "name": "ARMAN",
+    "course": "Diploma in Computer Science",
+    "batch": "5"
+  },
+  {
+    "rollNo": "80520L",
+    "name": "SHEKHAR",
+    "course": "Diploma in Computer Science",
+    "batch": "5"
+  },
+  {
+    "rollNo": "80521L",
+    "name": "VAISHNAVI BAIRAGI",
+    "course": "Diploma in Computer Science",
+    "batch": "5"
+  },
+  
+
+
+
+
+
+
+  
+  
+  {
+    "rollNo": "80601",
+    "name": "Aditya Chouhan",
     "course": "Diploma in Computer Science"
   },
   {
-    "rollNo": "80402",
-    "name": "Ajay Parmar",
+    "rollNo": "80602",
+    "name": "Akshat Aheer",
     "course": "Diploma in Computer Science"
   },
   {
-    "rollNo": "80403",
-    "name": "Aditya Bawaskar",
+    "rollNo": "80603",
+    "name": "Anushka Taretiya",
     "course": "Diploma in Computer Science"
   },
   {
-    "rollNo": "80404",
-    "name": "Hansraj Salawat",
+    "rollNo": "80604",
+    "name": "Atharv Verma",
     "course": "Diploma in Computer Science"
   },
   {
-    "rollNo": "80405",
-    "name": "Hardik Tripathi",
+    "rollNo": "80605",
+    "name": "Bhavesh Prajapat",
     "course": "Diploma in Computer Science"
   },
+  {
+    "rollNo": "80606",
+    "name": "HEROINE ISHIKA YEWALE",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80607",
+    "name": "Jatin Malviya",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80608",
+    "name": "Jayant Dabi",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80610",
+    "name": "Laxman Dhanuk",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80611",
+    "name": "Mohit Chauhan",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80613",
+    "name": "Nidhi Kashyap",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80614",
+    "name": "Piyush Shankla",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80615",
+    "name": "Prashant Sen",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80616",
+    "name": "Pushpraj Singh",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80617",
+    "name": "Ronak Prajapati",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80618",
+    "name": "Sakshi Haldiya",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80619",
+    "name": "Subham Kale",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80620",
+    "name": "Vaibhav Kher",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80621",
+    "name": "Yashika Soni",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80622",
+    "name": "Yashwant Bachaniya",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80623",
+    "name": "Yashwant Borasi",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80624",
+    "name": "Naitik Inani",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80625",
+    "name": "Vivek",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80626",
+    "name": "Arpit",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80627",
+    "name": "Lakshay",
+    "course": "Diploma in Computer Science"
+  },
+
+
+
+
+
+
+
+
+
+
+
   {
     "rollNo": "80406",
     "name": "Harshit Aulliya",
@@ -172,6 +311,31 @@
   {
     "rollNo": "80425",
     "name": "Suleman Syed",
+    "course": "Diploma in Computer Science"
+  },
+   {
+    "rollNo": "80405",
+    "name": "Haardik Tripathi",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80404",
+    "name": "Hansraj ",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80403",
+    "name": "Aditya Bawaskar",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80402",
+    "name": "Ajay Parmar",
+    "course": "Diploma in Computer Science"
+  },
+  {
+    "rollNo": "80401",
+    "name": "Aditya Tomar",
     "course": "Diploma in Computer Science"
   }
 ]
