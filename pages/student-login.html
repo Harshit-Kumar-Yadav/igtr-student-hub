@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login | IGTR Student Hub</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.login-page{min-height:calc(100vh - 38px);display:grid;place-items:center;background:#f5f7fb;padding:40px 20px}.login-box{width:min(430px,100%);background:#fff;border:1px solid #e1e6ed;border-radius:14px;padding:32px;box-shadow:0 15px 35px rgba(18,60,105,.08)}.login-box h1{font-size:28px;color:#172033;margin-bottom:8px}.login-box p{color:#737e8d;font-size:13px;line-height:1.7;margin-bottom:24px}.login-box label{display:block;font-size:12px;font-weight:700;color:#394457;margin:14px 0 7px}.login-box input,.login-box select{width:100%;padding:12px;border:1px solid #dce3eb;border-radius:8px;outline:none;background:#fff}.login-box input:focus,.login-box select:focus{border-color:#123c69}.login-box button{width:100%;margin-top:20px;background:#123c69;color:#fff;border:0;border-radius:8px;padding:12px;font-weight:700;cursor:pointer}.error{margin-top:14px;color:#b42318;font-size:12px;display:none}.login-top{position:absolute;top:20px;left:4%}.login-top a{color:#fff;font-weight:700}
+</style>
+</head><body>
+<div class="topbar"><span>🎓 Student Academic Portal</span><span>IGTR • Indore</span></div>
+<div class="login-page"><div class="login-box">
+<h1>Student Login</h1><p>Select your course. Your Roll Number and password must follow your course rules.</p>
+<form id="loginForm">
+<label for="rollNo">Roll Number</label>
+<input id="rollNo" required autocomplete="username" placeholder="Enter your Roll Number">
+
+<label for="course">Course</label>
+<select id="course" required>
+<option value="">Select your course</option>
+<option value="Diploma in Computer Science">Diploma in Computer Science</option>
+<option value="Diploma in Mechatronics">Diploma in Mechatronics</option>
+<option value="Diploma in Advanced Tool & Die Making">Diploma in Advanced Tool & Die Making</option>
+</select>
+
+<label for="password">Password</label>
+<input id="password" type="password" required autocomplete="current-password" placeholder="Enter your Roll Number">
+<button type="submit">Login →</button>
+<div class="error" id="error">Invalid Roll Number, Course or Password.</div>
+</form>
+</div></div>
+<script src="../js/auth.js"></script>
+<script>
+const form=document.getElementById('loginForm');
+const error=document.getElementById('error');
+
+(async()=>{
+    const session=await getSession();
+    if(session.loggedIn){
+        location.replace('student-dashboard.html');
+    }
+})();
+
+form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    error.style.display='none';
+    const rollNo=document.getElementById('rollNo').value.trim();
+    const password=document.getElementById('password').value.trim();
+    const course=document.getElementById('course').value.trim();
+    const button=form.querySelector('button');
+    button.disabled=true;
+    button.textContent='Logging in...';
+
+    const result=await studentLogin(rollNo,password,course);
+
+    if(result.success){
+        button.textContent='Login successful ✓';
+        setTimeout(()=>location.replace('student-dashboard.html'),300);
+    }else{
+        error.textContent=result.message;
+        error.style.display='block';
+        button.disabled=false;
+        button.textContent='Login →';
+    }
+});
+</script></body></html>

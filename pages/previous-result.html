@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Previous Result | IGTR Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f4f7fb;
+            color: #1e293b;
+        }
+
+        .header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #64748b;
+            padding: 9px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #64748b;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: auto;
+            padding-bottom: 60px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.10);
+        }
+
+        .course-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .course-title h2 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .course-title p {
+            color: #64748b;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 9px;
+            font-size: 15px;
+            background: white;
+            outline: none;
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: #38bdf8;
+        }
+
+        .check-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            background: #0f172a;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .check-btn:hover {
+            background: #0284c7;
+            transform: translateY(-2px);
+        }
+
+        .back-course {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-course:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .result-card {
+                padding: 22px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            IGTR <span>Student Hub</span>
+        </div>
+
+        <a href="previous-result-courses.html" class="back-btn">
+            ← Courses
+        </a>
+
+    </header>
+
+
+    <section class="hero">
+
+        <h1>Previous Year Result</h1>
+
+        <p>Select batch and semester to check the result</p>
+
+    </section>
+
+
+    <main class="container">
+
+        <div class="result-card">
+
+            <div class="course-title">
+
+                <h2 id="courseName">
+                    Course
+                </h2>
+
+                <p>
+                    Select the required batch and semester
+                </p>
+
+            </div>
+
+
+            <!-- BATCH -->
+
+            <div class="form-group">
+
+                <label for="batch">
+                    Select Batch
+                </label>
+
+                <select id="batch">
+
+                    <option value="">
+                        -- Select Batch --
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SEMESTER -->
+
+            <div class="form-group">
+
+                <label for="semester">
+                    Select Semester
+                </label>
+
+                <select id="semester">
+
+                    <option value="">
+                        -- Select Semester --
+                    </option>
+
+                    <option value="1">
+                        1st Semester
+                    </option>
+
+                    <option value="2">
+                        2nd Semester
+                    </option>
+
+                    <option value="3">
+                        3rd Semester
+                    </option>
+
+                    <option value="4">
+                        4th Semester
+                    </option>
+
+                    <option value="5">
+                        5th Semester
+                    </option>
+
+                    <option value="6">
+                        6th Semester
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button class="check-btn" onclick="checkResult()">
+                Check Result
+            </button>
+
+
+            <a href="previous-result-courses.html"
+               class="back-course">
+                ← Select Different Course
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        const course = params.get("course");
+
+
+        const courseNames = {
+
+            computer:
+                "Diploma in Computer Science",
+
+            mechatronics:
+                "Diploma in Mechatronics",
+
+            tool:
+                "Diploma in Advanced Tool & Die Making",
+
+            vocational:
+                "Diploma in Vocational"
+
+        };
+
+
+        const courseName =
+            courseNames[course] || "Unknown Course";
+
+
+        document.getElementById("courseName").innerText =
+            courseName;
+
+
+        const batchSelect =
+            document.getElementById("batch");
+
+
+        /*
+            Computer Science = 5th Batch
+            Mechatronics = 7th Batch
+
+            Other courses will be
+            updated when batch information
+            is provided.
+        */
+
+        let maxBatch = 0;
+
+
+        if (course === "computer") {
+
+            maxBatch = 5;
+
+        }
+
+        else if (course === "mechatronics") {
+
+            maxBatch = 7;
+
+        }
+
+        else {
+
+            maxBatch = 0;
+
+        }
+
+
+        for (let i = 1; i <= maxBatch; i++) {
+
+            const option =
+                document.createElement("option");
+
+            option.value = i;
+
+            option.textContent =
+                getOrdinal(i) + " Batch";
+
+            batchSelect.appendChild(option);
+
+        }
+
+
+        function getOrdinal(number) {
+
+            if (number === 1) return "1st";
+            if (number === 2) return "2nd";
+            if (number === 3) return "3rd";
+
+            return number + "th";
+
+        }
+
+
+        function checkResult() {
+
+            const batch =
+                document.getElementById("batch").value;
+
+            const semester =
+                document.getElementById("semester").value;
+
+
+            if (!batch) {
+
+                alert("Please select Batch.");
+
+                return;
+
+            }
+
+
+            if (!semester) {
+
+                alert("Please select Semester.");
+
+                return;
+
+            }
+
+
+            /*
+                Next step:
+                Here we will open the
+                actual result database/page.
+            */
+
+            const url =
+                "result.html" +
+                "?course=" + encodeURIComponent(course) +
+                "&batch=" + encodeURIComponent(batch) +
+                "&semester=" + encodeURIComponent(semester);
+
+
+            window.location.href = url;
+
+        }
+
+    </script>
+
+</body>
+</html>

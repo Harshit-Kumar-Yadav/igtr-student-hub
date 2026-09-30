@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses | IGTR Student Hub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<style>
+    /* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    height: 38px;
+    background: #101827;
+    color: #dbe3ef;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 6%;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 76px;
+    background: #ffffff;
+
+    border-bottom: 1px solid #e7eaf0;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    width: min(1200px, 90%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #123c69;
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    font-weight: 800;
+}
+
+.logo h2 {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.logo small {
+    color: #7b8495;
+    font-size: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #596273;
+
+    transition: 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #123c69;
+}
+
+.login-btn {
+    background: #123c69;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 11px 17px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.course-hero {
+    background:
+        linear-gradient(
+            120deg,
+            #102d4d,
+            #123c69 55%,
+            #18578e
+        );
+
+    min-height: 330px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.course-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+
+    right: -120px;
+    top: -180px;
+}
+
+.hero-content {
+    width: min(1200px, 90%);
+    margin: auto;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    color: #668ab0;
+}
+
+.course-hero .eyebrow {
+    color: #a9d0f5;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.05;
+
+    margin: 15px 0;
+}
+
+.hero-content h1 span {
+    color: #8cc8ff;
+}
+
+.hero-content p {
+    max-width: 650px;
+
+    color: #d3dfeb;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   COURSE SECTION
+========================= */
+
+.course-section {
+    width: min(1200px, 90%);
+    margin: 70px auto;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #778092;
+    font-size: 14px;
+}
+
+.course-counter {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.course-counter strong {
+    font-size: 35px;
+    color: #123c69;
+}
+
+.course-counter span {
+    font-size: 11px;
+    color: #8a93a3;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.course-search {
+    height: 55px;
+
+    background: white;
+
+    border: 1px solid #e1e6ee;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    margin-bottom: 30px;
+}
+
+.course-search span {
+    font-size: 25px;
+    color: #8792a3;
+}
+
+.course-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   COURSE GRID
+========================= */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.course-card {
+    background: white;
+
+    border: 1px solid #e3e7ed;
+
+    border-radius: 14px;
+
+    padding: 28px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #a8bfd5;
+
+    box-shadow:
+        0 18px 40px rgba(17, 35, 60, 0.08);
+}
+
+.course-icon {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 12px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.course-icon.blue {
+    background: #e8f2fb;
+    color: #195888;
+}
+
+.course-icon.purple {
+    background: #eeeaff;
+    color: #5d48a6;
+}
+
+.course-icon.green {
+    background: #e5f6ef;
+    color: #16805c;
+}
+
+.course-icon.orange {
+    background: #fff0df;
+    color: #b86b16;
+}
+
+.course-number {
+    position: absolute;
+
+    top: 25px;
+    right: 28px;
+
+    font-size: 12px;
+
+    color: #a5adba;
+    font-weight: 700;
+}
+
+.course-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+    max-width: 400px;
+}
+
+.course-card p {
+    color: #727c8c;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: 45px;
+}
+
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    padding-top: 16px;
+
+    border-top: 1px solid #edf0f4;
+
+    color: #7b8492;
+
+    font-size: 11px;
+}
+
+.course-meta span:last-child {
+    color: #123c69;
+    font-weight: 700;
+}
+
+.explore-btn {
+    width: 100%;
+
+    margin-top: 18px;
+
+    border: 1px solid #dce3eb;
+
+    background: #f8fafc;
+
+    color: #123c69;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+.explore-btn:hover {
+    background: #123c69;
+    color: white;
+}
+
+
+/* =========================
+   NO RESULT
+========================= */
+
+.no-result {
+    display: none;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: white;
+
+    border-radius: 12px;
+}
+
+.no-result div {
+    font-size: 35px;
+}
+
+.no-result h3 {
+    margin: 12px 0 6px;
+}
+
+.no-result p {
+    color: #788293;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(8, 18, 30, 0.72);
+
+    backdrop-filter: blur(5px);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: min(720px, 95%);
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 38px;
+
+    position: relative;
+
+    animation: modalIn 0.25s ease;
+}
+
+.large-modal {
+    width: min(900px, 95%);
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+.close-modal {
+    position: absolute;
+
+    right: 20px;
+    top: 18px;
+
+    border: none;
+
+    background: #f1f3f6;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    color: #5e6877;
+}
+
+.modal-box h2 {
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+.modal-box > p {
+    color: #778191;
+
+    font-size: 13px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   YEAR
+========================= */
+
+.year-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.year-card {
+    text-align: left;
+
+    background: #f7f9fc;
+
+    border: 1px solid #e0e6ed;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    transition: 0.25s;
+}
+
+.year-card:hover {
+    background: #123c69;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.year-card span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #6683a0;
+
+    margin-bottom: 18px;
+}
+
+.year-card:hover span {
+    color: #a8d4fa;
+}
+
+.year-card strong {
+    display: block;
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.year-card small {
+    color: #7d8795;
+
+    font-size: 10px;
+}
+
+.year-card:hover small {
+    color: #d6e4f0;
+}
+
+
+/* =========================
+   SEMESTER
+========================= */
+
+.semester-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.semester-card {
+    border: 1px solid #e0e6ed;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    transition: 0.25s;
+}
+
+.semester-card:hover {
+    border-color: #123c69;
+
+    transform: translateY(-3px);
+}
+
+.semester-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 10px;
+
+    background: #e7f0f8;
+
+    color: #123c69;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.semester-card strong {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.semester-card small {
+    color: #7a8492;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   SUBJECTS
+========================= */
+
+.subject-header {
+    margin-bottom: 25px;
+}
+
+#subjectSubtitle {
+    margin-bottom: 0;
+}
+
+.subject-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+.subject-card {
+    border: 1px solid #e0e6ed;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    background: #fafbfd;
+
+    transition: 0.25s;
+}
+
+.subject-card:hover {
+    border-color: #123c69;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px rgba(18,60,105,0.08);
+}
+
+.subject-card .subject-code {
+    font-size: 10px;
+
+    color: #6685a3;
+
+    font-weight: 800;
+}
+
+.subject-card h3 {
+    font-size: 15px;
+
+    margin: 8px 0 15px;
+}
+
+.resource-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.resource-buttons button {
+    border: 1px solid #dce3ea;
+
+    background: white;
+
+    border-radius: 6px;
+
+    padding: 7px 9px;
+
+    font-size: 10px;
+
+    color: #526073;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #101827;
+
+    color: #d7dee8;
+
+    margin-top: 80px;
+}
+
+.footer-container {
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    padding: 55px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-logo {
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #8995a7;
+
+    max-width: 350px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.footer h4 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.footer a {
+    display: block;
+
+    color: #8995a7;
+
+    font-size: 12px;
+
+    margin: 9px 0;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #273244;
+
+    text-align: center;
+
+    padding: 18px;
+
+    color: #768296;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-links,
+    .login-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .year-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: start;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .top-bar {
+        padding: 0 4%;
+    }
+
+    .top-right {
+        display: none;
+    }
+
+    .course-section {
+        width: 92%;
+    }
+
+    .modal-box {
+        padding: 25px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+</style>
+
+
+
+
+
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+    <div class="top-left">
+        <span>🎓 Student Academic Portal</span>
+    </div>
+
+    <div class="top-right">
+        <span>IGTR • Indore</span>
+    </div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">IG</div>
+
+            <div>
+                <h2>IGTR</h2>
+                <small>Student Hub</small>
+            </div>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="../index.html">Home</a>
+
+            <a href="courses.html" class="active">
+                Courses
+            </a>
+
+            <a href="#">Notices</a>
+
+            <a href="#">Student Tools</a>
+
+            <a href="#">Career</a>
+
+            <a href="#">Campus</a>
+
+        </nav>
+
+
+        <button class="login-btn">
+            Student Login
+        </button>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="course-hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">
+            ACADEMIC EXPLORER
+        </span>
+
+        <h1>
+            Explore Your
+            <span>Course</span>
+        </h1>
+
+        <p>
+            Select your course, year and semester to access
+            subjects, study material, previous papers,
+            practicals and academic resources.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COURSE SECTION ================= -->
+
+<main class="course-section">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="section-label">
+                STEP 01
+            </span>
+
+            <h2>
+                Select Your Course
+            </h2>
+
+            <p>
+                Choose the programme you are currently studying.
+            </p>
+        </div>
+
+        <div class="course-counter">
+            <strong id="courseCount">4</strong>
+            <span>Courses</span>
+        </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="course-search">
+
+        <span>⌕</span>
+
+        <input
+            type="text"
+            id="courseSearch"
+            placeholder="Search course..."
+        >
+
+    </div>
+
+
+    <!-- COURSE GRID -->
+
+    <div class="course-grid" id="courseGrid">
+
+
+        <!-- COURSE 1 -->
+
+        <article
+            class="course-card"
+            data-course="tool die making"
+            data-name="Diploma in Tool & Die Making"
+        >
+
+            <div class="course-icon blue">
+                ⚙
+            </div>
+
+            <div class="course-number">
+                01
+            </div>
+
+            <h3>
+                Diploma in Tool & Die Making
+            </h3>
+
+            <p>
+                Explore academic resources, subjects,
+                practicals and study material.
+            </p>
+
+            <div class="course-meta">
+
+                <span>
+                    ⚙ Manufacturing
+                </span>
+
+                <span>
+                    → Explore
+                </span>
+
+            </div>
+
+            <button
+                class="explore-btn"
+                onclick="openCourse('Diploma in Tool & Die Making')"
+            >
+                Explore Course →
+            </button>
+
+        </article>
+
+
+        <!-- COURSE 2 -->
+
+        <article
+            class="course-card"
+            data-course="mechatronics"
+            data-name="Diploma in Mechatronics"
+        >
+
+            <div class="course-icon purple">
+                🤖
+            </div>
+
+            <div class="course-number">
+                02
+            </div>
+
+            <h3>
+                Diploma in Mechatronics
+            </h3>
+
+            <p>
+                Access electronics, mechanical,
+                automation and practical resources.
+            </p>
+
+            <div class="course-meta">
+
+                <span>
+                    🤖 Automation
+                </span>
+
+                <span>
+                    → Explore
+                </span>
+
+            </div>
+
+            <button
+                class="explore-btn"
+                onclick="openCourse('Diploma in Mechatronics')"
+            >
+                Explore Course →
+            </button>
+
+        </article>
+
+
+        <!-- COURSE 3 -->
+
+        <article
+            class="course-card"
+            data-course="computer science computer"
+            data-name="Diploma in Computer Science"
+        >
+
+            <div class="course-icon green">
+                &lt;/&gt;
+            </div>
+
+            <div class="course-number">
+                03
+            </div>
+
+            <h3>
+                Diploma in Computer Science
+            </h3>
+
+            <p>
+                Find programming, database, networking,
+                web development and academic resources.
+            </p>
+
+            <div class="course-meta">
+
+                <span>
+                    💻 Computing
+                </span>
+
+                <span>
+                    → Explore
+                </span>
+
+            </div>
+
+            <button
+                class="explore-btn"
+                onclick="openCourse('Diploma in Computer Science')"
+            >
+                Explore Course →
+            </button>
+
+        </article>
+
+
+        <!-- COURSE 4 -->
+
+        <article
+            class="course-card"
+            data-course="production technology"
+            data-name="D.Voc Production Technology"
+        >
+
+            <div class="course-icon orange">
+                🏭
+            </div>
+
+            <div class="course-number">
+                04
+            </div>
+
+            <h3>
+                D.Voc Production Technology
+            </h3>
+
+            <p>
+                Access production, manufacturing,
+                practical and technical resources.
+            </p>
+
+            <div class="course-meta">
+
+                <span>
+                    🏭 Production
+                </span>
+
+                <span>
+                    → Explore
+                </span>
+
+            </div>
+
+            <button
+                class="explore-btn"
+                onclick="openCourse('D.Voc Production Technology')"
+            >
+                Explore Course →
+            </button>
+
+        </article>
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div class="no-result" id="noResult">
+
+        <div>🔍</div>
+
+        <h3>
+            Course Not Found
+        </h3>
+
+        <p>
+            Try searching with another course name.
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- ================= COURSE MODAL ================= -->
+
+<div class="modal" id="courseModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closeCourse()"
+        >
+            ×
+        </button>
+
+
+        <span class="section-label">
+            COURSE SELECTED
+        </span>
+
+        <h2 id="selectedCourse">
+            Course Name
+        </h2>
+
+        <p>
+            Now select your academic year.
+        </p>
+
+
+        <div class="year-grid">
+
+            <button
+                class="year-card"
+                onclick="selectYear(1)"
+            >
+                <span>01</span>
+                <strong>1st Year</strong>
+                <small>Foundation & Core Subjects</small>
+            </button>
+
+
+            <button
+                class="year-card"
+                onclick="selectYear(2)"
+            >
+                <span>02</span>
+                <strong>2nd Year</strong>
+                <small>Advanced Technical Subjects</small>
+            </button>
+
+
+            <button
+                class="year-card"
+                onclick="selectYear(3)"
+            >
+                <span>03</span>
+                <strong>3rd Year</strong>
+                <small>Advanced & Professional Skills</small>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SEMESTER MODAL ================= -->
+
+<div class="modal" id="semesterModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closeSemester()"
+        >
+            ×
+        </button>
+
+        <span class="section-label">
+            STEP 03
+        </span>
+
+        <h2 id="yearTitle">
+            Select Semester
+        </h2>
+
+        <p>
+            Choose the semester you want to explore.
+        </p>
+
+
+        <div class="semester-grid">
+
+            <button
+                class="semester-card"
+                onclick="openSemester(1)"
+            >
+
+                <div class="semester-icon">
+                    01
+                </div>
+
+                <div>
+                    <strong>Semester 1</strong>
+                    <small>View Subjects →</small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="semester-card"
+                onclick="openSemester(2)"
+            >
+
+                <div class="semester-icon">
+                    02
+                </div>
+
+                <div>
+                    <strong>Semester 2</strong>
+                    <small>View Subjects →</small>
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SUBJECT MODAL ================= -->
+
+<div class="modal" id="subjectModal">
+
+    <div class="modal-box large-modal">
+
+        <button
+            class="close-modal"
+            onclick="closeSubjects()"
+        >
+            ×
+        </button>
+
+
+        <div class="subject-header">
+
+            <div>
+
+                <span class="section-label">
+                    ACADEMIC DASHBOARD
+                </span>
+
+                <h2 id="subjectTitle">
+                    Subjects
+                </h2>
+
+                <p id="subjectSubtitle">
+                    Course • Year • Semester
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="subject-grid"
+            id="subjectGrid"
+        >
+
+            <!-- JS WILL LOAD SUBJECTS -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <div class="footer-logo">
+                IGTR Student Hub
+            </div>
+
+            <p>
+                A student-focused academic platform
+                designed for IGTR learners.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="../index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="#">Notices</a>
+            <a href="#">Student Tools</a>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Resources
+            </h4>
+
+            <a href="#">Study Material</a>
+            <a href="#">Previous Papers</a>
+            <a href="#">Practicals</a>
+            <a href="#">Career</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 IGTR Student Hub • Student Academic Portal
+
+    </div>
+
+</footer>
+
+
+<script src="../js/auth.js"></script>
+<script>
+
+    /* =================================
+   COURSE DATA
+================================= */
+
+const subjects = {
+
+    "Diploma in Tool & Die Making": {
+
+        1: {
+
+            1: [
+                ["TDM101", "Engineering Mathematics"],
+                ["TDM102", "Engineering Physics"],
+                ["TDM103", "Engineering Chemistry"],
+                ["TDM104", "Engineering Drawing"],
+                ["TDM105", "Workshop Practice"]
+            ],
+
+            2: [
+                ["TDM201", "Engineering Mathematics-II"],
+                ["TDM202", "Manufacturing Processes"],
+                ["TDM203", "Engineering Mechanics"],
+                ["TDM204", "Material Science"],
+                ["TDM205", "Workshop Technology"]
+            ]
+
+        }
+
+    },
+
+
+    "Diploma in Mechatronics": {
+
+        1: {
+
+            1: [
+                ["MEC101", "Engineering Mathematics"],
+                ["MEC102", "Engineering Physics"],
+                ["MEC103", "Basic Electrical Engineering"],
+                ["MEC104", "Engineering Drawing"],
+                ["MEC105", "Workshop Practice"]
+            ],
+
+            2: [
+                ["MEC201", "Engineering Mathematics-II"],
+                ["MEC202", "Basic Electronics"],
+                ["MEC203", "Mechanical Engineering"],
+                ["MEC204", "Electrical Machines"],
+                ["MEC205", "Manufacturing Technology"]
+            ]
+
+        }
+
+    },
+
+
+    "Diploma in Computer Science": {
+
+        1: {
+
+            1: [
+                ["CS101", "Programming in C"],
+                ["CS102", "Computer Fundamentals"],
+                ["CS103", "Engineering Mathematics"],
+                ["CS104", "Digital Electronics"],
+                ["CS105", "Communication Skills"]
+            ],
+
+            2: [
+                ["CS201", "C++ Programming"],
+                ["CS202", "Data Structures"],
+                ["CS203", "Computer Architecture"],
+                ["CS204", "Database Fundamentals"],
+                ["CS205", "Web Development"]
+            ]
+
+        }
+
+    },
+
+
+    "D.Voc Production Technology": {
+
+        1: {
+
+            1: [
+                ["PT101", "Engineering Mathematics"],
+                ["PT102", "Engineering Drawing"],
+                ["PT103", "Manufacturing Processes"],
+                ["PT104", "Workshop Practice"],
+                ["PT105", "Computer Fundamentals"]
+            ],
+
+            2: [
+                ["PT201", "Production Technology"],
+                ["PT202", "Engineering Mechanics"],
+                ["PT203", "Material Science"],
+                ["PT204", "Machine Tools"],
+                ["PT205", "Quality Control"]
+            ]
+
+        }
+
+    }
+
+};
+
+
+/* =================================
+   GLOBAL VARIABLES
+================================= */
+
+let selectedCourse = "";
+let loggedInStudent = null;
+
+let selectedYear = 1;
+let selectedSemester = 1;
+let currentSubject = "";
+
+
+/* =================================
+   OPEN COURSE
+================================= */
+
+function openCourse(courseName) {
+
+    if (!loggedInStudent) {
+        alert("Please wait for your student session to load.");
+        return;
+    }
+
+    if (courseName !== String(loggedInStudent.course).trim()) {
+        alert("You can access only your selected course.");
+        return;
+    }
+
+    selectedCourse = courseName;
+
+    document.getElementById("selectedCourse").textContent =
+        courseName;
+
+    document.getElementById("courseModal")
+        .classList.add("show");
+
+}
+
+
+/* =================================
+   CLOSE COURSE
+================================= */
+
+function closeCourse() {
+
+    document.getElementById("courseModal")
+        .classList.remove("show");
+
+}
+
+
+/* =================================
+   SELECT YEAR
+================================= */
+
+function selectYear(year) {
+
+    selectedYear = year;
+
+    closeCourse();
+
+    document.getElementById("yearTitle").textContent =
+        `${year}${getOrdinal(year)} Year — Select Semester`;
+
+    document.getElementById("semesterModal")
+        .classList.add("show");
+
+}
+
+
+/* =================================
+   ORDINAL
+================================= */
+
+function getOrdinal(number) {
+
+    if (number === 1) return "st";
+
+    if (number === 2) return "nd";
+
+    if (number === 3) return "rd";
+
+    return "th";
+
+}
+
+
+/* =================================
+   OPEN SEMESTER
+================================= */
+
+function openSemester(semester) {
+
+    selectedSemester = semester;
+
+    closeSemester();
+
+    const courseData =
+        subjects[selectedCourse];
+
+    let subjectList = [];
+
+    if (
+        courseData &&
+        courseData[selectedYear] &&
+        courseData[selectedYear][semester]
+    ) {
+
+        subjectList =
+            courseData[selectedYear][semester];
+
+    }
+
+
+    document.getElementById("subjectTitle").textContent =
+        `${selectedCourse}`;
+
+    document.getElementById("subjectSubtitle").textContent =
+        `${selectedYear}${getOrdinal(selectedYear)} Year • Semester ${semester}`;
+
+
+    const grid =
+        document.getElementById("subjectGrid");
+
+    grid.innerHTML = "";
+
+
+    if (subjectList.length === 0) {
+
+        grid.innerHTML = `
+            <div class="subject-card">
+                <h3>Subjects will be added soon.</h3>
+                <p>
+                    This academic section is ready
+                    for your official curriculum data.
+                </p>
+            </div>
+        `;
+
+    }
+
+
+    subjectList.forEach((subject) => {
+
+        const code = subject[0];
+
+        const name = subject[1];
+
+
+        const card = document.createElement("div");
+
+        card.className = "subject-card";
+
+
+        card.innerHTML = `
+
+            <div class="subject-code">
+                ${code}
+            </div>
+
+            <h3>
+                ${name}
+            </h3>
+
+            <div class="resource-buttons">
+
+                <button onclick="openSubject('${name}')">
+                    Open Subject →
+                </button>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+
+    document.getElementById("subjectModal")
+        .classList.add("show");
+
+}
+
+
+/* =================================
+   CLOSE SEMESTER
+================================= */
+
+function closeSemester() {
+
+    document.getElementById("semesterModal")
+        .classList.remove("show");
+
+}
+
+
+/* =================================
+   CLOSE SUBJECTS
+================================= */
+
+function closeSubjects() {
+
+    document.getElementById("subjectModal")
+        .classList.remove("show");
+
+}
+
+
+/* =================================
+   RESOURCE
+================================= */
+
+function openSubject(subjectName) {
+
+    currentSubject = subjectName;
+
+    const url =
+        `subject.html?subject=${encodeURIComponent(subjectName)}` +
+        `&course=${encodeURIComponent(selectedCourse)}` +
+        `&year=${selectedYear}` +
+        `&semester=${selectedSemester}`;
+
+    window.location.href = url;
+
+}
+
+
+/* =================================
+   COURSE SEARCH
+================================= */
+
+const searchInput =
+    document.getElementById("courseSearch");
+
+const courseCards =
+    document.querySelectorAll(".course-card");
+
+const noResult =
+    document.getElementById("noResult");
+
+// Show only the course selected for the logged-in student.
+(async function restrictToStudentCourse(){
+    loggedInStudent = await requireLogin("student-login.html");
+    if (!loggedInStudent) return;
+
+    selectedCourse = String(loggedInStudent.course).trim();
+    const cards = document.querySelectorAll(".course-card");
+    let visible = 0;
+
+    cards.forEach(card => {
+        const cardName = (card.dataset.name || "").trim();
+        const allowed = cardName === selectedCourse;
+        card.style.display = allowed ? "block" : "none";
+        if (allowed) visible++;
+    });
+
+    const count = document.getElementById("courseCount");
+    if (count) count.textContent = visible;
+
+    const heading = document.querySelector(".section-heading p");
+    if (heading) heading.textContent = "Showing only your selected course.";
+})();
+
+if (searchInput) {
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            const value =
+                this.value
+                    .toLowerCase()
+                    .trim();
+
+            let visible = 0;
+
+
+            courseCards.forEach(card => {
+
+                const course =
+                    card.dataset.course;
+
+                const name =
+                    card.dataset.name.toLowerCase();
+
+
+                if (
+                    course.includes(value) ||
+                    name.includes(value)
+                ) {
+
+                    card.style.display = "block";
+
+                    visible++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            noResult.style.display =
+                visible === 0
+                    ? "block"
+                    : "none";
+
+
+            document.getElementById("courseCount")
+                .textContent = visible;
+
+        }
+    );
+
+}
+
+
+/* =================================
+   ESC KEY
+================================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (event.key === "Escape") {
+
+            closeCourse();
+
+            closeSemester();
+
+            closeSubjects();
+
+        }
+
+    }
+);
+
+
+/* =================================
+   CLICK OUTSIDE MODAL
+================================= */
+
+document.querySelectorAll(".modal")
+    .forEach(modal => {
+
+        modal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === modal) {
+
+                    modal.classList.remove("show");
+
+                }
+
+            }
+        );
+
+    });
+</script>
+<script>
+(async()=>{
+    const session=await getSession();
+    const btn=document.querySelector('.login-btn');
+    if(btn && session.loggedIn){
+        btn.textContent='Student Dashboard';
+        btn.addEventListener('click',()=>location.href='student-dashboard.html');
+    }
+})();
+</script>
+</body>
+</html>

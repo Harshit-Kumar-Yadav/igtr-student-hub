@@ -1,0 +1,437 @@
+[
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "2",
+    "rank": 1,
+    "roll": "80503",
+    "name": "Harshit Kumar",
+    "grandTotal": 715,
+    "percentage": 89.4
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "2",
+    "rank": 2,
+    "roll": "80511",
+    "name": "Shreshth Yeotikar",
+    "grandTotal": 667,
+    "percentage": 83.4
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "2",
+    "rank": 3,
+    "roll": "80512",
+    "name": "Shubhi Bhorhari",
+    "grandTotal": 615,
+    "percentage": 76.9
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "2",
+    "rank": 4,
+    "roll": "80516",
+    "name": "Chhaya Kosthi",
+    "grandTotal": 589,
+    "percentage": 73.6
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "2",
+    "rank": 5,
+    "roll": "80502",
+    "name": "Dheeraj Sahu",
+    "grandTotal": 544,
+    "percentage": 68
+  },
+
+
+
+
+
+
+   {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 1,
+    "roll": "80503",
+    "name": "Harshit Kumar",
+    "grandTotal": 618,
+    "percentage": 88.3
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 2,
+    "roll": "80511",
+    "name": "Shreshth Yeotikar",
+    "grandTotal": 615,
+    "percentage": 87.9
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 3,
+    "roll": "80512",
+    "name": "Shubhi Bhorhari",
+    "grandTotal": 560,
+    "percentage": 80
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 4,
+    "roll": "80516",
+    "name": "Chhaya Kosthi",
+    "grandTotal": 481,
+    "percentage": 68.7
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 5,
+    "roll": "80502",
+    "name": "Dheeraj Sahu",
+    "grandTotal": 446,
+    "percentage": 63.7
+  },
+
+
+
+
+
+
+
+
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "1",
+    "rank": 1,
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "grandTotal": 609,
+    "percentage": 87.0
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "1",
+    "rank": 2,
+    "roll": "80424",
+    "name": "Gauri Sontakke ",
+    "grandTotal": 569,
+    "percentage": 85.1
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "1",
+    "rank": 3,
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "grandTotal": 583,
+    "percentage": 83.3
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "1",
+    "rank": 4,
+    "roll": "80413",
+    "name": "Paragi Dixit",
+    "grandTotal": 565,
+    "percentage": 80.7
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "1",
+    "rank": 5,
+    "roll": "80416",
+    "name": "Priti Prajapati",
+    "grandTotal": 446,
+    "percentage": 79.9
+  },
+
+
+
+
+
+
+
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "2",
+    "rank": 1,
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "grandTotal": 688,
+    "percentage": 86.0
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "2",
+    "rank": 2,
+    "roll": "80418",
+    "name": "Ritu Rajput ",
+    "grandTotal": 672,
+    "percentage": 84.0
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "2",
+    "rank": 3,
+    "roll": "80402",
+    "name": "Gauri Sontakke ",
+    "grandTotal": 664,
+    "percentage": 83.0
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "2",
+    "rank": 4,
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "grandTotal": 657,
+    "percentage": 82.1
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "2",
+    "rank": 5,
+    "roll": "80413",
+    "name": "Paragi Dixit",
+    "grandTotal": 629,
+    "percentage": 78.6
+  },
+
+
+
+
+
+
+  {
+  "_comment": "Ye user ka name hai",
+  "name": "Harshit"
+},
+
+
+
+
+   {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "3",
+    "rank": 1,
+    "roll": "80424",
+    "name": "Gauri Sontakke",
+    "grandTotal": 738,
+    "percentage": 92.3
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "3",
+    "rank": 2,
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "grandTotal": 731,
+    "percentage": 91.4
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "3",
+    "rank": 3,
+    "roll": "80418",
+    "name": "Ritu Rajput ",
+    "grandTotal": 725,
+    "percentage": 90.6
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "3",
+    "rank": 4,
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "grandTotal": 701,
+    "percentage": 87.6
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "3",
+    "rank": 5,
+    "roll": "80412",
+    "name": "Nitin Kuril",
+    "grandTotal": 692,
+    "percentage": 86.5
+  },
+
+
+
+
+
+
+
+
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "4",
+    "rank": 1,
+    "roll": "80424",
+    "name": "Gauri Sontakke ",
+    "grandTotal": 804,
+    "percentage": 89.3
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "4",
+    "rank": 2,
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "grandTotal": 785,
+    "percentage": 87.2
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "4",
+    "rank": 3,
+    "roll": "80419",
+    "name": "Rohan Chouhan",
+    "grandTotal": 780,
+    "percentage": 86.7
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "4",
+    "rank": 4,
+    "roll": "80418",
+    "name": "Ritu Rajput ",
+    "grandTotal": 775,
+    "percentage": 86.1
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "4",
+    "semester": "4",
+    "rank": 5,
+    "roll": "80412",
+    "name": "Nitin Kuril",
+    "grandTotal": 769,
+    "percentage": 85.4
+  },
+
+
+
+
+
+
+
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 1,
+    "roll": "80503",
+    "name": "Harshit Kumar",
+    "grandTotal": 618,
+    "percentage": 88.3
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 2,
+    "roll": "80511",
+    "name": "Shreshth Yeotikar",
+    "grandTotal": 615,
+    "percentage": 87.9
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 3,
+    "roll": "80512",
+    "name": "Shubhi Bhorhari",
+    "grandTotal": 560,
+    "percentage": 80
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 4,
+    "roll": "80516",
+    "name": "Chhaya Kosthi",
+    "grandTotal": 481,
+    "percentage": 68.7
+  },
+  {
+    "course": "computer",
+    "year": "2025-26",
+    "batch": "5",
+    "semester": "1",
+    "rank": 5,
+    "roll": "80502",
+    "name": "Dheeraj Sahu",
+    "grandTotal": 446,
+    "percentage": 63.7
+  }
+]

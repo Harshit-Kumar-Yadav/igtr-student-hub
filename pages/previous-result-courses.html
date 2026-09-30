@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Previous Year Result | IGTR Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f4f7fb;
+            color: #1e293b;
+        }
+
+        /* HEADER */
+        .header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #64748b;
+            padding: 9px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        /* COURSE CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding-bottom: 60px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* COURSE CARD */
+        .course-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            min-height: 250px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transition: 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #38bdf8;
+        }
+
+        .course-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+        }
+
+        .icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 15px;
+            background: #e0f2fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .course-card h2 {
+            font-size: 22px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .batch-info {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 8px 13px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .open-result {
+            position: absolute;
+            right: 25px;
+            bottom: 28px;
+            background: #0f172a;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .course-card:hover .open-result {
+            background: #0284c7;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 750px) {
+
+            .header {
+                padding: 17px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-card {
+                min-height: 230px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            IGTR <span>Student Hub</span>
+        </div>
+
+        <a href="../index.html" class="back-btn">
+            ← Home
+        </a>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>Check Previous Year Result</h1>
+
+        <p>
+            Select your course to check previous batch results
+        </p>
+
+    </section>
+
+
+    <!-- COURSES -->
+    <main class="container">
+
+        <div class="course-grid">
+
+
+            <!-- COMPUTER SCIENCE -->
+            <div class="course-card"
+                 onclick="openResult('computer')">
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h2>
+                    Diploma in Computer Science
+                </h2>
+
+                <p>
+                    Check semester-wise results of
+                    Computer Science students from
+                    previous batches.
+                </p>
+
+                <span class="batch-info">
+                    Available up to 5th Batch
+                </span>
+
+                <span class="open-result"  onclick="window.location.href='pages/previous-result-courses.html'">
+                    Check Result →
+                </span>
+
+            </div>
+
+
+            <!-- MECHATRONICS -->
+            <div class="course-card"
+                 onclick="openResult('mechatronics')">
+
+                <div class="icon">
+                    ⚙️
+                </div>
+
+                <h2>
+                    Diploma in Mechatronics
+                </h2>
+
+                <p>
+                    Check semester-wise results of
+                    Mechatronics students from
+                    previous batches.
+                </p>
+
+                <span class="batch-info">
+                    Available up to 7th Batch
+                </span>
+
+                <span class="open-result">
+                    Check Result →
+                </span>
+
+            </div>
+
+
+            <!-- ADVANCED TOOL & DIE -->
+            <div class="course-card"
+                 onclick="openResult('tool')">
+
+                <div class="icon">
+                    🔧
+                </div>
+
+                <h2>
+                    Diploma in Advanced Tool & Die Making
+                </h2>
+
+                <p>
+                    Check semester-wise results of
+                    Advanced Tool & Die Making students.
+                </p>
+
+                <span class="batch-info">
+                    Batch information available soon
+                </span>
+
+                <span class="open-result">
+                    Check Result →
+                </span>
+
+            </div>
+
+
+            <!-- VOCATIONAL -->
+            <div class="course-card"
+                 onclick="openResult('vocational')">
+
+                <div class="icon">
+                    📘
+                </div>
+
+                <h2>
+                    Diploma in Vocational
+                </h2>
+
+                <p>
+                    Check semester-wise results of
+                    Vocational students.
+                </p>
+
+                <span class="batch-info">
+                    Batch information available soon
+                </span>
+
+                <span class="open-result">
+                    Check Result →
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        © 2026 IGTR Student Hub. All Rights Reserved.
+
+    </footer>
+
+
+    <script>
+
+        function openResult(course) {
+
+            window.location.href =
+                "previous-result.html?course=" +
+                encodeURIComponent(course);
+
+        }
+
+    </script>
+
+</body>
+</html>

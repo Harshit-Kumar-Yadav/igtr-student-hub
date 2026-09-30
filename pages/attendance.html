@@ -1,0 +1,1574 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        My Attendance | IGTR Student Hub
+    </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+        /* =========================
+           TOP
+        ========================== */
+
+        .top {
+            background: #0b1220;
+            color: #cbd5e1;
+            padding: 11px 5%;
+            font-size: 12px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .nav {
+            background: #ffffff;
+
+            border-bottom:
+                1px solid #e5e7eb;
+
+            padding: 14px 5%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            text-decoration: none;
+
+            color: #172033;
+
+            font-weight: 800;
+        }
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 10px;
+
+            background: #123c69;
+            color: #ffffff;
+
+            display: grid;
+            place-items: center;
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .navlinks a {
+            background: #f1f5f9;
+
+            color: #123c69;
+
+            padding: 9px 12px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        /* =========================
+           WRAPPER
+        ========================== */
+
+        .wrap {
+            width:
+                min(
+                    1180px,
+                    92%
+                );
+
+            margin:
+                32px auto;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #102d4d,
+                    #123c69,
+                    #18578e
+                );
+
+            color: #ffffff;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 30px
+                rgba(
+                    15,
+                    23,
+                    42,
+                    .12
+                );
+
+            margin-bottom: 24px;
+        }
+
+        .hero .eyebrow {
+
+            font-size: 11px;
+
+            letter-spacing: 1.6px;
+
+            color: #b9dcfb;
+
+            font-weight: 800;
+        }
+
+        .hero h1 {
+
+            font-size:
+                clamp(
+                    28px,
+                    4vw,
+                    44px
+                );
+
+            margin:
+                10px 0;
+        }
+
+        .hero p {
+
+            color:
+                #dbeafe;
+
+            line-height:
+                1.7;
+
+            max-width:
+                800px;
+        }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap: 14px;
+
+            margin-top: 18px;
+        }
+
+        .stat {
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius:
+                14px;
+
+            padding:
+                20px;
+
+            text-align:
+                center;
+        }
+
+        .stat span {
+
+            display:
+                block;
+
+            color:
+                #64748b;
+
+            font-size:
+                12px;
+
+            margin-bottom:
+                7px;
+        }
+
+        .stat b {
+
+            font-size:
+                25px;
+
+            color:
+                #123c69;
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        .section {
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius:
+                15px;
+
+            padding:
+                22px;
+
+            margin-top:
+                20px;
+        }
+
+        .section h2 {
+
+            font-size:
+                21px;
+
+            margin-bottom:
+                8px;
+        }
+
+        .muted {
+
+            color:
+                #64748b;
+
+            font-size:
+                12px;
+
+            line-height:
+                1.6;
+        }
+
+        /* =========================
+           ATTENDANCE STATUS
+        ========================== */
+
+        .attendance-status {
+
+            margin-top:
+                18px;
+
+            padding:
+                16px;
+
+            border-radius:
+                12px;
+
+            background:
+                #f8fafc;
+
+            border:
+                1px solid #e5e7eb;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+        }
+
+        .attendance-status-left strong {
+
+            display:
+                block;
+
+            font-size:
+                15px;
+
+            margin-bottom:
+                4px;
+        }
+
+        .attendance-status-left span {
+
+            font-size:
+                12px;
+
+            color:
+                #64748b;
+        }
+
+        .status-good {
+
+            background:
+                #dcfce7;
+
+            color:
+                #166534;
+
+            padding:
+                8px 12px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+        }
+
+        .status-warning {
+
+            background:
+                #fef3c7;
+
+            color:
+                #92400e;
+
+            padding:
+                8px 12px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+        }
+
+        /* =========================
+           PROGRESS
+        ========================== */
+
+        .progress-box {
+
+            margin-top:
+                18px;
+        }
+
+        .progress-head {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            margin-bottom:
+                7px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+        }
+
+        .progress {
+
+            width:
+                100%;
+
+            height:
+                10px;
+
+            background:
+                #e5e7eb;
+
+            border-radius:
+                999px;
+
+            overflow:
+                hidden;
+        }
+
+        .progress-fill {
+
+            height:
+                100%;
+
+            width:
+                0%;
+
+            background:
+                #123c69;
+
+            border-radius:
+                999px;
+
+            transition:
+                width .4s ease;
+        }
+
+        /* =========================
+           TABLE
+        ========================== */
+
+        .table-wrap {
+
+            overflow:
+                auto;
+
+            margin-top:
+                18px;
+        }
+
+        .table {
+
+            width:
+                100%;
+
+            border-collapse:
+                collapse;
+
+            font-size:
+                13px;
+        }
+
+        .table th,
+        .table td {
+
+            padding:
+                12px;
+
+            border-bottom:
+                1px solid #e5e7eb;
+
+            text-align:
+                left;
+
+            white-space:
+                nowrap;
+        }
+
+        .table th {
+
+            background:
+                #f8fafc;
+
+            color:
+                #334155;
+        }
+
+        /* =========================
+           STATUS BADGES
+        ========================== */
+
+        .badge {
+
+            display:
+                inline-block;
+
+            padding:
+                6px 10px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+        }
+
+        .badge.present {
+
+            background:
+                #dcfce7;
+
+            color:
+                #166534;
+        }
+
+        .badge.absent {
+
+            background:
+                #fee2e2;
+
+            color:
+                #991b1b;
+        }
+
+        /* =========================
+           INFO BOXES
+        ========================== */
+
+        .info-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                12px;
+
+            margin-top:
+                18px;
+        }
+
+        .info-box {
+
+            background:
+                #f8fafc;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius:
+                12px;
+
+            padding:
+                16px;
+        }
+
+        .info-box span {
+
+            display:
+                block;
+
+            color:
+                #64748b;
+
+            font-size:
+                11px;
+
+            margin-bottom:
+                6px;
+        }
+
+        .info-box strong {
+
+            color:
+                #123c69;
+
+            font-size:
+                20px;
+        }
+
+        /* =========================
+           EMPTY
+        ========================== */
+
+        .empty {
+
+            padding:
+                35px;
+
+            text-align:
+                center;
+
+            color:
+                #64748b;
+
+            border:
+                1px dashed #cbd5e1;
+
+            border-radius:
+                12px;
+
+            margin-top:
+                15px;
+        }
+
+        .empty strong {
+
+            display:
+                block;
+
+            color:
+                #334155;
+
+            margin-bottom:
+                6px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+
+            text-align:
+                center;
+
+            padding:
+                28px;
+
+            background:
+                #0b1220;
+
+            color:
+                #94a3b8;
+
+            margin-top:
+                40px;
+
+            font-size:
+                12px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width:850px) {
+
+            .stats {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .info-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+        }
+
+        @media(max-width:600px) {
+
+            .top {
+
+                display:
+                    none;
+            }
+
+            .nav {
+
+                padding:
+                    12px 4%;
+
+                flex-direction:
+                    column;
+
+                gap:
+                    10px;
+            }
+
+            .wrap {
+
+                width:
+                    92%;
+
+                margin:
+                    22px auto;
+            }
+
+            .hero {
+
+                padding:
+                    25px;
+            }
+
+            .hero h1 {
+
+                font-size:
+                    28px;
+            }
+
+            .stats {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .info-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top">
+
+        <span>
+            🎓 IGTR Student Hub
+        </span>
+
+        <span>
+            My Attendance
+        </span>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="nav">
+
+        <a
+            class="brand"
+            href="student-dashboard.html"
+        >
+
+            <span class="brand-icon">
+                IG
+            </span>
+
+            <span>
+                My Attendance
+            </span>
+
+        </a>
+
+
+        <div class="navlinks">
+
+            <a href="student-dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="student-tools.html">
+                Tools
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="wrap">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <span class="eyebrow">
+                STUDENT ATTENDANCE PORTAL
+            </span>
+
+            <h1>
+                📈 My Attendance
+            </h1>
+
+            <p id="studentInfo">
+                Loading student information...
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             STATS
+        ========================== -->
+
+        <section class="stats">
+
+            <div class="stat">
+
+                <span>
+                    Overall Attendance
+                </span>
+
+                <b id="pct">
+                    0.00%
+                </b>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Present
+                </span>
+
+                <b id="present">
+                    0
+                </b>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Absent
+                </span>
+
+                <b id="absent">
+                    0
+                </b>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Total Classes
+                </span>
+
+                <b id="total">
+                    0
+                </b>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ATTENDANCE STATUS
+        ========================== -->
+
+        <section class="section">
+
+            <h2>
+                📊 Attendance Status
+            </h2>
+
+            <p class="muted">
+                Attendance is marked only by your assigned Batch Incharge.
+                You can view your own attendance here.
+            </p>
+
+
+            <div class="attendance-status">
+
+                <div class="attendance-status-left">
+
+                    <strong>
+                        Attendance Requirement
+                    </strong>
+
+                    <span>
+                        Minimum required attendance:
+                        <b id="required">
+                            75%
+                        </b>
+                    </span>
+
+                </div>
+
+
+                <span
+                    id="statusBadge"
+                    class="status-good"
+                >
+                    Attendance OK
+                </span>
+
+            </div>
+
+
+            <div class="progress-box">
+
+                <div class="progress-head">
+
+                    <span>
+                        Current Attendance
+                    </span>
+
+                    <span id="progressText">
+                        0.00%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-box">
+
+                    <span>
+                        Present Classes
+                    </span>
+
+                    <strong id="presentBox">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>
+                        Absent Classes
+                    </span>
+
+                    <strong id="absentBox">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>
+                        Last Updated
+                    </span>
+
+                    <strong
+                        id="updatedBox"
+                        style="font-size:14px;"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAILY HISTORY
+        ========================== -->
+
+        <section class="section">
+
+            <h2>
+                🕘 Daily Attendance History
+            </h2>
+
+            <p class="muted">
+
+                This history contains only your own attendance.
+                There are no editing controls for students.
+
+            </p>
+
+
+            <div
+                id="historyArea"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        © 2026 IGTR Student Hub •
+        Student Academic Portal
+
+    </footer>
+
+
+    <!-- AUTH -->
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/attendance.js"></script>
+
+
+    <script>
+
+        async function init() {
+
+            /*
+                Student login check
+            */
+
+            const student =
+                await requireLogin(
+                    'student-login.html'
+                );
+
+
+            if (!student) {
+
+                return;
+
+            }
+
+
+            /*
+                Student information
+            */
+
+            document.getElementById(
+                'studentInfo'
+            ).textContent =
+
+                student.name +
+                ' • Roll No. ' +
+                student.rollNo +
+                ' • ' +
+                student.course +
+                (
+                    student.batch
+                        ? ' • Batch ' +
+                          student.batch
+                        : ''
+                );
+
+
+            /*
+                Get attendance
+                from secure server API.
+            */
+
+            const data =
+                await getAttendanceDetails();
+
+
+            if (!data) {
+
+                showNoAttendance();
+
+                return;
+
+            }
+
+
+            const overall =
+                data.overall || {};
+
+
+            const total =
+                Number(
+                    overall.total || 0
+                );
+
+
+            const present =
+                Number(
+                    overall.present || 0
+                );
+
+
+            const absent =
+                Number(
+                    overall.absent ||
+                    Math.max(
+                        0,
+                        total - present
+                    )
+                );
+
+
+            const percentage =
+                total > 0
+                    ? (
+                        present /
+                        total
+                    ) * 100
+
+                    : 0;
+
+
+            const required =
+                Number(
+                    overall.required ??
+                    75
+                );
+
+
+            /*
+                Top stats
+            */
+
+            document.getElementById(
+                'pct'
+            ).textContent =
+                percentage.toFixed(2) +
+                '%';
+
+
+            document.getElementById(
+                'present'
+            ).textContent =
+                present;
+
+
+            document.getElementById(
+                'absent'
+            ).textContent =
+                absent;
+
+
+            document.getElementById(
+                'total'
+            ).textContent =
+                total;
+
+
+            /*
+                Requirement
+            */
+
+            document.getElementById(
+                'required'
+            ).textContent =
+                required +
+                '%';
+
+
+            /*
+                Progress
+            */
+
+            document.getElementById(
+                'progressText'
+            ).textContent =
+                percentage.toFixed(2) +
+                '%';
+
+
+            document.getElementById(
+                'progressFill'
+            ).style.width =
+                Math.min(
+                    100,
+                    Math.max(
+                        0,
+                        percentage
+                    )
+                ) + '%';
+
+
+            /*
+                Info cards
+            */
+
+            document.getElementById(
+                'presentBox'
+            ).textContent =
+                present;
+
+
+            document.getElementById(
+                'absentBox'
+            ).textContent =
+                absent;
+
+
+            /*
+                Last updated
+            */
+
+            if (
+                overall.updatedAt
+            ) {
+
+                const date =
+                    new Date(
+                        overall.updatedAt
+                    );
+
+                document.getElementById(
+                    'updatedBox'
+                ).textContent =
+
+                    date.toLocaleDateString(
+                        'en-IN'
+                    );
+
+            }
+
+
+            /*
+                Attendance status
+            */
+
+            const badge =
+                document.getElementById(
+                    'statusBadge'
+                );
+
+
+            if (
+                total === 0
+            ) {
+
+                badge.textContent =
+                    'No Record Yet';
+
+                badge.className =
+                    'status-warning';
+
+            }
+
+            else if (
+                percentage >=
+                required
+            ) {
+
+                badge.textContent =
+                    'Attendance OK';
+
+                badge.className =
+                    'status-good';
+
+            }
+
+            else {
+
+                badge.textContent =
+                    'Below Required';
+
+                badge.className =
+                    'status-warning';
+
+            }
+
+
+            /*
+                History
+
+                Support both:
+                data.history
+                and data.recent
+            */
+
+            const history =
+                Array.isArray(
+                    data.history
+                )
+
+                    ? data.history
+
+                    : Array.isArray(
+                        data.recent
+                    )
+
+                        ? data.recent
+
+                        : [];
+
+
+            renderHistory(
+                history
+            );
+
+        }
+
+
+        /* =========================
+           RENDER HISTORY
+        ========================== */
+
+        function renderHistory(
+            history
+        ) {
+
+            const area =
+                document.getElementById(
+                    'historyArea'
+                );
+
+
+            if (
+                !history.length
+            ) {
+
+                area.innerHTML =
+
+                    `
+                    <div class="empty">
+
+                        <strong>
+                            No attendance records yet.
+                        </strong>
+
+                        Your attendance will appear here
+                        after the Batch Incharge marks it.
+
+                    </div>
+                    `;
+
+                return;
+
+            }
+
+
+            area.innerHTML =
+
+                `
+                <div class="table-wrap">
+
+                    <table class="table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    S.No.
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            ${
+                                history
+                                    .map(
+                                        (
+                                            item,
+                                            index
+                                        ) => {
+
+                                            const status =
+                                                String(
+                                                    item.status ||
+                                                    ''
+                                                ).toUpperCase();
+
+
+                                            return `
+
+                                                <tr>
+
+                                                    <td>
+                                                        ${index + 1}
+                                                    </td>
+
+
+                                                    <td>
+
+                                                        <strong>
+                                                            ${escapeHtml(
+                                                                item.date ||
+                                                                '—'
+                                                            )}
+                                                        </strong>
+
+                                                    </td>
+
+
+                                                    <td>
+
+                                                        ${
+                                                            status === 'P'
+
+                                                                ? `
+                                                                    <span
+                                                                        class="badge present"
+                                                                    >
+                                                                        PRESENT
+                                                                    </span>
+                                                                  `
+
+                                                                : `
+                                                                    <span
+                                                                        class="badge absent"
+                                                                    >
+                                                                        ABSENT
+                                                                    </span>
+                                                                  `
+                                                        }
+
+                                                    </td>
+
+                                                </tr>
+
+                                            `;
+
+                                        }
+                                    )
+                                    .join('')
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+                `;
+
+        }
+
+
+        /* =========================
+           NO ATTENDANCE
+        ========================== */
+
+        function showNoAttendance() {
+
+            document.getElementById(
+                'historyArea'
+            ).innerHTML =
+
+                `
+                <div class="empty">
+
+                    <strong>
+                        Attendance information unavailable.
+                    </strong>
+
+                    Please login again or contact
+                    your Batch Incharge.
+
+                </div>
+                `;
+
+        }
+
+
+        /* =========================
+           ESCAPE HTML
+        ========================== */
+
+        function escapeHtml(
+            value
+        ) {
+
+            return String(
+                value ?? ''
+            )
+
+            .replace(
+                /[&<>"']/g,
+                character =>
+
+                    ({
+                        '&':
+                            '&amp;',
+
+                        '<':
+                            '&lt;',
+
+                        '>':
+                            '&gt;',
+
+                        '"':
+                            '&quot;',
+
+                        "'":
+                            '&#39;'
+
+                    }[
+                        character
+                    ])
+            );
+
+        }
+
+
+        init();
+
+    </script>
+
+
+</body>
+
+</html>

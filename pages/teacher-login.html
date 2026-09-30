@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Batch Incharge Login | IGTR Student Hub</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.top {
+    background: #0b1220;
+    color: #cbd5e1;
+    padding: 11px 5%;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.page {
+    min-height: calc(100vh - 38px);
+
+    display: grid;
+    place-items: center;
+
+    padding: 40px 20px;
+}
+
+.box {
+    width: min(460px, 100%);
+
+    background: #fff;
+
+    border: 1px solid #e1e6ed;
+
+    border-radius: 18px;
+
+    padding: 34px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(18, 60, 105, .10);
+}
+
+.badge {
+    display: inline-block;
+
+    background: #eff6ff;
+
+    color: #123c69;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 29px;
+
+    margin-bottom: 9px;
+}
+
+.intro {
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: #394457;
+
+    margin:
+        14px 0 7px;
+}
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #dce3eb;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fff;
+}
+
+input:focus {
+    border-color: #123c69;
+}
+
+button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    background: #123c69;
+
+    color: #fff;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    padding: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: .65;
+
+    cursor: wait;
+}
+
+.error {
+    margin-top: 14px;
+
+    color: #b42318;
+
+    background: #fff1f1;
+
+    border: 1px solid #fecaca;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    display: none;
+}
+
+.info {
+    margin-top: 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    font-size: 12px;
+
+    color: #475569;
+
+    line-height: 1.7;
+}
+
+.links {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+}
+
+.links a {
+    color: #123c69;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="top">
+
+    <span>🎓 IGTR Student Hub</span>
+
+    <span>Batch Incharge Portal</span>
+
+</div>
+
+
+<main class="page">
+
+<div class="box">
+
+    <span class="badge">
+        TEACHER ACCESS • COMPUTER SCIENCE
+    </span>
+
+    <h1>
+        Batch Incharge Login
+    </h1>
+
+    <p class="intro">
+        Only authorized CS Batch Incharges can
+        open the attendance panel.
+        Each account is restricted to its
+        assigned batch.
+    </p>
+
+
+    <form id="form">
+
+        <label for="username">
+            Teacher ID
+        </label>
+
+        <input
+            id="username"
+            autocomplete="username"
+            required
+            placeholder="Enter Teacher ID"
+        >
+
+
+        <label for="password">
+            Password
+        </label>
+
+        <input
+            id="password"
+            type="password"
+            autocomplete="current-password"
+            required
+            placeholder="Enter password"
+        >
+
+
+        <button
+            id="button"
+            type="submit"
+        >
+            Login to Attendance →
+        </button>
+
+        <div
+            class="error"
+            id="error"
+        ></div>
+
+    </form>
+
+
+    <div class="info">
+
+        🔒 Batch access is enforced on
+        the server.
+
+        A teacher cannot open attendance
+        data for a batch that is not assigned
+        to their account.
+
+    </div>
+
+
+    <div class="links">
+
+        <a href="../index.html">
+            ← Home
+        </a>
+
+        <a href="student-login.html">
+            Student Login →
+        </a>
+
+    </div>
+
+</div>
+
+</main>
+
+
+<script src="../js/teacher-auth.js"></script>
+
+<script>
+
+(async function () {
+
+    const session =
+        await getTeacherSession();
+
+    if (session.loggedIn) {
+
+        location.replace(
+            'teacher-attendance.html'
+        );
+    }
+
+})();
+
+
+const form =
+    document.getElementById('form');
+
+const error =
+    document.getElementById('error');
+
+
+form.addEventListener(
+    'submit',
+    async function (e) {
+
+        e.preventDefault();
+
+        error.style.display = 'none';
+
+
+        const button =
+            document.getElementById(
+                'button'
+            );
+
+        button.disabled = true;
+
+        button.textContent =
+            'Signing in...';
+
+
+        const username =
+            document.getElementById(
+                'username'
+            ).value.trim();
+
+
+        const password =
+            document.getElementById(
+                'password'
+            ).value;
+
+
+        const result =
+            await teacherLogin(
+                username,
+                password
+            );
+
+
+        if (result.success) {
+
+            button.textContent =
+                'Login successful ✓';
+
+            setTimeout(
+                function () {
+
+                    location.replace(
+                        'teacher-attendance.html'
+                    );
+
+                },
+                250
+            );
+
+        } else {
+
+            error.textContent =
+                result.message;
+
+            error.style.display =
+                'block';
+
+            button.disabled =
+                false;
+
+            button.textContent =
+                'Login to Attendance →';
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>

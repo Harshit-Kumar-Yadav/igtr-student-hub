@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Marksheet | IGTR Student Hub</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        body {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 30px 15px;
+        }
+
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* HEADER */
+
+        .college-header {
+            text-align: center;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+
+        .college-header h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+
+        .college-header h2 {
+            font-size: 20px;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+
+        .college-header p {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+
+        /* TITLE */
+
+        .result-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+
+        .result-title h2 {
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+
+        .result-title p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+
+        /* STUDENT INFO */
+
+        .student-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+
+        .info-box {
+            border: 1px solid #cbd5e1;
+            padding: 13px 15px;
+            border-radius: 6px;
+            background: #f8fafc;
+        }
+
+
+        .info-box span {
+            display: block;
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+
+
+        .info-box strong {
+            font-size: 15px;
+            color: #0f172a;
+        }
+
+
+        /* TABLE */
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+
+        th {
+            background: #0f172a;
+            color: white;
+            padding: 12px 8px;
+            font-size: 13px;
+            border: 1px solid #0f172a;
+        }
+
+
+        td {
+            padding: 11px 8px;
+            text-align: center;
+            border: 1px solid #cbd5e1;
+            font-size: 13px;
+        }
+
+
+        td.subject-name {
+            text-align: left;
+            font-weight: 500;
+        }
+
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+
+        .total-row {
+            font-weight: bold;
+            background: #e2e8f0 !important;
+        }
+
+
+        /* SUMMARY */
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+
+        .summary-box {
+            border: 1px solid #cbd5e1;
+            padding: 16px;
+            text-align: center;
+            border-radius: 7px;
+            background: #f8fafc;
+        }
+
+
+        .summary-box span {
+            display: block;
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 7px;
+        }
+
+
+        .summary-box strong {
+            font-size: 19px;
+        }
+
+
+        /* RESULT */
+
+        .result-status {
+            text-align: center;
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 7px;
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+        }
+
+
+        .result-status span {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid #cbd5e1;
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+
+        button {
+            border: none;
+            padding: 11px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        .print-btn {
+            background: #0f172a;
+            color: white;
+        }
+
+
+        .back-btn {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+
+
+        button:hover {
+            opacity: 0.88;
+        }
+
+
+        /* ERROR */
+
+        .error {
+            text-align: center;
+            padding: 40px 20px;
+            color: #dc2626;
+        }
+
+
+        .error h2 {
+            margin-bottom: 10px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            body {
+                padding: 15px 8px;
+            }
+
+
+            .container {
+                padding: 20px 12px;
+            }
+
+
+            .college-header h1 {
+                font-size: 21px;
+            }
+
+
+            .college-header h2 {
+                font-size: 16px;
+            }
+
+
+            .student-info {
+                grid-template-columns: 1fr;
+            }
+
+
+            .summary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .buttons {
+                flex-direction: column;
+            }
+
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+
+        /* PRINT */
+
+        @media print {
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+
+            .buttons {
+                display: none;
+            }
+
+
+            table {
+                min-width: 100%;
+            }
+
+
+            .college-header h1 {
+                font-size: 24px;
+            }
+
+
+            .college-header h2 {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- COLLEGE HEADER -->
+
+    <div class="college-header">
+
+        <h1>
+            INDO GERMAN TOOL ROOM
+        </h1>
+
+        <h2>
+            STUDENT RESULT
+        </h2>
+
+        <p>
+            IGTR Student Hub
+        </p>
+
+    </div>
+
+
+    <!-- RESULT TITLE -->
+
+    <div class="result-title">
+
+        <h2>
+            SEMESTER EXAMINATION RESULT
+        </h2>
+
+        <p id="examInfo">
+            Loading result...
+        </p>
+
+    </div>
+
+
+    <!-- STUDENT INFORMATION -->
+
+    <div class="student-info">
+
+
+        <div class="info-box">
+
+            <span>
+                Student Name
+            </span>
+
+            <strong id="studentName">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                Roll Number
+            </span>
+
+            <strong id="rollNumber">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                Course
+            </span>
+
+            <strong id="courseName">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                Batch
+            </span>
+
+            <strong id="batchName">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                Semester
+            </span>
+
+            <strong id="semesterName">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span>
+                PA
+            </span>
+
+            <strong id="paValue">
+                -
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBJECT MARKS -->
+
+    <div class="table-wrapper">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>S.No.</th>
+
+                    <th>Subject Code</th>
+
+                    <th>Subject</th>
+
+                    <th>Sessional</th>
+
+                    <th>Exam</th>
+
+                    <th>Total</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="marksTable"></tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="summary">
+
+
+        <div class="summary-box">
+
+            <span>
+                Grand Total
+            </span>
+
+            <strong id="grandTotal">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="summary-box">
+
+            <span>
+                Maximum Marks
+            </span>
+
+            <strong id="maximumMarks">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="summary-box">
+
+            <span>
+                Percentage
+            </span>
+
+            <strong id="percentage">
+                -
+            </strong>
+
+        </div>
+
+
+        <div class="summary-box">
+
+            <span>
+                PA Grade
+            </span>
+
+            <strong id="paSummary">
+                -
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- RESULT STATUS -->
+
+    <div class="result-status">
+
+        Result:
+
+        <span id="resultStatus">
+            -
+        </span>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <strong>
+            Result Status:
+        </strong>
+
+        <br>
+
+        P = Promoted
+
+        <br>
+
+        P+C = Promoted with Compartment
+
+        <br>
+
+        P+G = Promoted with Grace marks
+
+        <br><br>
+
+        <strong>
+            Note:
+        </strong>
+
+        This result is displayed for academic/reference purposes.
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="buttons">
+
+        <button
+            class="back-btn"
+            onclick="goBack()">
+
+            ← Back to Result
+
+        </button>
+
+
+        <button
+            class="print-btn"
+            onclick="window.print()">
+
+            🖨 Print Result
+
+        </button>
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+/* =====================================================
+   GO BACK
+===================================================== */
+
+function goBack() {
+
+    history.back();
+
+}
+
+
+/* =====================================================
+   BATCH NAME
+===================================================== */
+
+function getBatchName(number) {
+
+    const n = Number(number);
+
+    if (n === 1) return "1st Batch";
+    if (n === 2) return "2nd Batch";
+    if (n === 3) return "3rd Batch";
+
+    return n + "th Batch";
+
+}
+
+
+/* =====================================================
+   SEMESTER NAME
+===================================================== */
+
+function getSemesterName(number) {
+
+    const n = Number(number);
+
+    if (n === 1) return "1st Semester";
+    if (n === 2) return "2nd Semester";
+    if (n === 3) return "3rd Semester";
+
+    return n + "th Semester";
+
+}
+
+
+/* =====================================================
+   COURSE NAME
+===================================================== */
+
+function getCourseName(course) {
+
+    const courses = {
+
+        computer:
+            "Diploma in Computer Science",
+
+        mechatronics:
+            "Diploma in Mechatronics",
+
+        tool:
+            "Diploma in Advanced Tool & Die Making",
+
+        vocational:
+            "Diploma in Vocational"
+
+    };
+
+    return courses[course] || course;
+
+}
+
+
+/* =====================================================
+   CLEAN VALUE
+===================================================== */
+
+function cleanValue(value) {
+
+    return String(value ?? "")
+        .trim()
+        .toLowerCase();
+
+}
+
+
+/* =====================================================
+   LOAD RESULT
+===================================================== */
+
+function normalizeCourse(value) {
+        const v = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+        if (v === "computer" || v.includes("computer science")) return "computer";
+        if (v === "mechatronics" || v.includes("mechatronics")) return "mechatronics";
+        if (v === "tool" || v.includes("advanced tool") || v.includes("tool & die") || v.includes("tool and die")) return "tool";
+        if (v === "vocational" || v.includes("vocational")) return "vocational";
+        return v;
+    }
+
+async function loadResult() {
+
+    try {
+
+
+        /* ---------------------------------------------
+           URL PARAMETERS
+        --------------------------------------------- */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const course =
+            normalizeCourse(params.get("course"));
+
+
+        const batch =
+            String(
+                params.get("batch") || ""
+            ).trim();
+
+
+        const semester =
+            String(
+                params.get("semester") || ""
+            ).trim();
+
+
+        const roll =
+            String(
+                params.get("roll") || ""
+            ).trim();
+
+
+        console.log("URL DATA:", {
+            course,
+            batch,
+            semester,
+            roll
+        });
+
+
+        /* ---------------------------------------------
+           LOAD RESULTS JSON
+        --------------------------------------------- */
+
+        const response =
+            await fetch(
+                "../data/results.json?nocache=" +
+                Date.now(),
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "results.json load nahi hua. Status: " +
+                response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        /* ---------------------------------------------
+           FLATTEN JSON
+        --------------------------------------------- */
+
+        let results = [];
+
+        if (Array.isArray(data)) {
+
+            results = data.flat(Infinity);
+
+        }
+
+
+        /* ---------------------------------------------
+           ONLY OBJECT RECORDS
+        --------------------------------------------- */
+
+        results =
+            results.filter(function(item) {
+
+                return (
+                    item &&
+                    typeof item === "object" &&
+                    !Array.isArray(item)
+                );
+
+            });
+
+
+        console.log(
+            "TOTAL RECORDS:",
+            results.length
+        );
+
+
+        /* ---------------------------------------------
+           FIND MATCHING RECORDS
+        --------------------------------------------- */
+
+        const matches =
+            results.filter(function(item) {
+
+                const itemCourse =
+                    normalizeCourse(item.course);
+
+                const itemBatch =
+                    String(item.batch ?? "").trim();
+
+                const itemSemester =
+                    String(item.semester ?? "").trim();
+
+                const itemRoll =
+                    String(item.roll ?? "").trim();
+
+
+                return (
+
+                    itemCourse === course &&
+
+                    itemBatch === batch &&
+
+                    itemSemester === semester &&
+
+                    itemRoll === roll
+
+                );
+
+            });
+
+
+        console.log(
+            "MATCHING RECORDS:",
+            matches
+        );
+
+
+        /* ---------------------------------------------
+           NO RESULT
+        --------------------------------------------- */
+
+        if (matches.length === 0) {
+
+            alert(
+                "Is Roll Number ka selected semester ka result nahi mila."
+            );
+
+            return;
+
+        }
+
+
+        /* ---------------------------------------------
+           SELECT RECORD
+        --------------------------------------------- */
+
+        let result = matches[0];
+
+
+        /*
+         * Agar multiple matching records hain,
+         * to jis record me actual P / P+C / P+G
+         * status hai usko select karo.
+         */
+
+        const statusRecord =
+            matches.find(function(item) {
+
+                const status = String(item.result ?? item.status ?? "")
+                    .replace(/\s+/g, "")
+                    .toUpperCase();
+
+                return (
+                    status === "P" ||
+                    status === "P+C" ||
+                    status === "P+G"
+                );
+
+            });
+
+
+        if (statusRecord) {
+
+            result = statusRecord;
+
+        }
+
+
+        console.log(
+            "SELECTED RECORD:",
+            result
+        );
+
+
+        /* =================================================
+           STUDENT INFORMATION
+        ================================================= */
+
+
+        document.getElementById(
+            "studentName"
+        ).innerText =
+            result.name || "Student";
+
+
+        document.getElementById(
+            "rollNumber"
+        ).innerText =
+            result.roll || roll;
+
+
+        document.getElementById(
+            "courseName"
+        ).innerText =
+            getCourseName(course);
+
+
+        document.getElementById(
+            "batchName"
+        ).innerText =
+            getBatchName(result.batch);
+
+
+        document.getElementById(
+            "semesterName"
+        ).innerText =
+            getSemesterName(result.semester);
+
+
+        /* =================================================
+           PA
+        ================================================= */
+
+        const pa =
+            result.pa !== undefined &&
+            result.pa !== null &&
+            String(result.pa).trim() !== ""
+
+                ? String(result.pa).trim()
+
+                : "-";
+
+
+        document.getElementById(
+            "paValue"
+        ).innerText = pa;
+
+
+        document.getElementById(
+            "paSummary"
+        ).innerText = pa;
+
+
+        /* =================================================
+           EXAM INFO
+        ================================================= */
+
+        document.getElementById(
+            "examInfo"
+        ).innerText =
+
+            getCourseName(course) +
+            " | " +
+            getBatchName(result.batch) +
+            " | " +
+            getSemesterName(result.semester);
+
+
+        /* =================================================
+           SUBJECT TABLE
+        ================================================= */
+
+        const marksTable =
+            document.getElementById(
+                "marksTable"
+            );
+
+
+        marksTable.innerHTML = "";
+
+
+        if (
+            Array.isArray(result.subjects) &&
+            result.subjects.length > 0
+        ) {
+
+
+            result.subjects.forEach(
+                function(subject, index) {
+
+
+                    const sessional =
+                        Number(
+                            subject.sessional
+                        );
+
+
+                    const exam =
+                        Number(
+                            subject.exam
+                        );
+
+
+                    const total =
+                        Number(
+                            subject.total
+                        );
+
+
+                    const finalSessional =
+                        Number.isFinite(
+                            sessional
+                        )
+                            ? sessional
+                            : 0;
+
+
+                    const finalExam =
+                        Number.isFinite(
+                            exam
+                        )
+                            ? exam
+                            : 0;
+
+
+                    const finalTotal =
+                        Number.isFinite(
+                            total
+                        )
+                            ? total
+                            : (
+                                finalSessional +
+                                finalExam
+                            );
+
+
+                    const row =
+                        document.createElement(
+                            "tr"
+                        );
+
+
+                    row.innerHTML = `
+
+                        <td>
+                            ${index + 1}
+                        </td>
+
+                        <td>
+                            ${subject.code || "-"}
+                        </td>
+
+                        <td class="subject-name">
+                            ${subject.name || "-"}
+                        </td>
+
+                        <td>
+                            ${finalSessional}
+                        </td>
+
+                        <td>
+                            ${finalExam}
+                        </td>
+
+                        <td>
+                            ${finalTotal}
+                        </td>
+
+                    `;
+
+
+                    marksTable.appendChild(row);
+
+                }
+            );
+
+        }
+
+        else {
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            row.innerHTML = `
+
+                <td
+                    colspan="6"
+                    style="text-align:center;">
+
+                    Subject-wise marks are not
+                    available for this result.
+
+                </td>
+
+            `;
+
+
+            marksTable.appendChild(row);
+
+        }
+
+
+        /* =================================================
+           GRAND TOTAL
+        ================================================= */
+
+        const grandTotal =
+            Number(
+                result.grandTotal
+            );
+
+
+        document.getElementById(
+            "grandTotal"
+        ).innerText =
+
+            Number.isFinite(grandTotal)
+                ? grandTotal
+                : "-";
+
+
+        /* =================================================
+           MAXIMUM MARKS
+        ================================================= */
+
+        let maximumMarks = 800;
+
+
+        if (
+            String(result.semester).trim() === "1"
+        ) {
+
+            maximumMarks = 700;
+
+        }
+
+
+        document.getElementById(
+            "maximumMarks"
+        ).innerText =
+            maximumMarks;
+
+
+        /* =================================================
+           PERCENTAGE
+        ================================================= */
+
+        let percentage;
+
+
+        if (
+            result.percentage !== undefined &&
+            result.percentage !== null &&
+            result.percentage !== ""
+        ) {
+
+            percentage =
+                Number(
+                    result.percentage
+                );
+
+        }
+
+        else if (
+            Number.isFinite(grandTotal)
+        ) {
+
+            percentage =
+                (
+                    grandTotal /
+                    maximumMarks
+                ) * 100;
+
+        }
+
+        else {
+
+            percentage = 0;
+
+        }
+
+
+        document.getElementById(
+            "percentage"
+        ).innerText =
+
+            Number.isFinite(percentage)
+                ? percentage.toFixed(1) + "%"
+                : "-";
+
+
+        /* =================================================
+           FINAL RESULT STATUS
+        ================================================= */
+
+        const finalStatus = String(result.result ?? result.status ?? "")
+            .replace(/\s+/g, "")
+            .toUpperCase();
+
+
+        console.log(
+            "FINAL RESULT STATUS:",
+            finalStatus
+        );
+
+
+        document.getElementById(
+            "resultStatus"
+        ).innerText =
+            finalStatus || "-";
+
+
+        /* =================================================
+           FINAL DEBUG
+        ================================================= */
+
+        console.log(
+            "RESULT SUCCESS:",
+            {
+                roll: result.roll,
+                course: result.course,
+                batch: result.batch,
+                semester: result.semester,
+                grandTotal: result.grandTotal,
+                percentage: result.percentage,
+                resultStatus: result.result
+            }
+        );
+
+
+    }
+
+    catch(error) {
+
+        console.error(
+            "RESULT LOAD ERROR:",
+            error
+        );
+
+
+        alert(
+            "Result load karte waqt error aaya: " +
+            error.message
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    loadResult
+);
+
+</script>
+
+
+</body>
+
+</html>

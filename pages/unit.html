@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit | IGTR Student Hub</title>
+  <script src="../js/auth.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    .navbar {
+      height: 76px;
+      background: #fff;
+      border-bottom: 1px solid #e7eaf0;
+      display: flex;
+      align-items: center
+    }
+
+    .nav {
+      width: min(1100px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: #123c69;
+      color: #fff;
+      border-radius: 10px;
+      display: grid;
+      place-items: center
+    }
+
+    .logo small {
+      display: block;
+      color: #7b8495;
+      font-size: 10px
+    }
+
+    .back {
+      background: #123c69;
+      color: #fff;
+      border: 0;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #102d4d, #123c69, #18578e);
+      color: #fff;
+      padding: 60px 4%
+    }
+
+    .hero-inner {
+      width: min(1100px, 92%);
+      margin: auto
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #a9d0f5;
+      font-weight: 800
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      margin: 14px 0
+    }
+
+    .hero p {
+      color: #d3dfeb;
+      line-height: 1.8;
+      font-size: 14px
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 50px auto
+    }
+
+    .pdf-card {
+      background: #fff;
+      border: 1px solid #e1e6ed;
+      border-radius: 14px;
+      padding: 25px
+    }
+
+    .pdf-card h2 {
+      color: #123c69;
+      margin-bottom: 8px
+    }
+
+    .pdf-card p {
+      color: #737e8d;
+      font-size: 14px;
+      line-height: 1.7
+    }
+
+    .pdf-list {
+      margin-top: 20px;
+      display: grid;
+      gap: 12px
+    }
+
+    .pdf-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid #e4e8ef;
+      border-radius: 10px;
+      padding: 14px
+    }
+
+    .pdf-name {
+      font-size: 13px;
+      font-weight: 700;
+      word-break: break-word
+    }
+
+    .open-pdf {
+      background: #123c69;
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap
+    }
+
+    .empty {
+      padding: 30px;
+      text-align: center;
+      color: #7b8495;
+      border: 1px dashed #b9c5d3;
+      border-radius: 10px;
+      margin-top: 18px
+    }
+
+    @media(max-width:600px) {
+      .pdf-item {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .open-pdf {
+        width: 100%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="nav">
+      <a href="courses.html" class="logo">
+        <div class="logo-icon">IG</div>
+        <div>IGTR<small>Student Hub</small></div>
+      </a>
+      <button class="back" onclick="history.back()">← Back</button>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="label">UNIT • PDF NOTES</span>
+      <h1 id="unitTitle">Unit</h1>
+      <p id="unitInfo">Course • Year • Semester • Subject</p>
+    </div>
+  </section>
+  <main class="container">
+    <div class="pdf-card">
+      <h2>Available PDF Notes</h2>
+      <p>PDF files uploaded for this unit will appear below.</p>
+      <div id="pdfList" class="pdf-list"></div>
+      <div id="empty" class="empty" style="display:none">No PDF uploaded for this unit yet.</div>
+    </div>
+  </main>
+  <script>
+    (async function () {
+      const student = await requireCourse('courses.html');
+      if (!student) return;
+      const p = new URLSearchParams(location.search);
+      const subject = p.get('subject') || 'Subject';
+      const course = p.get('course') || 'Course';
+      const year = p.get('year') || '1';
+      const semester = p.get('semester') || '1';
+      const unit = Math.max(1, Math.min(4, Number(p.get('unit') || '1')));
+
+      document.getElementById('unitTitle').textContent = 'Unit ' + unit + ' — ' + subject;
+      document.getElementById('unitInfo').textContent = `${course} • Year ${year} • Semester ${semester} • ${subject}`;
+
+      try {
+        const q = new URLSearchParams({ subject, course, year, semester });
+        const response = await fetch('../api/pdfs?' + q.toString(), { credentials: 'same-origin' });
+        if (!response.ok) throw new Error('PDF request failed');
+        const data = await response.json();
+        const files = Array.isArray(data) ? (data[unit - 1] || []) : [];
+        const list = document.getElementById('pdfList');
+        const empty = document.getElementById('empty');
+        if (!files.length) { empty.style.display = 'block'; return; }
+        files.forEach(file => {
+          const item = document.createElement('div');
+          item.className = 'pdf-item';
+          item.innerHTML = `<div class="pdf-name">📄 ${file.name}</div><button class="open-pdf">Open PDF →</button>`;
+          item.querySelector('.open-pdf').addEventListener('click', () => { location.href = file.url; });
+          list.appendChild(item);
+        });
+      } catch (error) {
+        document.getElementById('empty').style.display = 'block';
+        document.getElementById('empty').textContent = 'Unable to load PDFs. Please check the server.';
+        console.error(error);
+      }
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IGTR Student Hub | Academic Portal</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =========================
+       EXISTING BUTTONS
+    ========================== */
+
+    .yes {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #0f172a;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid #0f172a;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .yes:hover {
+      background: #0284c7;
+      border-color: #0284c7;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(2, 132, 199, 0.25);
+    }
+
+    .yes:active {
+      transform: translateY(0);
+    }
+
+    .login {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #0f172a;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid #0f172a;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .login:hover {
+      background: #0284c7;
+      border-color: #0284c7;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(2, 132, 199, 0.25);
+    }
+
+    .login:active {
+      transform: translateY(0);
+    }
+
+
+    /* =========================
+       ATTENDANCE SECTION
+    ========================== */
+
+    .attendance-section {
+      background:
+        linear-gradient(
+          135deg,
+          #07111f 0%,
+          #0d1b2a 55%,
+          #123c69 100%
+        );
+
+      color: #ffffff;
+
+      border-radius: 22px;
+
+      padding: 55px;
+
+      margin-top: 40px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 20px 50px rgba(7, 17, 31, 0.18);
+    }
+
+    .attendance-section::before {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(11, 99, 246, 0.15);
+
+      top: -100px;
+      right: -80px;
+    }
+
+    .attendance-section::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.05);
+
+      bottom: -80px;
+      left: -50px;
+    }
+
+    .attendance-content {
+      position: relative;
+
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns:
+        1.25fr
+        .75fr;
+
+      gap: 45px;
+
+      align-items: center;
+    }
+
+    .attendance-label {
+      display: inline-block;
+
+      font-size: 11px;
+
+      letter-spacing: 1.8px;
+
+      font-weight: 800;
+
+      color: #93c5fd;
+
+      margin-bottom: 12px;
+    }
+
+    .attendance-content h2 {
+      font-size:
+        clamp(30px, 4vw, 48px);
+
+      line-height: 1.15;
+
+      margin-bottom: 15px;
+    }
+
+    .attendance-content h2 span {
+      color: #60a5fa;
+    }
+
+    .attendance-description {
+      color: #d6e4f2;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      max-width: 680px;
+
+      margin-bottom: 24px;
+    }
+
+    .attendance-points {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 12px;
+
+      margin-bottom: 28px;
+    }
+
+    .attendance-point {
+      background:
+        rgba(255,255,255,.07);
+
+      border:
+        1px solid rgba(255,255,255,.10);
+
+      border-radius: 12px;
+
+      padding: 14px;
+
+      font-size: 12px;
+
+      color: #e5eff8;
+    }
+
+    .attendance-point strong {
+      display: block;
+
+      color: #ffffff;
+
+      margin-bottom: 4px;
+
+      font-size: 13px;
+    }
+
+    .teacher-login-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 13px 20px;
+
+      background: #ffffff;
+
+      color: #123c69;
+
+      border-radius: 10px;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .teacher-login-btn:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+    }
+
+    .attendance-note {
+      display: block;
+
+      margin-top: 11px;
+
+      color: #a9bfd4;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       ATTENDANCE VISUAL CARD
+    ========================== */
+
+    .attendance-card {
+      background:
+        rgba(255,255,255,.08);
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius: 18px;
+
+      padding: 22px;
+
+      backdrop-filter: blur(10px);
+    }
+
+    .attendance-card-top {
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      margin-bottom: 20px;
+    }
+
+    .attendance-card-title {
+      font-size: 12px;
+
+      color: #a9bfd4;
+
+      letter-spacing: 1px;
+
+      font-weight: 800;
+    }
+
+    .attendance-live {
+      font-size: 10px;
+
+      background:
+        #dcfce7;
+
+      color: #166534;
+
+      padding: 5px 8px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+    }
+
+    .attendance-main-number {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      margin-bottom: 20px;
+    }
+
+    .attendance-icon {
+      width: 58px;
+      height: 58px;
+
+      border-radius: 15px;
+
+      display: grid;
+
+      place-items: center;
+
+      background:
+        rgba(255,255,255,.10);
+
+      font-size: 27px;
+    }
+
+    .attendance-main-number strong {
+      display: block;
+
+      font-size: 28px;
+
+      color: #ffffff;
+    }
+
+    .attendance-main-number span {
+      color: #b9ccde;
+
+      font-size: 11px;
+    }
+
+    .attendance-mini-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 10px;
+    }
+
+    .attendance-mini-box {
+      border-radius: 11px;
+
+      padding: 13px;
+
+      background:
+        rgba(255,255,255,.06);
+
+      border:
+        1px solid rgba(255,255,255,.08);
+    }
+
+    .attendance-mini-box span {
+      display: block;
+
+      color: #9fb5c9;
+
+      font-size: 10px;
+
+      margin-bottom: 4px;
+    }
+
+    .attendance-mini-box strong {
+      font-size: 17px;
+
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:900px) {
+
+      .attendance-content {
+        grid-template-columns: 1fr;
+      }
+
+      .attendance-section {
+        padding: 35px 28px;
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .attendance-section {
+        padding: 28px 20px;
+
+        border-radius: 17px;
+      }
+
+      .attendance-points {
+        grid-template-columns: 1fr;
+      }
+
+      .teacher-login-btn {
+        width: 100%;
+      }
+
+    }
+
+    /* =========================
+   NOTICE BOARD
+========================= */
+
+.notice-board-section {
+  margin-top: 40px;
+}
+
+.notice-board-container {
+  display: grid;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.notice-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 5px solid #0b63f6;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: 0.25s ease;
+}
+
+.notice-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+
+.notice-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.notice-category {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.notice-date {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.notice-card h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.notice-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.notice-posted-by {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.notice-empty,
+.notice-loading,
+.notice-error {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  color: #64748b;
+}
+
+@media (max-width: 700px) {
+
+  .notice-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+
+  <div class="topbar">
+
+    <span>
+      🎓 Student Academic Portal
+    </span>
+
+    <span>
+      IGTR • Indore
+    </span>
+
+  </div>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+
+      <span class="brand-icon">
+        IG
+      </span>
+
+      <span>
+
+        <b>
+          IGTR
+        </b>
+
+        <small>
+          Student Hub
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <nav>
+
+      <a
+        class="active"
+        href="index.html"
+      >
+        Home
+      </a>
+
+      <a href="pages/courses.html">
+        Courses
+      </a>
+
+      <a href="#services">
+        Student Tools
+      </a>
+
+      <a href="#career">
+        Career
+      </a>
+
+      <a href="#campus">
+        Campus
+      </a>
+
+    </nav>
+
+
+    <button
+      class="yes"
+      onclick="window.location.href='pages/previous-result-courses.html'"
+    >
+      Check Previous Year Result
+    </button>
+
+
+    <a
+      href="pages/toppers.html"
+      class="previous-result-btn"
+    >
+      🏆 Toppers List
+    </a>
+
+
+    <a
+      class="login"
+      href="#"
+    >
+      Student Login
+    </a>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          IGTR STUDENT HUB
+        </span>
+
+        <h1>
+          Your Academic Journey,
+          <br>
+
+          <span>
+            Organized in One Place.
+          </span>
+
+        </h1>
+
+        <p>
+
+          Explore courses, subjects and academic
+          resources through a clean student-focused
+          portal built for IGTR learners.
+
+        </p>
+
+        <div class="actions">
+
+          <a
+            class="primary"
+            href="pages/courses.html"
+          >
+            Explore Courses →
+          </a>
+
+          <a
+            class="secondary"
+            href="#services"
+          >
+            Student Tools
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-panel">
+
+        <div class="panel-head">
+
+          <span>
+            STUDENT DASHBOARD
+          </span>
+
+          <strong>
+            Academic Hub
+          </strong>
+
+        </div>
+
+
+        <div class="dash-grid">
+
+          <div>
+
+            <b>01</b>
+
+            <span>
+              Choose Course
+            </span>
+
+          </div>
+
+          <div>
+
+            <b>02</b>
+
+            <span>
+              Select Semester
+            </span>
+
+          </div>
+
+          <div>
+
+            <b>03</b>
+
+            <span>
+              Open Subject
+            </span>
+
+          </div>
+
+          <div>
+
+            <b>04</b>
+
+            <span>
+              Access Notes
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK ACCESS
+    ========================== -->
+
+    <section
+      class="section"
+      id="services"
+    >
+
+      <div class="heading">
+
+        <span>
+          QUICK ACCESS
+        </span>
+
+        <h2>
+          Everything starts with your academics.
+        </h2>
+
+        <p>
+
+          Use the portal to move from your course
+          to subjects and study resources without
+          losing track.
+
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <a
+          class="card"
+          href="pages/courses.html"
+        >
+
+          <i>
+            01
+          </i>
+
+          <h3>
+            Course Explorer
+          </h3>
+
+          <p>
+            Select your programme, year and semester.
+          </p>
+
+          <strong>
+            Open Courses →
+          </strong>
+
+        </a>
+
+
+        <a
+          class="card"
+          href="pages/courses.html"
+        >
+
+          <i>
+            02
+          </i>
+
+          <h3>
+            Subject Hub
+          </h3>
+
+          <p>
+            Open a subject and continue to its
+            academic resources.
+          </p>
+
+          <strong>
+            View Subjects →
+          </strong>
+
+        </a>
+
+
+        <a
+          class="card"
+          href="#career"
+        >
+
+          <i>
+            03
+          </i>
+
+          <h3>
+            Career Hub
+          </h3>
+
+          <p>
+            Reserved section for internships,
+            placements and preparation.
+          </p>
+
+          <strong>
+            Coming Next →
+          </strong>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ATTENDANCE
+    ========================== -->
+
+    <section
+      class="section"
+      id="attendance"
+    >
+
+      <div class="attendance-section">
+
+        <div class="attendance-content">
+
+
+          <!-- LEFT -->
+
+          <div>
+
+            <span class="attendance-label">
+              ATTENDANCE MANAGEMENT
+            </span>
+
+
+            <h2>
+
+              Daily Attendance,
+              <br>
+
+              <span>
+                Managed Securely.
+              </span>
+
+            </h2>
+
+
+            <p class="attendance-description">
+
+              IGTR Student Hub attendance system
+              is designed for authorized batch
+              incharges. Teachers can mark the
+              daily morning attendance for their
+              assigned batch, while students can
+              only view their own attendance from
+              their profile.
+
+            </p>
+
+
+            <div class="attendance-points">
+
+              <div class="attendance-point">
+
+                <strong>
+                  🔐 Teacher Controlled
+                </strong>
+
+                Only authorized teachers can
+                mark attendance.
+
+              </div>
+
+
+              <div class="attendance-point">
+
+                <strong>
+                  📅 Daily Attendance
+                </strong>
+
+                One attendance record is maintained
+                for each batch per day.
+
+              </div>
+
+
+              <div class="attendance-point">
+
+                <strong>
+                  👨‍🎓 Student Read Only
+                </strong>
+
+                Students can view only their own
+                attendance.
+
+              </div>
+
+
+              <div class="attendance-point">
+
+                <strong>
+                  💾 Secure Storage
+                </strong>
+
+                Attendance is stored on the
+                server for future records.
+
+              </div>
+
+            </div>
+
+
+            <a
+              class="teacher-login-btn"
+              href="pages/teacher-login.html"
+            >
+
+              👨‍🏫
+              Teacher Attendance Login →
+
+            </a>
+
+
+            <span class="attendance-note">
+
+              Teacher access only • Batch-wise
+              attendance management
+
+            </span>
+
+          </div>
+
+
+          <!-- RIGHT -->
+
+          <div class="attendance-card">
+
+            <div class="attendance-card-top">
+
+              <span class="attendance-card-title">
+                ATTENDANCE OVERVIEW
+              </span>
+
+              <span class="attendance-live">
+                SECURE
+              </span>
+
+            </div>
+
+
+            <div class="attendance-main-number">
+
+              <div class="attendance-icon">
+                📋
+              </div>
+
+              <div>
+
+                <strong>
+                  100%
+                </strong>
+
+                <span>
+                  Attendance tracking system
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="attendance-mini-grid">
+
+              <div class="attendance-mini-box">
+
+                <span>
+                  MARKED BY
+                </span>
+
+                <strong>
+                  Teacher
+                </strong>
+
+              </div>
+
+
+              <div class="attendance-mini-box">
+
+                <span>
+                  FREQUENCY
+                </span>
+
+                <strong>
+                  Daily
+                </strong>
+
+              </div>
+
+
+              <div class="attendance-mini-box">
+
+                <span>
+                  ACCESS
+                </span>
+
+                <strong>
+                  Secure
+                </strong>
+
+              </div>
+
+
+              <div class="attendance-mini-box">
+
+                <span>
+                  STUDENT
+                </span>
+
+                <strong>
+                  Read Only
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CAREER
+    ========================== -->
+
+
+
+    <!-- =========================
+     NOTICE BOARD
+========================== -->
+
+<section
+  class="section notice-board-section"
+  id="notices"
+>
+
+  <div class="heading">
+
+    <span>
+      NOTICE BOARD
+    </span>
+
+    <h2>
+      Latest <strong>Notices</strong>
+    </h2>
+
+    <p>
+      Important announcements, academic updates
+      and institute information.
+    </p>
+
+  </div>
+
+
+  <div
+    id="noticeContainer"
+    class="notice-board-container"
+  >
+
+    <div class="notice-loading">
+      Loading notices...
+    </div>
+
+  </div>
+
+</section>
+
+    <section
+      class="section light"
+      id="career"
+    >
+
+      <div class="split">
+
+        <div>
+
+          <span>
+            CAREER & SKILLS
+          </span>
+
+          <h2>
+            Build skills alongside your curriculum.
+          </h2>
+
+          <p>
+
+            The portal structure is ready to expand
+            with coding practice, interview preparation,
+            resume tools, internships and placement
+            resources.
+
+          </p>
+
+        </div>
+
+
+        <div class="mini-list">
+
+          <div>
+
+            <b>
+              Programming
+            </b>
+
+            <span>
+              C • C++ • Python
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <b>
+              Web Development
+            </b>
+
+            <span>
+              HTML • CSS • JavaScript
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <b>
+              Core Preparation
+            </b>
+
+            <span>
+              Practice • Viva • Interviews
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CAMPUS
+    ========================== -->
+
+    <section
+      class="section"
+      id="campus"
+    >
+
+      <div class="heading">
+
+        <span>
+          STUDENT PORTAL
+        </span>
+
+        <h2>
+          One foundation, many modules.
+        </h2>
+
+      </div>
+
+
+      <div class="module-row">
+
+        <span>
+          Academics
+        </span>
+
+        <span>
+          Notes
+        </span>
+
+        <span>
+          PYQs
+        </span>
+
+        <span>
+          Practicals
+        </span>
+
+        <span>
+          Assignments
+        </span>
+
+        <span>
+          Results
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div>
+
+      <b>
+        IGTR Student Hub
+      </b>
+
+      <p>
+        A student-focused academic portal
+        for organized learning.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>
+        Quick Links
+      </b>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="pages/courses.html">
+        Courses
+      </a>
+
+    </div>
+
+
+    <div>
+
+      <b>
+        Resources
+      </b>
+
+      <a href="pages/courses.html">
+        Subjects
+      </a>
+
+      <a href="#services">
+        Student Tools
+      </a>
+
+      <a href="#attendance">
+        Attendance
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <div class="copyright">
+
+    © 2026 IGTR Student Hub • Student Academic Portal
+
+  </div>
+
+
+  <!-- STUDENT LOGIN -->
+
+  <script>
+
+    document
+      .querySelectorAll(".login")
+      .forEach(
+
+        a =>
+
+          a.addEventListener(
+
+            "click",
+
+            e => {
+
+              e.preventDefault();
+
+              location.href =
+                "pages/student-login.html";
+
+            }
+
+          )
+
+      );
+
+  </script>
+
+
+  <script src="js/script.js"></script>
+
+
+  <script>
+
+/* =========================
+   LOAD HOME NOTICES
+========================== */
+
+async function loadHomeNotices() {
+
+  const container =
+    document.getElementById(
+      "noticeContainer"
+    );
+
+  if (!container) {
+    return;
+  }
+
+
+  try {
+
+    const response =
+      await fetch(
+        "/api/notices"
+      );
+
+
+    if (!response.ok) {
+      throw new Error(
+        "Failed to load notices"
+      );
+    }
+
+
+    const data =
+      await response.json();
+
+
+    const notices =
+      Array.isArray(
+        data.notices
+      )
+        ? data.notices
+        : [];
+
+
+    if (notices.length === 0) {
+
+      container.innerHTML = `
+
+        <div class="notice-empty">
+
+          <strong>
+            No notices available
+          </strong>
+
+          <br>
+
+          New announcements will
+          appear here.
+
+        </div>
+
+      `;
+
+      return;
+    }
+
+
+    container.innerHTML =
+      notices
+        .slice(0, 5)
+        .map(notice => {
+
+          return `
+
+            <div class="notice-card">
+
+              <div class="notice-top">
+
+                <span class="notice-category">
+                  ${escapeNoticeText(
+                    notice.category ||
+                    "General"
+                  )}
+                </span>
+
+                <span class="notice-date">
+                  ${escapeNoticeText(
+                    notice.date || ""
+                  )}
+                </span>
+
+              </div>
+
+
+              <h3>
+                ${escapeNoticeText(
+                  notice.title ||
+                  "Notice"
+                )}
+              </h3>
+
+
+              <p>
+                ${escapeNoticeText(
+                  notice.message ||
+                  ""
+                )}
+              </p>
+
+
+              <div class="notice-posted-by">
+
+                Posted by:
+                ${escapeNoticeText(
+                  notice.postedBy ||
+                  "IGTR"
+                )}
+
+              </div>
+
+            </div>
+
+          `;
+
+        })
+        .join("");
+
+  }
+
+  catch (error) {
+
+    console.error(
+      "Notice loading error:",
+      error
+    );
+
+
+    container.innerHTML = `
+
+      <div class="notice-error">
+        Unable to load notices right now.
+      </div>
+
+    `;
+
+  }
+
+}
+
+
+/* =========================
+   SECURITY HELPER
+========================== */
+
+function escapeNoticeText(
+  value
+) {
+
+  return String(value)
+
+    .replace(
+      /&/g,
+      "&amp;"
+    )
+
+    .replace(
+      /</g,
+      "&lt;"
+    )
+
+    .replace(
+      />/g,
+      "&gt;"
+    )
+
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+
+    .replace(
+      /'/g,
+      "&#039;"
+    );
+
+}
+
+
+/* =========================
+   START
+========================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  loadHomeNotices
+);
+
+</script>
+
+
+</body>
+
+</html>

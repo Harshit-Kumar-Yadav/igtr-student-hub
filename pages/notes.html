@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes | IGTR Student Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172033
+    }
+
+    .top {
+      background: #101827;
+      color: #dbe3ef;
+      padding: 12px 4%;
+      font-size: 12px
+    }
+
+    .nav {
+      height: 72px;
+      background: #fff;
+      border-bottom: 1px solid #e7eaf0;
+      display: flex;
+      align-items: center
+    }
+
+    .navin {
+      width: min(1100px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .logo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 800
+    }
+
+    .logoicon {
+      width: 40px;
+      height: 40px;
+      background: #123c69;
+      color: #fff;
+      border-radius: 9px;
+      display: grid;
+      place-items: center
+    }
+
+    .logo small {
+      display: block;
+      color: #7b8495;
+      font-size: 10px
+    }
+
+    .back {
+      background: #123c69;
+      color: #fff;
+      border: 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #102d4d, #123c69, #18578e);
+      color: #fff;
+      padding: 55px 4%
+    }
+
+    .heroIn {
+      width: min(1100px, 92%);
+      margin: auto
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #a9d0f5;
+      font-weight: 800
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 55px);
+      margin: 13px 0
+    }
+
+    .hero p {
+      color: #d3dfeb;
+      font-size: 14px
+    }
+
+    .main {
+      width: min(1100px, 92%);
+      margin: 45px auto
+    }
+
+    .unit {
+      background: #fff;
+      border: 1px solid #e1e6ed;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 18px
+    }
+
+    .unit h2 {
+      color: #123c69;
+      margin-bottom: 10px
+    }
+
+    .unit p {
+      color: #737e8d;
+      line-height: 1.8;
+      font-size: 14px
+    }
+
+    .empty {
+      background: #fff;
+      border: 1px dashed #b9c5d3;
+      border-radius: 14px;
+      padding: 50px;
+      text-align: center
+    }
+
+    .empty h2 {
+      margin-bottom: 10px
+    }
+
+    .empty p {
+      color: #737e8d
+    }
+  </style>
+  <script src="../js/auth.js"></script>
+</head>
+
+<body>
+  <div class="top">🎓 IGTR Student Hub • Academic Resources</div>
+  <nav class="nav">
+    <div class="navin">
+      <a class="logo" href="courses.html">
+        <div class="logoicon">IG</div>
+        <div>IGTR<small>Student Hub</small></div>
+      </a>
+      <button class="back" onclick="history.back()">← Back</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="heroIn">
+      <span class="label">STUDY MATERIAL • NOTES</span>
+      <h1 id="title">Subject Notes</h1>
+      <p id="info">Course • Year • Semester</p>
+    </div>
+  </section>
+
+  <main class="main">
+    <div id="unitsContainer"></div>
+  </main>
+
+  <script>
+    (async function () {
+      const _studentGuard = await requireCourse("courses.html");
+      if (!_studentGuard) return;
+      const p = new URLSearchParams(location.search);
+      const subject = p.get("subject") || "Subject";
+      const course = p.get("course") || "Course";
+      const year = p.get("year") || "1";
+      const sem = p.get("semester") || "1";
+      document.getElementById("title").textContent = subject + " — Notes";
+      document.getElementById("info").textContent = `${course} • ${year}${year == 1 ? "st" : year == 2 ? "nd" : year == 3 ? "rd" : "th"} Year • Semester ${sem}`;
+
+
+      window.openUnit = function (unit) {
+        const url = `unit.html?subject=${encodeURIComponent(subject)}&course=${encodeURIComponent(course)}&year=${encodeURIComponent(year)}&semester=${encodeURIComponent(sem)}&unit=${unit}`;
+        location.href = url;
+      }
+
+      function renderUnits() {
+        const box = document.getElementById('unitsContainer');
+        box.innerHTML = '';
+        for (let i = 1; i <= 4; i++) {
+          const card = document.createElement('div');
+          card.className = 'unit';
+          card.innerHTML = `
+      <h2>Unit ${i}</h2>
+      <p>Open Unit ${i} to view available PDF notes and study material.</p>
+      <button onclick="openUnit(${i})" style="margin-top:15px;border:0;background:#123c69;color:#fff;padding:11px 16px;border-radius:8px;font-weight:700;cursor:pointer">Open Unit ${i} →</button>
+    `;
+          box.appendChild(card);
+        }
+      }
+
+      renderUnits();
+    })();
+  </script>
+</body>
+
+</html>

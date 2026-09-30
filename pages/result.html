@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result | IGTR Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f4f7fb;
+            color: #1e293b;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid #64748b;
+            padding: 9px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
+
+        .hero h1 {
+            font-size: 35px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #64748b;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 90%;
+            max-width: 1050px;
+            margin: auto;
+            padding-bottom: 60px;
+        }
+
+        /* SELECTION INFO */
+
+        .selection-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .selection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .selection-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 9px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .selection-box small {
+            display: block;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        .selection-box strong {
+            color: #0f172a;
+        }
+
+        /* SEARCH */
+
+        .search-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .search-card h2 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .search-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 12px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 13px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .search-box input:focus {
+            border-color: #38bdf8;
+        }
+
+        .search-btn {
+            padding: 13px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #0f172a;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #0284c7;
+        }
+
+        /* STUDENTS */
+
+        .students-section {
+            margin-top: 25px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .students-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .student-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .student {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .student:hover {
+            background: #f8fafc;
+            border-color: #38bdf8;
+        }
+
+        .student-info h3 {
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+
+        .student-info span {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .view-btn {
+            border: none;
+            background: #0f172a;
+            color: white;
+            padding: 9px 16px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .view-btn:hover {
+            background: #0284c7;
+        }
+
+        .not-found {
+            text-align: center;
+            color: #64748b;
+            padding: 25px;
+            display: none;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .selection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-btn {
+                width: 100%;
+            }
+
+            .student {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .view-btn {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            IGTR <span>Student Hub</span>
+        </div>
+
+        <a href="javascript:history.back()" class="back-btn">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>Student Result</h1>
+
+        <p>
+            Search student to view semester result
+        </p>
+
+    </section>
+
+
+    <main class="container">
+
+
+        <!-- SELECTED COURSE/BATCH/SEMESTER -->
+
+        <section class="selection-card">
+
+            <div class="selection-grid">
+
+                <div class="selection-box">
+
+                    <small>Course</small>
+
+                    <strong id="courseName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="selection-box">
+
+                    <small>Batch</small>
+
+                    <strong id="batchName">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="selection-box">
+
+                    <small>Semester</small>
+
+                    <strong id="semesterName">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-card">
+
+            <h2>
+                Search Student Result
+            </h2>
+
+            <p>
+                Enter the student's Roll Number
+            </p>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="rollInput"
+                    placeholder="Enter Roll Number"
+                    autocomplete="off"
+                >
+
+                <button
+                    class="search-btn"
+                    onclick="searchStudent()"
+                >
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDENT LIST -->
+
+        <section class="students-section">
+
+            <h2>
+                Students
+            </h2>
+
+            <div
+                class="student-list"
+                id="studentList"
+            ></div>
+
+            <div
+                class="not-found"
+                id="notFound"
+            >
+                No student found for this Roll Number.
+            </div>
+
+        </section>
+
+    </main>
+
+
+   <script>
+
+    /* --------------------------------
+       URL DATA
+    -------------------------------- */
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const course =
+        normalizeCourse(params.get("course"));
+
+    const batch =
+        (params.get("batch") || "").trim();
+
+    const semester =
+        (params.get("semester") || "").trim();
+
+
+    console.log("URL DATA:", {
+        course,
+        batch,
+        semester
+    });
+
+
+function normalizeCourse(value) {
+        const v = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+        if (v === "computer" || v.includes("computer science")) return "computer";
+        if (v === "mechatronics" || v.includes("mechatronics")) return "mechatronics";
+        if (v === "tool" || v.includes("advanced tool") || v.includes("tool & die") || v.includes("tool and die")) return "tool";
+        if (v === "vocational" || v.includes("vocational")) return "vocational";
+        return v;
+    }
+
+    /* --------------------------------
+       COURSE NAMES
+    -------------------------------- */
+
+    const courseNames = {
+
+        computer:
+            "Diploma in Computer Science",
+
+        mechatronics:
+            "Diploma in Mechatronics",
+
+        tool:
+            "Diploma in Advanced Tool & Die Making",
+
+        vocational:
+            "Diploma in Vocational"
+
+    };
+
+
+    /* --------------------------------
+       BATCH NAME
+    -------------------------------- */
+
+    function getBatchName(batch) {
+
+        if (!batch) return "-";
+
+        if (batch === "1") return "1st Batch";
+        if (batch === "2") return "2nd Batch";
+        if (batch === "3") return "3rd Batch";
+
+        return batch + "th Batch";
+
+    }
+
+
+    /* --------------------------------
+       SEMESTER NAME
+    -------------------------------- */
+
+    function getSemesterName(semester) {
+
+        if (!semester) return "-";
+
+        if (semester === "1") return "1st Semester";
+        if (semester === "2") return "2nd Semester";
+        if (semester === "3") return "3rd Semester";
+
+        return semester + "th Semester";
+
+    }
+
+
+    /* --------------------------------
+       SHOW SELECTION
+    -------------------------------- */
+
+    document.getElementById("courseName").innerText =
+        courseNames[course] || "Unknown Course";
+
+    document.getElementById("batchName").innerText =
+        getBatchName(batch);
+
+    document.getElementById("semesterName").innerText =
+        getSemesterName(semester);
+
+
+    /* --------------------------------
+       STUDENT DATABASE
+    -------------------------------- */
+
+    let students = [];
+
+
+    /* --------------------------------
+       LOAD STUDENTS FROM JSON
+    -------------------------------- */
+
+    async function loadStudents() {
+
+        try {
+
+            const response =
+                await fetch("../data/results.json?time=" + Date.now());
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "results.json not found. Status: " +
+                    response.status
+                );
+
+            }
+
+
+            let data =
+                await response.json();
+
+
+            console.log(
+                "RAW RESULTS DATA:",
+                data
+            );
+
+
+            /*
+               SAFETY FIX
+
+               Agar accidentally results.json
+               me nested array hai, to usko
+               automatically flat kar denge.
+            */
+
+            students =
+                Array.isArray(data)
+                    ? data.flat(Infinity)
+                    : [];
+
+
+            /*
+               Sirf objects ko student data
+               maanenge.
+            */
+
+            students =
+                students.filter(function (student) {
+
+                    return (
+                        student &&
+                        typeof student === "object" &&
+                        !Array.isArray(student)
+                    );
+
+                });
+
+
+            console.log(
+                "TOTAL STUDENTS:",
+                students.length
+            );
+
+
+            console.log(
+                "1ST SEMESTER DATA:",
+                students.filter(function (student) {
+
+                    return (
+                        String(student.course).trim().toLowerCase() === "computer" &&
+                        String(student.batch).trim() === "5" &&
+                        String(student.semester).trim() === "1"
+                    );
+
+                })
+            );
+
+
+            displayStudents();
+
+        }
+
+
+        catch (error) {
+
+            console.error(
+                "RESULT DATA ERROR:",
+                error
+            );
+
+
+            document.getElementById("studentList")
+                .innerHTML = "";
+
+
+            const notFound =
+                document.getElementById("notFound");
+
+
+            notFound.style.display =
+                "block";
+
+
+            notFound.textContent =
+                "Result data load nahi hua. Check console.";
+
+        }
+
+    }
+
+
+    /* --------------------------------
+       DISPLAY STUDENTS
+    -------------------------------- */
+
+    function displayStudents() {
+
+        const list =
+            document.getElementById("studentList");
+
+
+        const notFound =
+            document.getElementById("notFound");
+
+
+        list.innerHTML = "";
+
+
+        notFound.style.display =
+            "none";
+
+
+        /* --------------------------------
+           FILTER
+        -------------------------------- */
+
+        const filtered =
+            students.filter(function (student) {
+
+                const studentCourse =
+                    String(student.course || "")
+                        .trim()
+                        .toLowerCase();
+
+
+                const studentBatch =
+                    String(student.batch || "")
+                        .trim();
+
+
+                const studentSemester =
+                    String(student.semester || "")
+                        .trim();
+
+
+                return (
+
+                    normalizeCourse(student.course) ===
+                    course
+
+                    &&
+
+                    studentBatch ===
+                    batch
+
+                    &&
+
+                    studentSemester ===
+                    semester
+
+                );
+
+            });
+
+
+        console.log(
+            "FILTER DETAILS:",
+            {
+                selectedCourse: course,
+                selectedBatch: batch,
+                selectedSemester: semester
+            }
+        );
+
+
+        console.log(
+            "FILTERED STUDENTS:",
+            filtered
+        );
+
+
+        /* --------------------------------
+           CREATE STUDENT CARDS
+        -------------------------------- */
+
+        filtered.forEach(function (student) {
+
+            const div =
+                document.createElement("div");
+
+
+            div.className =
+                "student";
+
+
+            div.innerHTML = `
+
+                <div class="student-info">
+
+                    <h3>
+                        ${student.name || "Student"}
+                    </h3>
+
+                    <span>
+                        Roll Number: ${student.roll}
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="view-btn"
+                    onclick="viewResult('${student.roll}')"
+                >
+                    View Result
+                </button>
+
+            `;
+
+
+            list.appendChild(div);
+
+        });
+
+
+        /* --------------------------------
+           NO STUDENT FOUND
+        -------------------------------- */
+
+        if (filtered.length === 0) {
+
+            notFound.style.display =
+                "block";
+
+            notFound.textContent =
+                "No students found for the selected Course, Batch and Semester.";
+
+        }
+
+    }
+
+
+    /* --------------------------------
+       SEARCH STUDENT
+    -------------------------------- */
+
+    function searchStudent() {
+
+        const roll =
+            document.getElementById("rollInput")
+                .value
+                .trim();
+
+
+        const list =
+            document.getElementById("studentList");
+
+
+        const notFound =
+            document.getElementById("notFound");
+
+
+        /* EMPTY ROLL */
+
+        if (!roll) {
+
+            alert(
+                "Please enter Roll Number."
+            );
+
+            return;
+
+        }
+
+
+        /* --------------------------------
+           FIND STUDENT
+        -------------------------------- */
+
+        const student =
+            students.find(function (item) {
+
+                return (
+
+                    String(item.roll || "")
+                        .trim() === roll
+
+                    &&
+
+                    String(item.course || "")
+                        .trim()
+                        .toLowerCase() ===
+                    course.toLowerCase()
+
+                    &&
+
+                    String(item.batch || "")
+                        .trim() === batch
+
+                    &&
+
+                    String(item.semester || "")
+                        .trim() === semester
+
+                );
+
+            });
+
+
+        /* CLEAR */
+
+        list.innerHTML = "";
+
+
+        /* NOT FOUND */
+
+        if (!student) {
+
+            notFound.style.display =
+                "block";
+
+            notFound.textContent =
+                "No student found for Roll Number " +
+                roll;
+
+
+            console.log(
+                "SEARCH NOT FOUND:",
+                {
+                    roll,
+                    course,
+                    batch,
+                    semester
+                }
+            );
+
+
+            return;
+
+        }
+
+
+        /* FOUND */
+
+        notFound.style.display =
+            "none";
+
+
+        const div =
+            document.createElement("div");
+
+
+        div.className =
+            "student";
+
+
+        div.innerHTML = `
+
+            <div class="student-info">
+
+                <h3>
+                    ${student.name || "Student"}
+                </h3>
+
+                <span>
+                    Roll Number: ${student.roll}
+                </span>
+
+            </div>
+
+
+            <button
+                class="view-btn"
+                onclick="viewResult('${student.roll}')"
+            >
+                View Result
+            </button>
+
+        `;
+
+
+        list.appendChild(div);
+
+    }
+
+
+    /* --------------------------------
+       OPEN MARKSHEET
+    -------------------------------- */
+
+    function viewResult(roll) {
+
+        window.location.href =
+
+            "marksheet.html" +
+
+            "?course=" +
+            encodeURIComponent(course) +
+
+            "&batch=" +
+            encodeURIComponent(batch) +
+
+            "&semester=" +
+            encodeURIComponent(semester) +
+
+            "&roll=" +
+            encodeURIComponent(roll);
+
+    }
+
+
+    /* --------------------------------
+       INITIAL LOAD
+    -------------------------------- */
+
+    loadStudents();
+
+</script>
+</body>
+</html>

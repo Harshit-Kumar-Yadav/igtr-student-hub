@@ -1,0 +1,4427 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Attendance Management | IGTR Student Hub
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        body {
+            background: #f4f7fb;
+            color: #172033;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================== */
+
+        .top {
+            background: #0b1220;
+            color: #cbd5e1;
+            padding: 11px 5%;
+            font-size: 12px;
+
+            display: flex;
+            justify-content:
+                space-between;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .nav {
+            background: #ffffff;
+            border-bottom:
+                1px solid #e5e7eb;
+
+            padding: 14px 5%;
+
+            display: flex;
+            justify-content:
+                space-between;
+            align-items:
+                center;
+
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            text-decoration: none;
+            color: #172033;
+
+            font-weight: 800;
+        }
+
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 10px;
+
+            background: #123c69;
+            color: #ffffff;
+
+            display: grid;
+            place-items: center;
+        }
+
+
+        .navlinks {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+
+        .navlinks a,
+        .navlinks button {
+
+            background: #f1f5f9;
+            color: #123c69;
+
+            padding: 9px 12px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            border: 0;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           MAIN WRAPPER
+        ========================== */
+
+        .wrap {
+            width: min(1200px, 92%);
+            margin: 30px auto;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #102d4d,
+                    #123c69,
+                    #18578e
+                );
+
+            color: #ffffff;
+
+            padding: 32px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 30px
+                rgba(
+                    15,
+                    23,
+                    42,
+                    .12
+                );
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero .eyebrow {
+
+            font-size: 11px;
+
+            letter-spacing: 1.6px;
+
+            color: #b9dcfb;
+
+            font-weight: 800;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(
+                    28px,
+                    4vw,
+                    42px
+                );
+
+            margin: 9px 0;
+        }
+
+
+        .hero p {
+
+            color: #dbeafe;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap: 14px;
+        }
+
+
+        .stat {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 14px;
+
+            padding: 18px;
+        }
+
+
+        .stat span {
+
+            display: block;
+
+            color: #64748b;
+
+            font-size: 12px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .stat b {
+
+            font-size: 25px;
+
+            color: #123c69;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        .section {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            margin-top: 20px;
+        }
+
+
+        .section h2 {
+
+            font-size: 20px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .muted {
+
+            color: #64748b;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           FORM
+        ========================== */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 14px;
+
+            margin-top: 18px;
+        }
+
+
+        .field label {
+
+            display: block;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            color: #475569;
+
+            margin-bottom: 7px;
+        }
+
+
+        .field input,
+        .field select {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border:
+                1px solid #dbe2ea;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            background: #ffffff;
+        }
+
+
+        .field input:focus,
+        .field select:focus {
+
+            border-color: #123c69;
+        }
+
+
+        /* =========================
+           ACTIONS
+        ========================== */
+
+        .actions {
+
+            display: flex;
+
+            gap: 9px;
+
+            flex-wrap: wrap;
+
+            margin-top: 17px;
+        }
+
+
+        .btn {
+
+            border: 0;
+
+            background: #123c69;
+
+            color: #ffffff;
+
+            padding:
+                10px 15px;
+
+            border-radius: 8px;
+
+            font-weight: 800;
+
+            font-size: 12px;
+
+            cursor: pointer;
+        }
+
+
+        .btn.secondary {
+
+            background: #eaf2fb;
+
+            color: #123c69;
+        }
+
+
+        .btn.light {
+
+            background: #f8fafc;
+
+            color: #334155;
+
+            border:
+                1px solid #e5e7eb;
+        }
+
+
+        .btn:disabled {
+
+            opacity: .55;
+
+            cursor: not-allowed;
+        }
+
+
+        /* =========================
+           ALERT
+        ========================== */
+
+        .alert {
+
+            margin-top: 15px;
+
+            padding: 11px;
+
+            border-radius: 9px;
+
+            font-size: 12px;
+
+            display: none;
+        }
+
+
+        .alert.ok {
+
+            display: block;
+
+            background: #ecfdf3;
+
+            color: #166534;
+
+            border:
+                1px solid #bbf7d0;
+        }
+
+
+        .alert.err {
+
+            display: block;
+
+            background: #fff1f2;
+
+            color: #9f1239;
+
+            border:
+                1px solid #fecdd3;
+        }
+
+
+        /* =========================
+           ATTENDANCE SUMMARY
+        ========================== */
+
+        .summary {
+
+            margin-top: 18px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 12px;
+        }
+
+
+        .summary-box {
+
+            padding: 15px;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 12px;
+
+            background: #f8fafc;
+        }
+
+
+        .summary-box span {
+
+            display: block;
+
+            color: #64748b;
+
+            font-size: 11px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .summary-box strong {
+
+            font-size: 21px;
+
+            color: #123c69;
+        }
+
+
+        /* =========================
+           TABLE
+        ========================== */
+
+        .table-wrap {
+
+            overflow: auto;
+
+            margin-top: 18px;
+        }
+
+
+        .table {
+
+            width: 100%;
+
+            border-collapse:
+                collapse;
+
+            font-size: 13px;
+        }
+
+
+        .table th,
+        .table td {
+
+            padding: 12px;
+
+            border-bottom:
+                1px solid #e8edf2;
+
+            text-align: left;
+
+            white-space:
+                nowrap;
+        }
+
+
+        .table th {
+
+            background: #f8fafc;
+
+            color: #334155;
+        }
+
+
+        .row-status {
+
+            display: flex;
+
+            gap: 7px;
+        }
+
+
+        .status-btn {
+
+            border:
+                1px solid #dbe2ea;
+
+            background: #ffffff;
+
+            color: #475569;
+
+            padding: 7px 12px;
+
+            border-radius: 8px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+
+        .status-btn.active-present {
+
+            background: #e8f7ee;
+
+            border-color: #78c894;
+
+            color: #176b35;
+        }
+
+
+        .status-btn.active-absent {
+
+            background: #fff0f0;
+
+            border-color: #f0a0a0;
+
+            color: #a51d1d;
+        }
+
+
+        .status-btn.not-marked {
+
+            background: #f8fafc;
+
+            border-color: #cbd5e1;
+
+            color: #64748b;
+        }
+
+
+        /* =========================
+           RECORDS
+        ========================== */
+
+        .record-list {
+
+            display: grid;
+
+            gap: 10px;
+
+            margin-top: 15px;
+        }
+
+
+        .record {
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 11px;
+
+            padding: 14px;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            gap: 15px;
+
+            align-items: center;
+        }
+
+
+        .record-main {
+
+            min-width: 0;
+        }
+
+
+        .record strong {
+
+            font-size: 13px;
+        }
+
+
+        .record span {
+
+            color: #64748b;
+
+            font-size: 11px;
+        }
+
+
+        .record-actions {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            justify-content:
+                flex-end;
+        }
+
+
+        .history-btn {
+
+            border: 0;
+
+            background:
+                #123c69;
+
+            color: #ffffff;
+
+            padding:
+                8px 11px;
+
+            border-radius: 8px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+
+        .history-btn.edit {
+
+            background: #eaf2fb;
+
+            color: #123c69;
+        }
+
+
+        .pill {
+
+            display:
+                inline-block;
+
+            padding:
+                5px 9px;
+
+            border-radius:
+                999px;
+
+            background:
+                #eff6ff;
+
+            color:
+                #1d4ed8;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+        }
+
+
+        /* =========================
+           EMPTY STATE
+        ========================== */
+
+        .empty {
+
+            padding: 34px;
+
+            text-align:
+                center;
+
+            color:
+                #64748b;
+
+            border:
+                1px dashed #cbd5e1;
+
+            border-radius:
+                12px;
+
+            margin-top:
+                15px;
+        }
+
+
+        .empty strong {
+
+            display:
+                block;
+
+            color:
+                #334155;
+
+            margin-bottom:
+                6px;
+        }
+
+
+        /* =========================
+           DETAIL MODAL
+        ========================== */
+
+        .modal {
+
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(
+                    15,
+                    23,
+                    42,
+                    .65
+                );
+
+            z-index: 1000;
+
+            padding: 20px;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .modal.show {
+
+            display: flex;
+        }
+
+
+        .modal-box {
+
+            width:
+                min(
+                    900px,
+                    100%
+                );
+
+            max-height:
+                90vh;
+
+            overflow-y:
+                auto;
+
+            background:
+                #ffffff;
+
+            border-radius:
+                18px;
+
+            box-shadow:
+                0 25px 60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    .25
+                );
+
+            padding:
+                24px;
+        }
+
+
+        .modal-top {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-start;
+
+            gap: 15px;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .modal-top h3 {
+
+            color:
+                #123c69;
+
+            margin-bottom:
+                6px;
+        }
+
+
+        .modal-close {
+
+            width: 34px;
+            height: 34px;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background:
+                #f1f5f9;
+
+            color:
+                #334155;
+
+            font-size:
+                20px;
+
+            cursor: pointer;
+        }
+
+
+        .detail-stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 10px;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .detail-stat {
+
+            padding: 13px;
+
+            background:
+                #f8fafc;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius:
+                11px;
+        }
+
+
+        .detail-stat span {
+
+            display: block;
+
+            font-size: 10px;
+
+            color:
+                #64748b;
+
+            margin-bottom:
+                4px;
+
+            font-weight:
+                700;
+        }
+
+
+        .detail-stat strong {
+
+            font-size:
+                19px;
+
+            color:
+                #123c69;
+        }
+
+
+        .detail-table {
+
+            width: 100%;
+
+            border-collapse:
+                collapse;
+
+            font-size: 13px;
+        }
+
+
+        .detail-table th,
+        .detail-table td {
+
+            padding: 11px;
+
+            border-bottom:
+                1px solid #e8edf2;
+
+            text-align: left;
+        }
+
+
+        .detail-table th {
+
+            background:
+                #f8fafc;
+        }
+
+
+        .status-badge {
+
+            display:
+                inline-block;
+
+            padding:
+                5px 9px;
+
+            border-radius:
+                999px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+        }
+
+
+        .status-badge.present {
+
+            background:
+                #dcfce7;
+
+            color:
+                #166534;
+        }
+
+
+        .status-badge.absent {
+
+            background:
+                #fee2e2;
+
+            color:
+                #991b1b;
+        }
+
+
+        .modal-footer {
+
+            display: flex;
+
+            justify-content:
+                flex-end;
+
+            gap: 8px;
+
+            margin-top:
+                18px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        /* =========================
+           NOTICE BOARD
+        ========================== */
+
+        .notice-section {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e5e7eb;
+
+            border-radius: 15px;
+
+            padding: 22px;
+
+            margin-top: 20px;
+        }
+
+
+        .notice-form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 14px;
+
+            margin-top: 18px;
+        }
+
+
+        .notice-field {
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .notice-field.full {
+
+            grid-column:
+                1 / -1;
+        }
+
+
+        .notice-field label {
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            color: #475569;
+
+            margin-bottom: 7px;
+        }
+
+
+        .notice-field input,
+        .notice-field select,
+        .notice-field textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border:
+                1px solid #dbe2ea;
+
+            border-radius: 9px;
+
+            outline: none;
+
+            background: #ffffff;
+
+            color: #172033;
+        }
+
+
+        .notice-field textarea {
+
+            min-height: 110px;
+
+            resize: vertical;
+        }
+
+
+        .notice-field input:focus,
+        .notice-field select:focus,
+        .notice-field textarea:focus {
+
+            border-color: #123c69;
+        }
+
+
+        .notice-list {
+
+            display: grid;
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+
+        .notice-item {
+
+            border:
+                1px solid #e5e7eb;
+
+            border-left:
+                5px solid #123c69;
+
+            border-radius:
+                11px;
+
+            padding: 16px;
+
+            background:
+                #ffffff;
+        }
+
+
+        .notice-item-top {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-start;
+
+            gap: 12px;
+        }
+
+
+        .notice-item h3 {
+
+            color:
+                #123c69;
+
+            margin-bottom:
+                6px;
+
+            font-size:
+                16px;
+        }
+
+
+        .notice-meta {
+
+            color:
+                #64748b;
+
+            font-size:
+                11px;
+
+            line-height:
+                1.6;
+        }
+
+
+        .notice-category-pill {
+
+            display:
+                inline-block;
+
+            padding:
+                5px 9px;
+
+            border-radius:
+                999px;
+
+            background:
+                #eff6ff;
+
+            color:
+                #1d4ed8;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            white-space:
+                nowrap;
+        }
+
+
+        .notice-message {
+
+            margin-top:
+                10px;
+
+            color:
+                #334155;
+
+            line-height:
+                1.7;
+
+            font-size:
+                12px;
+
+            white-space:
+                pre-wrap;
+        }
+
+
+        .notice-actions {
+
+            display:
+                flex;
+
+            justify-content:
+                flex-end;
+
+            margin-top:
+                12px;
+        }
+
+
+        .notice-delete {
+
+            border:
+                0;
+
+            background:
+                #fff1f2;
+
+            color:
+                #9f1239;
+
+            padding:
+                8px 11px;
+
+            border-radius:
+                8px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                800;
+
+            cursor:
+                pointer;
+        }
+
+
+        .notice-delete:hover {
+
+            background:
+                #ffe4e6;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+
+            text-align:
+                center;
+
+            padding: 28px;
+
+            background:
+                #0b1220;
+
+            color:
+                #94a3b8;
+
+            margin-top:
+                38px;
+
+            font-size:
+                12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width:900px) {
+
+            .stats {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .summary {
+
+                grid-template-columns:
+                    1fr 1fr 1fr;
+            }
+        }
+
+
+        @media(max-width:600px) {
+
+            .nav {
+
+                flex-direction:
+                    column;
+
+                gap: 10px;
+            }
+
+
+            .stats {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .summary {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .form-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .notice-form-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .notice-field.full {
+
+                grid-column:
+                    auto;
+            }
+
+
+            .notice-item-top {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .wrap {
+
+                width:
+                    92%;
+            }
+
+
+            .row-status {
+
+                flex-wrap:
+                    wrap;
+            }
+
+
+            .record {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+
+
+            .record-actions {
+
+                justify-content:
+                    flex-start;
+            }
+
+
+            .detail-stats {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top">
+
+        <span>
+            🎓 IGTR Student Hub
+        </span>
+
+        <span>
+            Daily Attendance Management
+        </span>
+
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="nav">
+
+        <a
+            class="brand"
+            href="../index.html"
+        >
+
+            <span class="brand-icon">
+                IG
+            </span>
+
+            <span>
+                Teacher Attendance
+            </span>
+
+        </a>
+
+
+        <div class="navlinks">
+
+            <a
+                href="teacher-attendance.html"
+            >
+                Attendance
+            </a>
+
+
+            <a href="#notices">
+                Notice Board
+            </a>
+
+
+            <a
+                href="../index.html"
+            >
+                Home
+            </a>
+
+
+            <button
+                type="button"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="wrap">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <span class="eyebrow">
+                AUTHORIZED TEACHER PORTAL
+            </span>
+
+            <h1>
+                Daily Attendance Management 👨‍🏫
+            </h1>
+
+            <p id="teacherInfo">
+                Loading teacher information...
+            </p>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="stat">
+
+                <span>
+                    Assigned Batch
+                </span>
+
+                <b id="assignedBatches">
+                    —
+                </b>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Students
+                </span>
+
+                <b id="studentCount">
+                    —
+                </b>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Today's Record
+                </span>
+
+                <b id="todayMarked">
+                    —
+                </b>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    Attendance Records
+                </span>
+
+                <b id="recordCount">
+                    —
+                </b>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NOTICE BOARD
+        ========================== -->
+
+        <section
+            class="notice-section"
+            id="notices"
+        >
+
+            <h2>
+                📢 Notice Board
+            </h2>
+
+
+            <p class="muted">
+
+                Post important announcements
+                for students.
+
+                Only authorized teachers can
+                create or delete notices.
+
+            </p>
+
+
+            <div class="notice-form-grid">
+
+
+                <!-- TITLE -->
+
+                <div class="notice-field">
+
+                    <label for="noticeTitle">
+
+                        Notice Title
+
+                    </label>
+
+                    <input
+                        id="noticeTitle"
+                        type="text"
+                        placeholder="Enter notice title"
+                    >
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="notice-field">
+
+                    <label for="noticeCategory">
+
+                        Category
+
+                    </label>
+
+                    <select
+                        id="noticeCategory"
+                    >
+
+                        <option value="General">
+                            General
+                        </option>
+
+                        <option value="Exam">
+                            Exam
+                        </option>
+
+                        <option value="Academic">
+                            Academic
+                        </option>
+
+                        <option value="Holiday">
+                            Holiday
+                        </option>
+
+                        <option value="Event">
+                            Event
+                        </option>
+
+                        <option value="Important">
+                            Important
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    class="notice-field full"
+                >
+
+                    <label for="noticeMessage">
+
+                        Notice Message
+
+                    </label>
+
+                    <textarea
+                        id="noticeMessage"
+                        placeholder="Write the notice here..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- POST BUTTON -->
+
+            <div class="actions">
+
+                <button
+                    type="button"
+                    class="btn"
+                    id="postNoticeBtn"
+                    onclick="postNotice()"
+                >
+
+                    📢 Post Notice
+
+                </button>
+
+            </div>
+
+
+            <!-- NOTICE ALERT -->
+
+            <div
+                id="noticeAlert"
+                class="alert"
+            ></div>
+
+
+            <!-- EXISTING NOTICES -->
+
+            <div
+                id="noticeList"
+                class="notice-list"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             MARK ATTENDANCE
+        ========================== -->
+
+        <section class="section">
+
+            <h2>
+                📝 Mark Daily Attendance
+            </h2>
+
+            <p class="muted">
+
+                Attendance is taken once per day.
+                Subject selection is not required.
+                Existing attendance for the selected
+                batch and date will be loaded for correction.
+
+            </p>
+
+
+            <div class="form-grid">
+
+
+                <!-- BATCH -->
+
+                <div class="field">
+
+                    <label for="batch">
+                        Assigned Batch
+                    </label>
+
+                    <select id="batch"></select>
+
+                </div>
+
+
+                <!-- DATE -->
+
+                <div class="field">
+
+                    <label for="date">
+                        Attendance Date
+                    </label>
+
+                    <input
+                        id="date"
+                        type="date"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="actions">
+
+                <button
+                    type="button"
+                    class="btn"
+                    onclick="loadStudents()"
+                >
+                    Load Students
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn secondary"
+                    onclick="markAll('P')"
+                    id="presentAllBtn"
+                    disabled
+                >
+                    Mark All Present
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn light"
+                    onclick="markAll('A')"
+                    id="absentAllBtn"
+                    disabled
+                >
+                    Mark All Absent
+                </button>
+
+
+                <button
+                    type="button"
+                    id="saveBtn"
+                    class="btn"
+                    onclick="saveAttendance()"
+                    disabled
+                >
+                    Save Attendance
+                </button>
+
+            </div>
+
+
+            <!-- ALERT -->
+
+            <div
+                id="alert"
+                class="alert"
+            ></div>
+
+
+            <!-- SUMMARY -->
+
+            <div
+                id="summary"
+                class="summary"
+                style="display:none;"
+            >
+
+                <div class="summary-box">
+
+                    <span>
+                        TOTAL STUDENTS
+                    </span>
+
+                    <strong id="summaryTotal">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-box">
+
+                    <span>
+                        PRESENT
+                    </span>
+
+                    <strong id="summaryPresent">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-box">
+
+                    <span>
+                        ABSENT
+                    </span>
+
+                    <strong id="summaryAbsent">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENTS -->
+
+            <div id="studentsArea"></div>
+
+        </section>
+
+
+        <!-- =========================
+             HISTORY
+        ========================== -->
+
+        <section class="section">
+
+            <h2>
+                🕘 Attendance History
+            </h2>
+
+            <p class="muted">
+
+                Only attendance records belonging
+                to your assigned batch are visible here.
+
+                Use <b>View Details</b> to see
+                individual student attendance.
+
+            </p>
+
+
+            <div
+                id="recordsArea"
+                class="record-list"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         ATTENDANCE DETAILS MODAL
+    ========================== -->
+
+    <div
+        id="detailsModal"
+        class="modal"
+    >
+
+        <div class="modal-box">
+
+            <div class="modal-top">
+
+                <div>
+
+                    <h3>
+                        Attendance Details
+                    </h3>
+
+                    <p
+                        id="detailInfo"
+                        class="muted"
+                    >
+                        Attendance details
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    onclick="closeDetailsModal()"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="detail-stats">
+
+                <div class="detail-stat">
+
+                    <span>
+                        TOTAL STUDENTS
+                    </span>
+
+                    <strong id="detailTotal">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-stat">
+
+                    <span>
+                        PRESENT
+                    </span>
+
+                    <strong id="detailPresent">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-stat">
+
+                    <span>
+                        ABSENT
+                    </span>
+
+                    <strong id="detailAbsent">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrap">
+
+                <table class="detail-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                S.No.
+                            </th>
+
+                            <th>
+                                Roll No.
+                            </th>
+
+                            <th>
+                                Student Name
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="detailsTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn light"
+                    onclick="closeDetailsModal()"
+                >
+                    Close
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn secondary"
+                    id="editAttendanceBtn"
+                    onclick="editSelectedRecord()"
+                >
+                    ✏️ Edit This Attendance
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        © 2026 IGTR Student Hub •
+
+        Teacher Attendance Portal
+
+    </footer>
+
+
+    <!-- TEACHER AUTH -->
+
+    <script src="../js/teacher-auth.js"></script>
+
+
+    <script>
+
+        let teacher = null;
+
+        let students = [];
+
+        let selected = {};
+
+        let attendanceRecords = [];
+
+        let selectedHistoryRecord = null;
+
+
+        /* ==========================================
+           SHORTCUT
+        ========================================== */
+
+        function $(id) {
+
+            return document.getElementById(id);
+
+        }
+
+
+        /* ==========================================
+           ALERT
+        ========================================== */
+
+        function showAlert(
+            message,
+            type
+        ) {
+
+            const alert =
+                $('alert');
+
+
+            alert.className =
+                'alert ' + type;
+
+
+            alert.textContent =
+                message;
+
+        }
+
+
+        /* ==========================================
+           NOTICE ALERT
+        ========================================== */
+
+        function showNoticeAlert(
+            message,
+            type
+        ) {
+
+            const alert =
+                $('noticeAlert');
+
+
+            if (!alert) {
+
+                return;
+
+            }
+
+
+            alert.className =
+                'alert ' + type;
+
+
+            alert.textContent =
+                message;
+
+        }
+
+
+        /* ==========================================
+           NORMALIZE
+        ========================================== */
+
+        function normalize(
+            value
+        ) {
+
+            return String(
+                value ?? ''
+            ).trim();
+
+        }
+
+
+        /* ==========================================
+           LOCAL DATE
+        ========================================== */
+
+        function today() {
+
+            const date =
+                new Date();
+
+
+            const year =
+                date.getFullYear();
+
+
+            const month =
+                String(
+                    date.getMonth() + 1
+                ).padStart(
+                    2,
+                    '0'
+                );
+
+
+            const day =
+                String(
+                    date.getDate()
+                ).padStart(
+                    2,
+                    '0'
+                );
+
+
+            return (
+                year +
+                '-' +
+                month +
+                '-' +
+                day
+            );
+
+        }
+
+
+        /* ==========================================
+           API HELPER
+        ========================================== */
+
+        async function api(
+            path,
+            options = {}
+        ) {
+
+            const response =
+                await fetch(
+                    path,
+                    {
+                        credentials:
+                            'same-origin',
+
+                        cache:
+                            'no-store',
+
+                        ...options
+                    }
+                );
+
+
+            let data = {};
+
+
+            try {
+
+                data =
+                    await response.json();
+
+            } catch (error) {
+
+                data = {};
+
+            }
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.error ||
+                    'Request failed.'
+                );
+
+            }
+
+
+            return data;
+
+        }
+
+
+        /* ==========================================
+           INIT
+        ========================================== */
+
+        async function init() {
+
+            try {
+
+                teacher =
+                    await requireTeacherLogin(
+                        'teacher-login.html'
+                    );
+
+
+                if (!teacher) {
+
+                    return;
+
+                }
+
+
+                const batches =
+
+                    Array.isArray(
+                        teacher.batches
+                    )
+
+                        ? teacher.batches
+                        : [];
+
+
+                $('teacherInfo')
+                    .textContent =
+
+                    teacher.name +
+                    ' • ' +
+                    teacher.username +
+                    ' • Diploma in Computer Science' +
+                    ' • Assigned Batch: ' +
+                    (
+                        batches.join(', ')
+                        || '—'
+                    );
+
+
+                $('assignedBatches')
+                    .textContent =
+                    batches.join(', ')
+                    || '—';
+
+
+                $('date')
+                    .value =
+                    today();
+
+
+                $('batch')
+                    .innerHTML =
+
+                    batches
+                        .map(
+                            batch =>
+                                `
+                                <option value="${escapeHtml(
+                                    batch
+                                )}">
+                                    CS Batch ${escapeHtml(
+                                        batch
+                                    )}
+                                </option>
+                                `
+                        )
+                        .join('');
+
+
+                $('batch')
+                    .addEventListener(
+                        'change',
+                        async () => {
+
+                            await loadStudents();
+
+                            await loadRecords();
+
+                        }
+                    );
+
+
+                await loadStudents();
+
+                await loadRecords();
+
+
+                /* =====================================
+                   IMPORTANT:
+                   Existing notices load after
+                   every fresh teacher login.
+                ====================================== */
+
+                await loadTeacherNotices();
+
+
+            } catch (error) {
+
+                console.error(
+                    'Initialization error:',
+                    error
+                );
+
+            }
+
+        }
+
+
+        /* ==========================================
+           LOAD TEACHER NOTICES
+        ========================================== */
+
+        async function loadTeacherNotices() {
+
+            const list =
+                $('noticeList');
+
+
+            if (!list) {
+
+                return;
+
+            }
+
+
+            list.innerHTML =
+
+                `
+                <div class="empty">
+
+                    Loading notices...
+
+                </div>
+                `;
+
+
+            try {
+
+                const data =
+                    await api(
+                        '/api/notices'
+                    );
+
+
+                const notices =
+
+                    Array.isArray(
+                        data.notices
+                    )
+                        ? data.notices
+                        : [];
+
+
+                if (!notices.length) {
+
+                    list.innerHTML =
+
+                        `
+                        <div class="empty">
+
+                            <strong>
+                                No notices posted yet.
+                            </strong>
+
+                            Create the first notice above.
+
+                        </div>
+                        `;
+
+                    return;
+
+                }
+
+
+                list.innerHTML =
+
+                    notices
+                        .map(
+                            notice => {
+
+                                const noticeId =
+                                    String(
+                                        notice.id || ''
+                                    );
+
+
+                                return `
+
+                                    <div
+                                        class="notice-item"
+                                    >
+
+                                        <div
+                                            class="notice-item-top"
+                                        >
+
+                                            <div>
+
+                                                <h3>
+
+                                                    ${escapeHtml(
+                                                        notice.title ||
+                                                        'Notice'
+                                                    )}
+
+                                                </h3>
+
+
+                                                <div
+                                                    class="notice-meta"
+                                                >
+
+                                                    ${escapeHtml(
+                                                        notice.date ||
+                                                        ''
+                                                    )}
+
+                                                    • Posted by:
+
+                                                    ${escapeHtml(
+                                                        notice.postedBy ||
+                                                        'Teacher'
+                                                    )}
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <span
+                                                class="notice-category-pill"
+                                            >
+
+                                                ${escapeHtml(
+                                                    notice.category ||
+                                                    'General'
+                                                )}
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div
+                                            class="notice-message"
+                                        >
+
+                                            ${escapeHtml(
+                                                notice.message ||
+                                                ''
+                                            )}
+
+                                        </div>
+
+
+                                        <div
+                                            class="notice-actions"
+                                        >
+
+                                            <button
+                                                type="button"
+                                                class="notice-delete"
+                                                data-notice-id="${escapeHtml(
+                                                    noticeId
+                                                )}"
+                                                onclick="deleteNoticeFromButton(this)"
+                                            >
+
+                                                🗑 Delete Notice
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                `;
+
+                            }
+                        )
+                        .join('');
+
+
+            } catch (error) {
+
+                console.error(
+                    'Notice loading error:',
+                    error
+                );
+
+
+                list.innerHTML =
+
+                    `
+                    <div class="empty">
+
+                        <strong>
+
+                            Unable to load notices.
+
+                        </strong>
+
+                        ${escapeHtml(
+                            error.message ||
+                            'Please try again.'
+                        )}
+
+                    </div>
+                    `;
+
+            }
+
+        }
+
+
+        /* ==========================================
+           DELETE BUTTON HANDLER
+        ========================================== */
+
+        function deleteNoticeFromButton(
+            button
+        ) {
+
+            const noticeId =
+                button
+                    .getAttribute(
+                        'data-notice-id'
+                    );
+
+
+            if (!noticeId) {
+
+                showNoticeAlert(
+                    'Invalid notice ID.',
+                    'err'
+                );
+
+                return;
+
+            }
+
+
+            deleteNotice(
+                noticeId
+            );
+
+        }
+
+
+        /* ==========================================
+           POST NOTICE
+        ========================================== */
+
+        async function postNotice() {
+
+            const title =
+
+                normalize(
+                    $('noticeTitle').value
+                );
+
+
+            const category =
+
+                normalize(
+                    $('noticeCategory').value
+                )
+                ||
+                'General';
+
+
+            const message =
+
+                normalize(
+                    $('noticeMessage').value
+                );
+
+
+            if (!title) {
+
+                showNoticeAlert(
+                    'Please enter a notice title.',
+                    'err'
+                );
+
+                $('noticeTitle').focus();
+
+                return;
+
+            }
+
+
+            if (!message) {
+
+                showNoticeAlert(
+                    'Please enter the notice message.',
+                    'err'
+                );
+
+                $('noticeMessage').focus();
+
+                return;
+
+            }
+
+
+            const button =
+                $('postNoticeBtn');
+
+
+            button.disabled =
+                true;
+
+
+            button.textContent =
+                'Posting...';
+
+
+            try {
+
+                const data =
+
+                    await api(
+                        '/api/teacher/notices',
+                        {
+
+                            method:
+                                'POST',
+
+                            headers: {
+
+                                'Content-Type':
+                                    'application/json'
+
+                            },
+
+                            body:
+                                JSON.stringify(
+                                    {
+                                        title,
+                                        category,
+                                        message
+                                    }
+                                )
+
+                        }
+                    );
+
+
+                showNoticeAlert(
+                    data.message ||
+                    'Notice posted successfully.',
+                    'ok'
+                );
+
+
+                $('noticeTitle')
+                    .value = '';
+
+
+                $('noticeMessage')
+                    .value = '';
+
+
+                $('noticeCategory')
+                    .value =
+                    'General';
+
+
+                /* Refresh notice list */
+
+                await loadTeacherNotices();
+
+
+            } catch (error) {
+
+                console.error(
+                    'Notice posting error:',
+                    error
+                );
+
+
+                showNoticeAlert(
+                    error.message ||
+                    'Unable to post notice.',
+                    'err'
+                );
+
+
+            } finally {
+
+                button.disabled =
+                    false;
+
+
+                button.textContent =
+                    '📢 Post Notice';
+
+            }
+
+        }
+
+
+        /* ==========================================
+           DELETE NOTICE
+        ========================================== */
+
+        async function deleteNotice(
+            noticeId
+        ) {
+
+            noticeId =
+                normalize(
+                    noticeId
+                );
+
+
+            if (!noticeId) {
+
+                showNoticeAlert(
+                    'Invalid notice ID.',
+                    'err'
+                );
+
+                return;
+
+            }
+
+
+            const confirmed =
+                window.confirm(
+                    'Are you sure you want to delete this notice?'
+                );
+
+
+            if (!confirmed) {
+
+                return;
+
+            }
+
+
+            try {
+
+                const data =
+                    await api(
+                        '/api/teacher/notices?id=' +
+                        encodeURIComponent(
+                            noticeId
+                        ),
+                        {
+                            method:
+                                'DELETE'
+                        }
+                    );
+
+
+                showNoticeAlert(
+                    data.message ||
+                    'Notice deleted successfully.',
+                    'ok'
+                );
+
+
+                /* Refresh the notice list */
+
+                await loadTeacherNotices();
+
+
+            } catch (error) {
+
+                console.error(
+                    'Notice deletion error:',
+                    error
+                );
+
+
+                showNoticeAlert(
+                    error.message ||
+                    'Unable to delete notice.',
+                    'err'
+                );
+
+            }
+
+        }
+
+
+        /* ==========================================
+           LOAD STUDENTS
+        ========================================== */
+
+        async function loadStudents() {
+
+            const batch =
+                normalize(
+                    $('batch').value
+                );
+
+
+            const date =
+                $('date').value;
+
+
+            if (!batch) {
+
+                return;
+
+            }
+
+
+            try {
+
+                const data =
+                    await api(
+                        '/api/teacher/students?batch=' +
+                        encodeURIComponent(
+                            batch
+                        )
+                    );
+
+
+                students =
+                    Array.isArray(
+                        data.students
+                    )
+
+                        ? data.students
+                        : [];
+
+
+                selected = {};
+
+
+                /* New attendance starts as NOT MARKED */
+
+                students.forEach(
+                    student => {
+
+                        selected[
+                            String(
+                                student.rollNo
+                            )
+                        ] = '';
+
+                    }
+                );
+
+
+                /* Load existing attendance */
+
+                if (date) {
+
+                    try {
+
+                        const existing =
+                            await api(
+                                '/api/teacher/attendance?batch=' +
+                                encodeURIComponent(
+                                    batch
+                                ) +
+                                '&date=' +
+                                encodeURIComponent(
+                                    date
+                                )
+                            );
+
+
+                        if (
+                            existing.record &&
+                            existing.record.entries
+                        ) {
+
+                            Object.entries(
+                                existing.record.entries
+                            )
+                            .forEach(
+                                (
+                                    [
+                                        roll,
+                                        status
+                                    ]
+                                ) => {
+
+                                    selected[
+                                        String(roll)
+                                    ] =
+                                        status;
+
+                                }
+                            );
+
+
+                            showAlert(
+                                'Existing attendance loaded. You can correct it and save again.',
+                                'ok'
+                            );
+
+                        }
+
+
+                    } catch (error) {
+
+                        /* No existing attendance is okay */
+
+                    }
+
+                }
+
+
+                $('studentCount')
+                    .textContent =
+                    students.length;
+
+
+                const hasStudents =
+                    students.length > 0;
+
+
+                $('saveBtn')
+                    .disabled =
+                    !hasStudents;
+
+
+                $('presentAllBtn')
+                    .disabled =
+                    !hasStudents;
+
+
+                $('absentAllBtn')
+                    .disabled =
+                    !hasStudents;
+
+
+                renderStudents();
+
+                updateSummary();
+
+
+            } catch (error) {
+
+                students = [];
+
+                selected = {};
+
+
+                $('studentCount')
+                    .textContent =
+                    '0';
+
+
+                $('saveBtn')
+                    .disabled =
+                    true;
+
+
+                $('presentAllBtn')
+                    .disabled =
+                    true;
+
+
+                $('absentAllBtn')
+                    .disabled =
+                    true;
+
+
+                $('summary')
+                    .style.display =
+                    'none';
+
+
+                showAlert(
+                    error.message ||
+                    'Unable to load students.',
+                    'err'
+                );
+
+
+                renderStudents();
+
+            }
+
+        }
+
+
+        /* ==========================================
+           RENDER STUDENTS
+        ========================================== */
+
+        function renderStudents() {
+
+            if (
+                !students.length
+            ) {
+
+                $('studentsArea')
+                    .innerHTML =
+
+                    `
+                    <div class="empty">
+
+                        <strong>
+                            No students found for this batch.
+                        </strong>
+
+                        No student records are currently
+                        mapped to this batch.
+
+                    </div>
+                    `;
+
+                return;
+
+            }
+
+
+            $('studentsArea')
+                .innerHTML =
+
+                `
+                <div class="table-wrap">
+
+                    <table class="table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    S.No.
+                                </th>
+
+                                <th>
+                                    Roll No.
+                                </th>
+
+                                <th>
+                                    Student Name
+                                </th>
+
+                                <th>
+                                    Attendance
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            ${
+                                students
+                                    .map(
+                                        (
+                                            student,
+                                            index
+                                        ) => {
+
+                                            const roll =
+                                                String(
+                                                    student.rollNo
+                                                );
+
+
+                                            const status =
+                                                selected[
+                                                    roll
+                                                ] || '';
+
+
+                                            return `
+
+                                                <tr>
+
+                                                    <td>
+                                                        ${index + 1}
+                                                    </td>
+
+
+                                                    <td>
+
+                                                        <strong>
+                                                            ${escapeHtml(
+                                                                roll
+                                                            )}
+                                                        </strong>
+
+                                                    </td>
+
+
+                                                    <td>
+
+                                                        ${escapeHtml(
+                                                            student.name ||
+                                                            '—'
+                                                        )}
+
+                                                    </td>
+
+
+                                                    <td>
+
+                                                        <div
+                                                            class="row-status"
+                                                        >
+
+                                                            <button
+                                                                type="button"
+
+                                                                class="status-btn ${
+                                                                    status === 'P'
+                                                                        ? 'active-present'
+                                                                        : 'not-marked'
+                                                                }"
+
+                                                                onclick="setStatus(
+                                                                    '${escapeJs(
+                                                                        roll
+                                                                    )}',
+                                                                    'P'
+                                                                )"
+                                                            >
+
+                                                                Present
+
+                                                            </button>
+
+
+                                                            <button
+                                                                type="button"
+
+                                                                class="status-btn ${
+                                                                    status === 'A'
+                                                                        ? 'active-absent'
+                                                                        : 'not-marked'
+                                                                }"
+
+                                                                onclick="setStatus(
+                                                                    '${escapeJs(
+                                                                        roll
+                                                                    )}',
+                                                                    'A'
+                                                                )"
+                                                            >
+
+                                                                Absent
+
+                                                            </button>
+
+                                                        </div>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            `;
+
+                                        }
+                                    )
+                                    .join('')
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+                `;
+
+        }
+
+
+        /* ==========================================
+           SET STATUS
+        ========================================== */
+
+        function setStatus(
+            roll,
+            status
+        ) {
+
+            selected[
+                String(
+                    roll
+                )
+            ] =
+                status;
+
+
+            renderStudents();
+
+            updateSummary();
+
+        }
+
+
+        /* ==========================================
+           MARK ALL
+        ========================================== */
+
+        function markAll(
+            status
+        ) {
+
+            students.forEach(
+                student => {
+
+                    selected[
+                        String(
+                            student.rollNo
+                        )
+                    ] =
+                        status;
+
+                }
+            );
+
+
+            renderStudents();
+
+            updateSummary();
+
+        }
+
+
+        /* ==========================================
+           SUMMARY
+        ========================================== */
+
+        function updateSummary() {
+
+            if (
+                !students.length
+            ) {
+
+                $('summary')
+                    .style.display =
+                    'none';
+
+                return;
+
+            }
+
+
+            const values =
+                students.map(
+                    student =>
+                        selected[
+                            String(
+                                student.rollNo
+                            )
+                        ] || ''
+                );
+
+
+            const present =
+                values.filter(
+                    status =>
+                        status === 'P'
+                ).length;
+
+
+            const absent =
+                values.filter(
+                    status =>
+                        status === 'A'
+                ).length;
+
+
+            $('summaryTotal')
+                .textContent =
+                students.length;
+
+
+            $('summaryPresent')
+                .textContent =
+                present;
+
+
+            $('summaryAbsent')
+                .textContent =
+                absent;
+
+
+            $('summary')
+                .style.display =
+                'grid';
+
+        }
+
+
+        /* ==========================================
+           SAVE ATTENDANCE
+        ========================================== */
+
+        async function saveAttendance() {
+
+            if (
+                !students.length
+            ) {
+
+                return;
+
+            }
+
+
+            const batch =
+                normalize(
+                    $('batch').value
+                );
+
+
+            const date =
+                normalize(
+                    $('date').value
+                );
+
+
+            /* Make sure every student is marked */
+
+            const missing =
+                students.filter(
+                    student => {
+
+                        const status =
+                            selected[
+                                String(
+                                    student.rollNo
+                                )
+                            ];
+
+
+                        return (
+                            status !== 'P' &&
+                            status !== 'A'
+                        );
+
+                    }
+                );
+
+
+            if (
+                missing.length
+            ) {
+
+                showAlert(
+                    `Please mark attendance for all ${missing.length} remaining student(s).`,
+                    'err'
+                );
+
+                return;
+
+            }
+
+
+            const button =
+                $('saveBtn');
+
+
+            button.disabled =
+                true;
+
+
+            button.textContent =
+                'Saving...';
+
+
+            try {
+
+                const data =
+                    await api(
+                        '/api/teacher/attendance',
+                        {
+                            method:
+                                'POST',
+
+                            headers: {
+
+                                'Content-Type':
+                                    'application/json'
+
+                            },
+
+                            body:
+                                JSON.stringify(
+                                    {
+                                        batch,
+
+                                        date,
+
+                                        entries:
+                                            selected
+                                    }
+                                )
+
+                        }
+                    );
+
+
+                showAlert(
+                    data.message ||
+                    'Attendance saved successfully.',
+                    'ok'
+                );
+
+
+                await loadStudents();
+
+                await loadRecords();
+
+
+                /* Notice reload removed here intentionally */
+
+            } catch (error) {
+
+                showAlert(
+                    error.message ||
+                    'Unable to save attendance.',
+                    'err'
+                );
+
+            } finally {
+
+                button.disabled =
+                    students.length === 0;
+
+
+                button.textContent =
+                    'Save Attendance';
+
+            }
+
+        }
+
+
+        /* ==========================================
+           LOAD HISTORY
+        ========================================== */
+
+        async function loadRecords() {
+
+            const batch =
+                normalize(
+                    $('batch').value
+                );
+
+
+            if (!batch) {
+
+                return;
+
+            }
+
+
+            try {
+
+                const data =
+                    await api(
+                        '/api/teacher/attendance?batch=' +
+                        encodeURIComponent(
+                            batch
+                        )
+                    );
+
+
+                const records =
+                    Array.isArray(
+                        data.records
+                    )
+                        ? data.records
+                        : [];
+
+
+                attendanceRecords =
+                    records;
+
+
+                $('recordCount')
+                    .textContent =
+                    records.length;
+
+
+                const todayRecord =
+                    records.find(
+                        record =>
+                            record.date ===
+                            today()
+                    );
+
+
+                $('todayMarked')
+                    .textContent =
+                    todayRecord
+                        ? 'Saved'
+                        : 'Not Saved';
+
+
+                if (
+                    !records.length
+                ) {
+
+                    $('recordsArea')
+                        .innerHTML =
+
+                        `
+                        <div class="empty">
+
+                            <strong>
+                                No attendance history yet.
+                            </strong>
+
+                            Attendance records for
+                            this batch will appear here.
+
+                        </div>
+                        `;
+
+                    return;
+
+                }
+
+
+                $('recordsArea')
+                    .innerHTML =
+
+                    records
+                        .slice(
+                            0,
+                            20
+                        )
+                        .map(
+                            (
+                                record,
+                                index
+                            ) => {
+
+                                const entries =
+                                    record.entries
+                                    || {};
+
+
+                                const values =
+                                    Object.values(
+                                        entries
+                                    );
+
+
+                                const present =
+                                    values.filter(
+                                        status =>
+                                            status === 'P'
+                                    ).length;
+
+
+                                const absent =
+                                    values.filter(
+                                        status =>
+                                            status === 'A'
+                                    ).length;
+
+
+                                const total =
+                                    values.length;
+
+
+                                return `
+
+                                    <div class="record">
+
+                                        <div class="record-main">
+
+                                            <strong>
+                                                ${escapeHtml(
+                                                    record.date
+                                                )}
+                                            </strong>
+
+                                            <br>
+
+                                            <span>
+
+                                                Marked by:
+                                                ${escapeHtml(
+                                                    record.markedByName ||
+                                                    record.markedBy ||
+                                                    'Teacher'
+                                                )}
+
+                                                •
+
+                                                ${present}
+                                                Present
+
+                                                •
+
+                                                ${absent}
+                                                Absent
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="record-actions">
+
+                                            <span class="pill">
+
+                                                ${total}
+                                                Students
+
+                                            </span>
+
+
+                                            <button
+                                                type="button"
+
+                                                class="history-btn"
+
+                                                onclick="viewRecordDetails(
+                                                    ${index}
+                                                )"
+                                            >
+
+                                                👁 View Details
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+
+                                                class="history-btn edit"
+
+                                                onclick="openRecordForEdit(
+                                                    ${index}
+                                                )"
+                                            >
+
+                                                ✏️ Edit
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                `;
+
+                            }
+                        )
+                        .join('');
+
+
+            } catch (error) {
+
+                $('recordCount')
+                    .textContent =
+                    '—';
+
+
+                $('todayMarked')
+                    .textContent =
+                    '—';
+
+
+                $('recordsArea')
+                    .innerHTML =
+
+                    `
+                    <div class="empty">
+
+                        Unable to load attendance history.
+
+                    </div>
+                    `;
+
+            }
+
+        }
+
+
+        /* ==========================================
+           VIEW RECORD DETAILS
+        ========================================== */
+
+        function viewRecordDetails(
+            index
+        ) {
+
+            const record =
+                attendanceRecords[index];
+
+
+            if (!record) {
+
+                return;
+
+            }
+
+
+            selectedHistoryRecord =
+                record;
+
+
+            const entries =
+                record.entries
+                || {};
+
+
+            const values =
+                Object.values(
+                    entries
+                );
+
+
+            const present =
+                values.filter(
+                    status =>
+                        status === 'P'
+                ).length;
+
+
+            const absent =
+                values.filter(
+                    status =>
+                        status === 'A'
+                ).length;
+
+
+            $('detailInfo')
+                .textContent =
+
+                `Date: ${record.date} • CS Batch ${
+                    record.batch ||
+                    $('batch').value
+                } • Marked by: ${
+                    record.markedByName ||
+                    record.markedBy ||
+                    'Teacher'
+                }`;
+
+
+            $('detailTotal')
+                .textContent =
+                values.length;
+
+
+            $('detailPresent')
+                .textContent =
+                present;
+
+
+            $('detailAbsent')
+                .textContent =
+                absent;
+
+
+            /* Create student map */
+
+            const studentMap =
+                {};
+
+
+            students.forEach(
+                student => {
+
+                    studentMap[
+                        String(
+                            student.rollNo
+                        )
+                    ] =
+                        student;
+
+                }
+            );
+
+
+            let detailStudents =
+                [];
+
+
+            /* Show students in same order */
+
+            students.forEach(
+                student => {
+
+                    const roll =
+                        String(
+                            student.rollNo
+                        );
+
+
+                    if (
+                        Object.prototype
+                            .hasOwnProperty
+                            .call(
+                                entries,
+                                roll
+                            )
+                    ) {
+
+                        detailStudents.push(
+                            {
+                                roll,
+
+                                name:
+                                    student.name ||
+                                    '—',
+
+                                status:
+                                    entries[roll]
+                            }
+                        );
+
+                    }
+
+                }
+            );
+
+
+            /* Add old entries not currently found */
+
+            Object.entries(
+                entries
+            )
+            .forEach(
+                (
+                    [
+                        roll,
+                        status
+                    ]
+                ) => {
+
+                    const exists =
+                        detailStudents.some(
+                            item =>
+                                item.roll ===
+                                String(roll)
+                        );
+
+
+                    if (!exists) {
+
+                        detailStudents.push(
+                            {
+
+                                roll:
+                                    String(
+                                        roll
+                                    ),
+
+                                name:
+                                    studentMap[
+                                        String(
+                                            roll
+                                        )
+                                    ]?.name
+                                    ||
+                                    'Student',
+
+                                status
+
+                            }
+                        );
+
+                    }
+
+                }
+            );
+
+
+            if (
+                !detailStudents.length
+            ) {
+
+                $('detailsTableBody')
+                    .innerHTML =
+
+                    `
+                    <tr>
+
+                        <td
+                            colspan="4"
+                            style="text-align:center;padding:25px;color:#64748b;"
+                        >
+
+                            No individual attendance details found.
+
+                        </td>
+
+                    </tr>
+                    `;
+
+            } else {
+
+                $('detailsTableBody')
+                    .innerHTML =
+
+                    detailStudents
+                        .map(
+                            (
+                                student,
+                                index
+                            ) => {
+
+                                const status =
+                                    student.status;
+
+
+                                const isPresent =
+                                    status === 'P';
+
+
+                                return `
+
+                                    <tr>
+
+                                        <td>
+                                            ${index + 1}
+                                        </td>
+
+
+                                        <td>
+
+                                            <strong>
+                                                ${escapeHtml(
+                                                    student.roll
+                                                )}
+                                            </strong>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            ${escapeHtml(
+                                                student.name
+                                            )}
+
+                                        </td>
+
+
+                                        <td>
+
+                                            ${
+                                                isPresent
+
+                                                    ? `
+                                                        <span class="status-badge present">
+                                                            PRESENT
+                                                        </span>
+                                                      `
+
+                                                    : `
+                                                        <span class="status-badge absent">
+                                                            ABSENT
+                                                        </span>
+                                                      `
+                                            }
+
+                                        </td>
+
+                                    </tr>
+
+                                `;
+
+                            }
+                        )
+                        .join('');
+
+            }
+
+
+            $('detailsModal')
+                .classList.add(
+                    'show'
+                );
+
+        }
+
+
+        /* ==========================================
+           CLOSE DETAILS MODAL
+        ========================================== */
+
+        function closeDetailsModal() {
+
+            $('detailsModal')
+                .classList.remove(
+                    'show'
+                );
+
+
+            selectedHistoryRecord =
+                null;
+
+        }
+
+
+        /* ==========================================
+           OPEN RECORD FOR EDIT
+        ========================================== */
+
+        async function openRecordForEdit(
+            index
+        ) {
+
+            const record =
+                attendanceRecords[index];
+
+
+            if (!record) {
+
+                return;
+
+            }
+
+
+            const recordBatch =
+                String(
+                    record.batch ||
+                    $('batch').value
+                );
+
+
+            const batchOption =
+                Array.from(
+                    $('batch').options
+                ).find(
+                    option =>
+                        String(
+                            option.value
+                        ) ===
+                        recordBatch
+                );
+
+
+            if (
+                !batchOption
+            ) {
+
+                showAlert(
+                    'This attendance record is not assigned to your current teacher account.',
+                    'err'
+                );
+
+                return;
+
+            }
+
+
+            $('batch').value =
+                recordBatch;
+
+
+            $('date').value =
+                record.date;
+
+
+            closeDetailsModal();
+
+
+            await loadStudents();
+
+            await loadRecords();
+
+
+            showAlert(
+                `Editing attendance for ${record.date}. Correct individual Present/Absent status and click Save Attendance.`,
+                'ok'
+            );
+
+
+            document
+                .querySelector(
+                    '.section'
+                )
+                ?.scrollIntoView(
+                    {
+                        behavior:
+                            'smooth',
+
+                        block:
+                            'start'
+                    }
+                );
+
+        }
+
+
+        /* ==========================================
+           EDIT FROM MODAL BUTTON
+        ========================================== */
+
+        async function editSelectedRecord() {
+
+            if (
+                !selectedHistoryRecord
+            ) {
+
+                return;
+
+            }
+
+
+            const record =
+                selectedHistoryRecord;
+
+
+            const recordBatch =
+                String(
+                    record.batch ||
+                    $('batch').value
+                );
+
+
+            const batchOption =
+                Array.from(
+                    $('batch').options
+                ).find(
+                    option =>
+                        String(
+                            option.value
+                        ) ===
+                        recordBatch
+                );
+
+
+            if (
+                !batchOption
+            ) {
+
+                showAlert(
+                    'This attendance record is not assigned to your current teacher account.',
+                    'err'
+                );
+
+
+                closeDetailsModal();
+
+                return;
+
+            }
+
+
+            $('batch').value =
+                recordBatch;
+
+
+            $('date').value =
+                record.date;
+
+
+            closeDetailsModal();
+
+
+            await loadStudents();
+
+            await loadRecords();
+
+
+            showAlert(
+                `Editing attendance for ${record.date}. Correct individual attendance and save again.`,
+                'ok'
+            );
+
+
+            document
+                .querySelector(
+                    '.section'
+                )
+                ?.scrollIntoView(
+                    {
+                        behavior:
+                            'smooth',
+
+                        block:
+                            'start'
+                    }
+                );
+
+        }
+
+
+        /* ==========================================
+           HTML ESCAPE
+        ========================================== */
+
+        function escapeHtml(
+            value
+        ) {
+
+            return String(
+                value ?? ''
+            )
+            .replace(
+                /[&<>'"]/g,
+                character =>
+                    ({
+                        '&':
+                            '&amp;',
+
+                        '<':
+                            '&lt;',
+
+                        '>':
+                            '&gt;',
+
+                        "'":
+                            '&#39;',
+
+                        '"':
+                            '&quot;'
+
+                    }[
+                        character
+                    ])
+            );
+
+        }
+
+
+        /* ==========================================
+           JS ESCAPE
+        ========================================== */
+
+        function escapeJs(
+            value
+        ) {
+
+            return String(
+                value ?? ''
+            )
+
+            .replace(
+                /\\/g,
+                '\\\\'
+            )
+
+            .replace(
+                /'/g,
+                "\\'"
+            )
+
+            .replace(
+                /"/g,
+                '\\"'
+            )
+
+            .replace(
+                /\r/g,
+                '\\r'
+            )
+
+            .replace(
+                /\n/g,
+                '\\n'
+            );
+
+        }
+
+
+        /* ==========================================
+           DATE CHANGE
+        ========================================== */
+
+        $('date')
+            .addEventListener(
+                'change',
+                async () => {
+
+                    await loadStudents();
+
+                    await loadRecords();
+
+                }
+            );
+
+
+        /* ==========================================
+           CLOSE MODAL BY OUTSIDE CLICK
+        ========================================== */
+
+        $('detailsModal')
+            .addEventListener(
+                'click',
+                event => {
+
+                    if (
+                        event.target ===
+                        $('detailsModal')
+                    ) {
+
+                        closeDetailsModal();
+
+                    }
+
+                }
+            );
+
+
+        /* ==========================================
+           LOGOUT
+        ========================================== */
+
+        async function logout() {
+
+            await teacherLogout();
+
+        }
+
+
+        /* ==========================================
+           START
+        ========================================== */
+
+        init();
+
+    </script>
+
+</body>
+
+</html>

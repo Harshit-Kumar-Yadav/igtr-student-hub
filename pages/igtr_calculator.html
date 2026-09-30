@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indo German Tool Room — Final Grade Calculator</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#12151b">
+<meta name="description" content="Calculate your final IGTR grade from all six semester percentages.">
+
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="IGTR Grades">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#12151b;
+    --bg-panel:#1a1f28;
+    --bg-panel-2:#1f2530;
+    --grid-line:rgba(217,164,65,0.055);
+    --ink:#e9e4d8;
+    --muted:#8b93a1;
+    --muted-dim:#5b6270;
+    --brass:#d9a441;
+    --brass-soft:#f0c976;
+    --brass-dim:#8a6a2b;
+    --good:#6fae7c;
+    --warn:#d9724a;
+    --line:#2a3140;
+    --radius:2px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/40px 40px,
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0/40px 40px,
+      var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+
+  ::selection{ background:var(--brass); color:#12151b; }
+
+  a{ color:var(--brass-soft); }
+
+  .topbar{
+    height:4px;
+    width:100%;
+    background:linear-gradient(90deg, var(--brass-dim), var(--brass) 50%, var(--brass-dim));
+  }
+
+  .wrap{
+    max-width:980px;
+    margin:0 auto;
+    padding:48px 24px 100px;
+  }
+
+  /* Header */
+  header{
+    border-bottom:1px solid var(--line);
+    padding-bottom:30px;
+    margin-bottom:40px;
+    display:flex;
+    align-items:flex-start;
+    gap:22px;
+  }
+  .emblem{
+    flex:none;
+    width:56px; height:56px;
+    border:1px solid var(--brass-dim);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:4px;
+  }
+  .emblem svg{ width:30px; height:30px; }
+
+  .header-text{ min-width:0; }
+  .institute-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.2em;
+    color:var(--brass);
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+  .institute-name .abbr{
+    color:var(--muted-dim);
+    letter-spacing:0.1em;
+  }
+  h1{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    font-size:clamp(28px, 4.4vw, 42px);
+    line-height:1.08;
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+  }
+  header p{
+    color:var(--muted);
+    font-size:14.5px;
+    line-height:1.65;
+    max-width:560px;
+    margin:0;
+  }
+  .about-text{
+    color:var(--muted);
+    font-size:14.5px;
+    line-height:1.65;
+    max-width:620px;
+    margin:0 0 40px;
+  }
+  @media (max-width:520px){
+    header{ gap:16px; }
+    .emblem{ width:44px; height:44px; }
+    .emblem svg{ width:24px; height:24px; }
+  }
+
+  /* Section labels */
+  .section-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--muted-dim);
+    margin-bottom:16px;
+  }
+
+  /* Year cards */
+  .years{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-bottom:12px;
+  }
+  @media (max-width:760px){
+    .years{ grid-template-columns:1fr; }
+  }
+
+  .year-card{
+    background:var(--bg-panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    position:relative;
+    transition:border-color .2s ease;
+  }
+  .year-card.active{ border-color:var(--brass-dim); }
+
+  .year-card .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--brass);
+    letter-spacing:0.08em;
+    position:absolute;
+    top:20px;
+    right:20px;
+  }
+
+  .year-card h2{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 4px;
+  }
+  .year-card .weight{
+    color:var(--muted);
+    font-size:12.5px;
+    margin-bottom:18px;
+  }
+
+  .field{ margin-bottom:14px; }
+  .field:last-of-type{ margin-bottom:0; }
+  .field label{
+    display:block;
+    font-size:12.5px;
+    color:var(--muted);
+    margin-bottom:6px;
+  }
+  .field label .out-of{
+    color:var(--muted-dim);
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .field .input-row{
+    display:flex;
+    align-items:center;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--bg);
+    overflow:hidden;
+  }
+  .field input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    padding:10px 12px;
+    width:100%;
+    min-width:0;
+  }
+  .field input::placeholder{ color:var(--muted-dim); }
+  .field .suffix{
+    padding:0 12px;
+    color:var(--muted-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    border-left:1px solid var(--line);
+    height:100%;
+    display:flex; align-items:center;
+  }
+  .field .input-row:focus-within{ border-color:var(--brass); }
+  .field.error .input-row{ border-color:var(--warn); }
+  .field .err-msg{
+    font-size:11.5px;
+    color:var(--warn);
+    margin-top:5px;
+    display:none;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .field.error .err-msg{ display:block; }
+
+  .subtotal-row{
+    margin-top:18px;
+    padding-top:14px;
+    border-top:1px dashed var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .subtotal-row .label{ font-size:12px; color:var(--muted); }
+  .subtotal-row .value{ font-size:16px; color:var(--brass-soft); font-weight:600; }
+  .subtotal-row .value .out{ color:var(--muted-dim); font-size:12px; font-weight:400; }
+
+  /* Actions */
+  .actions{
+    display:flex;
+    gap:12px;
+    margin:28px 0 48px;
+    flex-wrap:wrap;
+  }
+  button{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.04em;
+    padding:12px 22px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    border:1px solid var(--brass-dim);
+    background:var(--brass);
+    color:#141821;
+    font-weight:600;
+    transition:transform .12s ease, background .15s ease;
+  }
+  button:hover{ background:var(--brass-soft); }
+  button:active{ transform:scale(0.98); }
+  button.ghost{
+    background:transparent;
+    color:var(--muted);
+    border:1px solid var(--line);
+    font-weight:500;
+  }
+  button.ghost:hover{ color:var(--ink); border-color:var(--muted-dim); }
+
+  /* Result console */
+  .console{
+    background:var(--bg-panel-2);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px;
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:36px;
+    align-items:center;
+  }
+  @media (max-width:760px){
+    .console{ grid-template-columns:1fr; justify-items:center; text-align:center; }
+  }
+
+  /* Gauge */
+  .gauge-wrap{ display:flex; flex-direction:column; align-items:center; }
+  .gauge{ width:200px; height:120px; overflow:visible; }
+  .gauge-value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:34px;
+    font-weight:700;
+    color:var(--brass-soft);
+    margin-top:-6px;
+  }
+  .gauge-grade{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.1em;
+    color:var(--muted);
+    text-transform:uppercase;
+    margin-top:4px;
+  }
+
+  .breakdown table{
+    width:100%;
+    border-collapse:collapse;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+  }
+  .breakdown th{
+    text-align:left;
+    color:var(--muted-dim);
+    font-weight:500;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .breakdown td{
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  .breakdown tr:last-child td{ border-bottom:none; }
+  .breakdown td.num{ text-align:right; color:var(--muted); }
+  .breakdown tr.total td{ color:var(--brass-soft); font-weight:600; padding-top:14px; }
+  .breakdown tr.total td.num{ color:var(--brass-soft); }
+
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
+  }
+  .legend .chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.03em;
+    padding:6px 10px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    color:var(--muted-dim);
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .legend .chip.on{
+    border-color:var(--brass-dim);
+    color:var(--brass-soft);
+  }
+
+  .bar{
+    height:3px;
+    background:var(--line);
+    border-radius:2px;
+    margin-top:10px;
+    overflow:hidden;
+  }
+  .bar > span{
+    display:block;
+    height:100%;
+    width:0%;
+    background:var(--brass-dim);
+    transition:width .4s ease, background .3s ease;
+  }
+
+  footer{
+    margin-top:56px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    color:var(--muted-dim);
+    font-size:12px;
+    font-family:'IBM Plex Mono', monospace;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<div class="wrap">
+
+  <header>
+    <div class="emblem">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="17" stroke="#d9a441" stroke-width="1.2"/>
+        <path d="M20 6 L20 11 M20 29 L20 34 M6 20 L11 20 M29 20 L34 20" stroke="#d9a441" stroke-width="1.2"/>
+        <path d="M12 20 A8 8 0 1 1 28 20" stroke="#e9e4d8" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M20 20 L24 13" stroke="#e9e4d8" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="1.6" fill="#e9e4d8"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <div class="institute-name">Indo German Tool Room <span class="abbr">· IGTR</span></div>
+      <h1>Final Grade Calculator</h1>
+    </div>
+  </header>
+
+  <div class="section-label">00 — About</div>
+  <p class="about-text">Enter your semester percentages for all three years. The final grade is weighted exactly like the official calculation — Year 1 at 50%, Year 2 at 75%, Year 3 at 100% — out of 3625 total marks.</p>
+
+
+  <div class="section-label">01 — Enter your semester scores</div>
+
+  <div class="years">
+
+    <!-- Year 1 -->
+    <div class="year-card" id="card-y1">
+      <span class="tag">50%</span>
+      <h2>Year 1</h2>
+      <div class="weight">Semesters 1 &amp; 2</div>
+
+      <div class="field" id="f-sem1">
+        <label>Semester 1 <span class="out-of">/ 700</span></label>
+        <div class="input-row">
+          <input type="number" inputmode="decimal" id="sem1" placeholder="0" min="0" max="100" step="0.01">
+          <span class="suffix">%</span>
+        </div>
+        <div class="err-msg">Enter a value between 0 and 100</div>
+      </div>
+
+      <div class="field" id="f-sem2">
+        <label>Semester 2 <span class="out-of">/ 800</span></label>
+        <div class="input-row">
+          <input type="number" inputmode="decimal" id="sem2" placeholder="0" min="0" max="100" step="0.01">
+          <span class="suffix">%</span>
+        </div>
+        <div class="err-msg">Enter a value between 0 and 100</div>
+      </div>
+
+      <div class="subtotal-row">
+        <span class="label">Year 1 total</span>
+        <span class="value"><span id="sum1">—</span> <span class="out">/ 750</span></span>
+      </div>
+      <div class="bar"><span id="bar1"></span></div>
+    </div>
+
+    <!-- Year 2 -->
+    <div class="year-card" id="card-y2">
+      <span class="tag">75%</span>
+      <h2>Year 2</h2>
+      <div class="weight">Semesters 3 &amp; 4</div>
+
+      <div class="field" id="f-sem3">
+        <label>Semester 3 <span class="out-of">/ 800</span></label>
+        <div class="input-row">
+          <input type="number" inputmode="decimal" id="sem3" placeholder="0" min="0" max="100" step="0.01">
+          <span class="suffix">%</span>
+        </div>
+        <div class="err-msg">Enter a value between 0 and 100</div>
+      </div>
+
+      <div class="field" id="f-sem4">
+        <label>Semester 4 <span class="out-of">/ 900</span></label>
+        <div class="input-row">
+          <input type="number" inputmode="decimal" id="sem4" placeholder="0" min="0" max="100" step="0.01">
+          <span class="suffix">%</span>
+        </div>
+        <div class="err-msg">Enter a value between 0 and 100</div>
+      </div>
+
+      <div class="subtotal-row">
+        <span class="label">Year 2 total</span>
+        <span class="value"><span id="sum2">—</span> <span class="out">/ 1275</span></span>
+      </div>
+      <div class="bar"><span id="bar2"></span></div>
+    </div>
+
+    <!-- Year 3 -->
+    <div class="year-card" id="card-y3">
+      <span class="tag">100%</span>
+      <h2>Year 3</h2>
+      <div class="weight">Semesters 5 &amp; 6</div>
+
+      <div class="field" id="f-sem5">
+        <label>Semester 5 <span class="out-of">/ 800</span></label>
+        <div class="input-row">
+          <input type="number" inputmode="decimal" id="sem5" placeholder="0" min="0" max="100" step="0.01">
+          <span class="suffix">%</span>
+        </div>
+        <div class="err-msg">Enter a value between 0 and 100</div>
+      </div>
+
+      <div class="field" id="f-sem6">
+        <label>Semester 6 <span class="out-of">/ 800</span></label>
+        <div class="input-row">
+          <input type="number" inputmode="decimal" id="sem6" placeholder="0" min="0" max="100" step="0.01">
+          <span class="suffix">%</span>
+        </div>
+        <div class="err-msg">Enter a value between 0 and 100</div>
+      </div>
+
+      <div class="subtotal-row">
+        <span class="label">Year 3 total</span>
+        <span class="value"><span id="sum3">—</span> <span class="out">/ 1600</span></span>
+      </div>
+      <div class="bar"><span id="bar3"></span></div>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <button id="calcBtn">Calculate final grade</button>
+    <button class="ghost" id="resetBtn">Reset</button>
+    <button class="ghost" id="installBtn" style="display:none;">Install app</button>
+  </div>
+
+  <div class="section-label">02 — Result</div>
+
+  <div class="console">
+    <div class="gauge-wrap">
+      <svg class="gauge" viewBox="0 0 200 120">
+        <path d="M 15 105 A 85 85 0 0 1 185 105" fill="none" stroke="#2a3140" stroke-width="14" stroke-linecap="round"/>
+        <path id="gaugeArc" d="M 15 105 A 85 85 0 0 1 185 105" fill="none" stroke="#d9a441" stroke-width="14" stroke-linecap="round" stroke-dasharray="267" stroke-dashoffset="267" style="transition:stroke-dashoffset .5s ease, stroke .3s ease;"/>
+        <line id="needle" x1="100" y1="105" x2="100" y2="35" stroke="#e9e4d8" stroke-width="2.5" stroke-linecap="round" style="transform-origin:100px 105px; transform:rotate(-90deg); transition:transform .5s ease;"/>
+        <circle cx="100" cy="105" r="5" fill="#e9e4d8"/>
+      </svg>
+      <div class="gauge-value" id="finalPer">0.00%</div>
+      <div class="gauge-grade" id="finalGrade">Awaiting input</div>
+    </div>
+
+    <div class="breakdown">
+      <table>
+        <thead>
+          <tr><th>Year</th><th style="text-align:right">Marks</th><th style="text-align:right">Out of</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Year 1 (50%)</td><td class="num" id="row1">0.00</td><td class="num">750</td></tr>
+          <tr><td>Year 2 (75%)</td><td class="num" id="row2">0.00</td><td class="num">1275</td></tr>
+          <tr><td>Year 3 (100%)</td><td class="num" id="row3">0.00</td><td class="num">1600</td></tr>
+          <tr class="total"><td>Total</td><td class="num" id="rowTotal">0.00</td><td class="num">3625</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="legend" id="legend">
+    <span class="chip" data-min="75">Distinction · 75%+</span>
+    <span class="chip" data-min="60">First Class · 60%+</span>
+    <span class="chip" data-min="50">Second Class · 50%+</span>
+    <span class="chip" data-min="40">Pass Class · 40%+</span>
+  </div>
+
+  <footer>
+    <span>Indo German Tool Room — Result Console, for student use</span>
+    <span>Formula: (Y1 marks + Y2 marks + Y3 marks) ÷ 3625 × 100</span>
+  </footer>
+
+</div>
+
+<script>
+  const ids = ['sem1','sem2','sem3','sem4','sem5','sem6'];
+  const inputs = {};
+  ids.forEach(id => inputs[id] = document.getElementById(id));
+
+  function clampCheck(id){
+    const el = inputs[id];
+    const wrap = document.getElementById('f-' + id);
+    const val = el.value.trim();
+    if(val === ''){ wrap.classList.remove('error'); return null; }
+    const num = parseFloat(val);
+    if(isNaN(num) || num < 0 || num > 100){
+      wrap.classList.add('error');
+      return null;
+    }
+    wrap.classList.remove('error');
+    return num;
+  }
+
+  function fmt(n){ return n.toFixed(2); }
+
+  function gradeFor(per){
+    if(per >= 75) return 'Distinction';
+    if(per >= 60) return 'First Class';
+    if(per >= 50) return 'Second Class';
+    if(per >= 40) return 'Pass Class';
+    return 'Below Passing';
+  }
+
+  function setGauge(per){
+    const CIRC = 267; // approx arc length for r=85, half-circle-ish path used above
+    const clamped = Math.max(0, Math.min(100, per));
+    const offset = CIRC - (CIRC * clamped / 100);
+    const arc = document.getElementById('gaugeArc');
+    arc.style.strokeDashoffset = offset;
+    arc.style.stroke = clamped >= 40 ? '#d9a441' : '#d9724a';
+
+    const angle = -90 + (clamped / 100) * 180;
+    document.getElementById('needle').style.transform = `rotate(${angle}deg)`;
+  }
+
+  function calculate(){
+    const sem1 = clampCheck('sem1');
+    const sem2 = clampCheck('sem2');
+    const sem3 = clampCheck('sem3');
+    const sem4 = clampCheck('sem4');
+    const sem5 = clampCheck('sem5');
+    const sem6 = clampCheck('sem6');
+
+    const s1 = sem1 ?? 0, s2 = sem2 ?? 0, s3 = sem3 ?? 0, s4 = sem4 ?? 0, s5 = sem5 ?? 0, s6 = sem6 ?? 0;
+
+    const mark1 = (s1/100)*700;
+    const mark2 = (s2/100)*800;
+    const sum1 = (mark1+mark2)/2;
+
+    const mark3 = (s3/100)*800;
+    const mark4 = (s4/100)*900;
+    const sum2 = (mark3+mark4)*0.75;
+
+    const mark5 = (s5/100)*800;
+    const mark6 = (s6/100)*800;
+    const sum3 = (mark5+mark6);
+
+    const total = sum1 + sum2 + sum3;
+    const per = (total/3625)*100;
+
+    document.getElementById('sum1').textContent = fmt(sum1);
+    document.getElementById('sum2').textContent = fmt(sum2);
+    document.getElementById('sum3').textContent = fmt(sum3);
+
+    document.getElementById('row1').textContent = fmt(sum1);
+    document.getElementById('row2').textContent = fmt(sum2);
+    document.getElementById('row3').textContent = fmt(sum3);
+    document.getElementById('rowTotal').textContent = fmt(total);
+
+    document.getElementById('finalPer').textContent = fmt(per) + '%';
+    document.getElementById('finalGrade').textContent = gradeFor(per);
+
+    setGauge(per);
+
+    document.getElementById('bar1').style.width = Math.min(100, (sum1/750)*100) + '%';
+    document.getElementById('bar2').style.width = Math.min(100, (sum2/1275)*100) + '%';
+    document.getElementById('bar3').style.width = Math.min(100, (sum3/1600)*100) + '%';
+
+    document.querySelectorAll('#legend .chip').forEach(chip => {
+      chip.classList.toggle('on', per >= parseFloat(chip.dataset.min));
+    });
+
+    ['card-y1','card-y2','card-y3'].forEach((id,i)=>{
+      const filled = [ (sem1!==null && inputs.sem1.value!=='') || (sem2!==null && inputs.sem2.value!==''),
+                       (sem3!==null && inputs.sem3.value!=='') || (sem4!==null && inputs.sem4.value!==''),
+                       (sem5!==null && inputs.sem5.value!=='') || (sem6!==null && inputs.sem6.value!=='') ][i];
+      document.getElementById(id).classList.toggle('active', filled);
+    });
+  }
+
+  ids.forEach(id => {
+    inputs[id].addEventListener('input', calculate);
+  });
+
+  document.getElementById('calcBtn').addEventListener('click', calculate);
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    ids.forEach(id => { inputs[id].value=''; document.getElementById('f-'+id).classList.remove('error'); });
+    calculate();
+  });
+
+  calculate();
+
+  // --- PWA: install prompt ---
+  let deferredPrompt = null;
+  const installBtn = document.getElementById('installBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block';
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    installBtn.style.display = 'none';
+  });
+
+  window.addEventListener('appinstalled', () => {
+    installBtn.style.display = 'none';
+  });
+
+  // --- PWA: service worker registration ---
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>

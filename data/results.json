@@ -1,0 +1,9609 @@
+
+[
+  {
+    "roll": "80502",
+    "name": "Dheeraj Sahu",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 27,
+        "exam": 42,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 24,
+        "exam": 18,
+        "total": 42,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 35,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 40,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 27,
+        "exam": 48,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 20,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 48,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 16,
+        "exam": 25,
+        "total": 41,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 544,
+    "percentage": 68.0,
+    "result": "P"
+  },
+
+  {
+    "roll": "80503",
+    "name": "Harshit Kumar",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 67,
+        "total": 95,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 28,
+        "exam": 54,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 64,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 67,
+        "total": 95,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 29,
+        "exam": 68,
+        "total": 97,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 18,
+        "exam": 26,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 28,
+        "exam": 57,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 56,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 15,
+        "exam": 27,
+        "total": 42,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 715,
+    "percentage": 89.4,
+    "result": "P"
+  },
+
+  {
+    "roll": "80504",
+    "name": "Krishna Murari Chauhan",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 21,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 11,
+        "total": 36,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 30,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 4,
+        "total": 27,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 35,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 18,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 49,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 38,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 10,
+        "exam": 12,
+        "total": 22,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 418,
+    "percentage": 52.3,
+    "result": "P+C"
+  },
+
+  {
+    "roll": "80505",
+    "name": "Mahi Yadav",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 22,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 21,
+        "exam": 6,
+        "total": 27,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 24,
+        "exam": 3,
+        "total": 27,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 2,
+        "total": 24,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 23,
+        "exam": 25,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 15,
+        "total": 29,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 24,
+        "exam": 45,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 33,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 12,
+        "exam": 13,
+        "total": 25,
+        "status": "PASS"
+      }
+    ],
+    "pa": "D",
+    "grandTotal": 352,
+    "percentage": 44.0,
+    "result": "P+C"
+  },
+
+  {
+    "roll": "80506",
+    "name": "Pratima Jatav",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 35,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 24,
+        "exam": 28,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 47,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 32,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 31,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 18,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 55,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 56,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 18,
+        "exam": 27,
+        "total": 45,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 540,
+    "percentage": 67.5,
+    "result": "P"
+  },
+
+  {
+    "roll": "80508",
+    "name": "Rishika Pandey",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 34,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 23,
+        "exam": 7,
+        "total": 30,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 18,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 18,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 53,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 15,
+        "total": 29,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 45,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 38,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 10,
+        "exam": 12,
+        "total": 22,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 437,
+    "percentage": 54.6,
+    "result": "P+C"
+  },
+
+  {
+    "roll": "80509",
+    "name": "Rohan Solanki",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 22,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 10,
+        "total": 35,
+        "status": "GRACE"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 32,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 21,
+        "total": 45,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 50,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 11,
+        "total": 26,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 38,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 10,
+        "exam": 12,
+        "total": 22,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 442,
+    "percentage": 55.3,
+    "result": "P+G"
+  },
+
+  {
+    "roll": "80510",
+    "name": "Roodra Sakhiya",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 13,
+        "total": 39,
+        "status": "GRACE"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 23,
+        "exam": 18,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 35,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 17,
+        "total": 39,
+        "status": "GRACE"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 25,
+        "exam": 47,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 13,
+        "total": 27,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 45,
+        "total": 70,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 35,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 15,
+        "exam": 25,
+        "total": 40,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 446,
+    "percentage": 55.8,
+    "result": "P+G"
+  },
+
+  {
+    "roll": "80511",
+    "name": "Shreshth Yeotikar",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 64,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 23,
+        "exam": 49,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 29,
+        "exam": 50,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 18,
+        "exam": 25,
+        "total": 43,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 28,
+        "exam": 50,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 53,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 18,
+        "exam": 27,
+        "total": 45,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 667,
+    "percentage": 83.4,
+    "result": "P"
+  },
+
+  {
+    "roll": "80512",
+    "name": "Shubhi Bhorhari",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 46,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 27,
+        "exam": 46,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 27,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 18,
+        "exam": 23,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 55,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 53,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 14,
+        "exam": 22,
+        "total": 36,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 615,
+    "percentage": 76.9,
+    "result": "P"
+  },
+
+  {
+    "roll": "80513",
+    "name": "Sunny Basane",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 28,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 20,
+        "total": 45,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 37,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 18,
+        "total": 40,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 49,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 17,
+        "total": 31,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 24,
+        "exam": 50,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 21,
+        "exam": 43,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 10,
+        "exam": 10,
+        "total": 20,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 464,
+    "percentage": 58.0,
+    "result": "P"
+  },
+
+  {
+    "roll": "80514",
+    "name": "Vaibhav Rathore",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 24,
+        "total": 50,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 24,
+        "exam": 18,
+        "total": 42,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 41,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 13,
+        "total": 36,
+        "status": "GRACE"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 16,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 51,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 45,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 15,
+        "exam": 18,
+        "total": 33,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 484,
+    "percentage": 60.5,
+    "result": "P+G"
+  },
+
+  {
+    "roll": "80516",
+    "name": "Chaya Kosthi",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 22,
+        "exam": 28,
+        "total": 50,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 31,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 55,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 21,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 28,
+        "exam": 54,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 51,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 13,
+        "exam": 25,
+        "total": 38,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 589,
+    "percentage": 73.6,
+    "result": "P"
+  },
+
+  {
+    "roll": "80517",
+    "name": "Yugank Vishwakarma",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 27,
+        "exam": 49,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 17,
+        "total": 42,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 48,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 24,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 48,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 12,
+        "total": 27,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 40,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 16,
+        "exam": 27,
+        "total": 43,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 528,
+    "percentage": 66.0,
+    "result": "P"
+  },
+
+  {
+    "roll": "80422",
+    "name": "Shivam Yadav",
+    "course": "computer",
+    "batch": "5",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 22,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 21,
+        "exam": 25,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 47,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 25,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 23,
+        "exam": 54,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 20,
+        "total": 36,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 45,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics & Workshop Lab",
+        "sessional": 10,
+        "exam": 15,
+        "total": 25,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 488,
+    "percentage": 61.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  [
+  {
+    "roll": "80501",
+    "name": "Abhisekh",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+      
+    ],
+    "pa": "A",
+    "grandTotal": 380,
+    "percentage": 54.3,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80502",
+    "name": "Dheeraj Sahu",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 26,
+        "exam": 30,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 28,
+        "exam": 8,
+        "total": 36,
+        "status": "GRACE"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 27,
+        "exam": 29,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 25,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 26,
+        "exam": 83,
+        "total": 109,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 28,
+        "exam": 108,
+        "total": 136,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 446,
+    "percentage": 63.7,
+    "result": "P+G"
+  },
+
+
+
+
+
+  {
+    "roll": "80503",
+    "name": "Harshit Kumar",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 27,
+        "exam": 52,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 56,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 28,
+        "exam": 108,
+        "total": 136,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 29,
+        "exam": 110,
+        "total": 139,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 618,
+    "percentage": 88.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80504",
+    "name": "Krishna Murari Chauhan",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 401,
+    "percentage": 57.3,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80505",
+    "name": "Mahi Yadav",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 379,
+    "percentage": 54.1,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80506",
+    "name": "Pratima Jatav",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 423,
+    "percentage": 60.4,
+    "result": "P+C"
+  },
+
+
+
+
+  {
+    "roll": "80508",
+    "name": "Rishika Pandey",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 361,
+    "percentage": 51.6,
+    "result": "P+C"
+  },
+
+
+
+
+
+  {
+    "roll": "80509",
+    "name": "Rohan Solanki",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 392,
+    "percentage": 56.0,
+    "result": "P+G"
+  },
+
+
+
+
+  {
+    "roll": "80510",
+    "name": "Roodra Sakhiya",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 350,
+    "percentage": 50.0,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80511",
+    "name": "Shreshth Yeotikar",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 615,
+    "percentage": 87.9,
+    "result": "P"
+  },
+
+
+
+  {
+    "roll": "80512",
+    "name": "Shubhi Bhorhari",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+     {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 560,
+    "percentage": 80.0,
+    "result": "P"
+  },
+
+
+
+
+  {
+    "roll": "80513",
+    "name": "Sunny Basane",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 369,
+    "percentage": 52.7,
+    "result": "P+C"
+  },
+
+
+
+
+
+  {
+    "roll": "80514",
+    "name": "Vaibhav Rathore",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 409,
+    "percentage": 58.4,
+    "result": "P+G"
+  },
+
+
+
+
+  {
+    "roll": "80515",
+    "name": "Vinod",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+     {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 344,
+    "percentage": 49.1,
+    "result": "P+C"
+  },
+
+
+
+
+
+  {
+    "roll": "80516",
+    "name": "Chaya Kosthi",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 13,
+        "total": 35,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 0,
+        "total": 22,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 21,
+        "exam": 69,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 87,
+        "total": 110,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 481,
+    "percentage": 68.7,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80517",
+    "name": "Yugank Vishwakarma",
+    "course": "computer",
+    "batch": "5",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 29,
+        "total": 51,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 21,
+        "exam": 20,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 29,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 27,
+        "exam": 21,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 82,
+        "total": 107,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 26,
+        "exam": 104,
+        "total": 130,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 430,
+    "percentage": 61.4,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80401",
+    "name": "Aditya Tomar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 38,
+        "total": 60,
+        "status": "Pass"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 28,
+        "exam": 30,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 43,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 26,
+        "exam": 41,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 98,
+        "total": 122,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 27,
+        "exam": 88,
+        "total": 115,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 490,
+    "percentage": 70,
+    "result": "P"
+  },
+
+
+
+  {
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 20,
+        "exam": 36,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 27,
+        "exam": 68,
+        "total": 95,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 66,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 45,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 26,
+        "exam": 103,
+        "total": 129,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 28,
+        "exam": 110,
+        "total": 138,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 583,
+    "percentage": 83.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80403",
+    "name": "Aditya Bawaskar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 21,
+        "exam": 23,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 26,
+        "exam": 1,
+        "total": 27,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 3,
+        "total": 29,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 12,
+        "total": 40,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 75,
+        "total": 99,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 26,
+        "exam": 57,
+        "total": 83,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 322,
+    "percentage": 46.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80404",
+    "name": "Hansraj Salawat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 25,
+        "exam": 36,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 26,
+        "exam": 34,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 34,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 27,
+        "exam": 36,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 23,
+        "exam": 179,
+        "total": 102,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 26,
+        "exam": 95,
+        "total": 121,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 466,
+    "percentage": 66.6,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80405",
+    "name": "Hardik Tripathi",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 24,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 24,
+        "exam": 16,
+        "total": 40,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 8,
+        "total": 32,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 26,
+        "exam": 6,
+        "total": 32,
+        "status": "COMPARTMENT"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 23,
+        "exam": 97,
+        "total": 120,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 24,
+        "exam": 85,
+        "total": 109,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 380,
+    "percentage": 54.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80406",
+    "name": "Harshit Aulliya",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 31,
+        "total": 54,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 25,
+        "exam": 60,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 31,
+        "total": 56,
+        "status": "Pass"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 27,
+        "exam": 34,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 80,
+        "total": 104,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 28,
+        "exam": 103,
+        "total": 131,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 510,
+    "percentage": 70.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80407",
+    "name": "Ravindra Kanadje",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 40,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 23,
+        "exam": 58,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 41,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 43,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 23,
+        "exam": 85,
+        "total": 108,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 28,
+        "exam": 92,
+        "total": 120,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 510,
+    "percentage": 72.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80408",
+    "name": "Khwahish Sahare",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 34,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 27,
+        "exam": 25,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 39,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 35,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 99,
+        "total": 124,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 26,
+        "exam": 87,
+        "total": 113,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 470,
+    "percentage": 67.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80410",
+    "name": "Lucky ****",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 23,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 20,
+        "exam": 0,
+        "total": 20,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 2,
+        "total": 26,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 24,
+        "exam": 6,
+        "total": 30,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 85,
+        "total": 109,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 23,
+        "exam": 63,
+        "total": 86,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 317,
+    "percentage": 45.3,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80412",
+    "name": "Nitin Kuril",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 38,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 20,
+        "exam": 62,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 54,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 26,
+        "exam": 27,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 26,
+        "exam": 95,
+        "total": 121,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 24,
+        "exam": 75,
+        "total": 99,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 495,
+    "percentage": 70.7,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80413",
+    "name": "Paragi Dixit",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 46,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 28,
+        "exam": 53,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 47,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 29,
+        "exam": 50,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 99,
+        "total": 124,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 29,
+        "exam": 112,
+        "total": 141,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 565,
+    "percentage": 80.7,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80414",
+    "name": "Pooja Jatav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 24,
+        "exam": 40,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 25,
+        "exam": 50,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 65,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 33,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 94,
+        "total": 119,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 27,
+        "exam": 100,
+        "total": 127,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 537,
+    "percentage": 76.7,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80415",
+    "name": "Pradhumna ****",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 24,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 24,
+        "exam": 22,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 21,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 25,
+        "exam": 13,
+        "total": 38,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 94,
+        "total": 118,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 24,
+        "exam": 79,
+        "total": 103,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 399,
+    "percentage": 57.0,
+    "result": "P+G"
+  },
+
+
+
+
+
+  {
+    "roll": "80416",
+    "name": "Preeti Prajapati",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 26,
+        "exam": 45,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 60,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 43,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 95,
+        "total": 120,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 28,
+        "exam": 91,
+        "total": 119,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 559,
+    "percentage": 79.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80417",
+    "name": "Purvansh Ahirwal",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 23,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 19,
+        "exam": 8,
+        "total": 27,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 21,
+        "total": 45,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 24,
+        "exam": 10,
+        "total": 34,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 93,
+        "total": 117,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 24,
+        "exam": 64,
+        "total": 88,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 357,
+    "percentage": 51.0,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80418",
+    "name": "Ritu Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 47,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 24,
+        "exam": 44,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 51,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 34,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 95,
+        "total": 120,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 29,
+        "exam": 109,
+        "total": 138,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 533,
+    "percentage": 76.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80419",
+    "name": "Rohan Chouhan",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 24,
+        "exam": 28,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 23,
+        "exam": 51,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 24,
+        "exam": 0,
+        "total": 24,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 23,
+        "exam": 90,
+        "total": 113,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 22,
+        "exam": 78,
+        "total": 100,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 445,
+    "percentage": 63.6,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 54,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 25,
+        "exam": 69,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 66,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 29,
+        "exam": 53,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 28,
+        "exam": 97,
+        "total": 125,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 29,
+        "exam": 111,
+        "total": 140,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 609,
+    "percentage": 87.0,
+    "result": "P"
+  },
+  {
+    "roll": "80421",
+    "name": "Samarth Salgat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 22,
+        "exam": 27,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 65,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 48,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 26,
+        "exam": 33,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 94,
+        "total": 118,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 25,
+        "exam": 74,
+        "total": 99,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 486,
+    "percentage": 69.4,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80422",
+    "name": "Shivam Yadav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 21,
+        "exam": 50,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 19,
+        "exam": 5,
+        "total": 24,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 25,
+        "exam": 21,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 23,
+        "exam": 17,
+        "total": 40,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 23,
+        "exam": 98,
+        "total": 121,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 20,
+        "exam": 67,
+        "total": 87,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 389,
+    "percentage": 55.6,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80424",
+    "name": "Gauri Sonttake",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 53,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 24,
+        "exam": 64,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 28,
+        "exam": 69,
+        "total": 97,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 28,
+        "exam": 35,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 29,
+        "exam": 104,
+        "total": 133,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 29,
+        "exam": 110,
+        "total": 139,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 596,
+    "percentage": 85.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80425",
+    "name": "Suleman Syed",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 23,
+        "exam": 26,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 22,
+        "exam": 31,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 26,
+        "exam": 38,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 24,
+        "exam": 22,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 25,
+        "exam": 99,
+        "total": 124,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 24,
+        "exam": 90,
+        "total": 114,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 450,
+    "percentage": 64.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80427",
+    "name": "Raj Konde",
+    "course": "computer",
+    "batch": "4",
+    "semester": "1",
+    "subjects": [
+      {
+        "code": "C1.1",
+        "name": "Communication Skills",
+        "sessional": 21,
+        "exam": 28,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.2",
+        "name": "Mathematics",
+        "sessional": 19,
+        "exam": 0,
+        "total": 19,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.3",
+        "name": "Physics",
+        "sessional": 24,
+        "exam": 16,
+        "total": 40,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.4",
+        "name": "Computer Fundamentals",
+        "sessional": 23,
+        "exam": 22,
+        "total": 45,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.5",
+        "name": "Physics Lab",
+        "sessional": 24,
+        "exam": 96,
+        "total": 120,
+        "status": "PASS"
+      },
+      {
+        "code": "C1.6",
+        "name": "Computer Fundamentals Lab",
+        "sessional": 22,
+        "exam": 83,
+        "total": 105,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 378,
+    "percentage": 54.0,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  [
+  {
+    "roll": "80401",
+    "name": "Aditya Tomar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 50,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 18,
+        "total": 43,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 48,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 31,
+        "total": 55,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 50,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 22,
+        "total": 39,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 50,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 12,
+        "exam": 20,
+        "total": 32,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 543,
+    "percentage": 67.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 29,
+        "exam": 55,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 28,
+        "exam": 33,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 47,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 24,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 18,
+        "exam": 25,
+        "total": 43,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 657,
+    "percentage": 82.1,
+    "result": "P"
+  },
+
+
+
+
+  {
+    "roll": "80403",
+    "name": "Aditya Bawaskar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 7,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 3,
+        "total": 28,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 7,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 1,
+        "total": 27,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 43,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 12,
+        "total": 28,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 40,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 38,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 10,
+        "exam": 17,
+        "total": 27,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 371,
+    "percentage": 46.4,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80404",
+    "name": "Hansraj Salawat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 42,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 26,
+        "exam": 47,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 50,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 47,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 24,
+        "total": 39,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 53,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 56,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 15,
+        "exam": 22,
+        "total": 37,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 591,
+    "percentage": 73.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80405",
+    "name": "Hardik Tripathi",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 24,
+        "exam": 20,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 21,
+        "exam": 12,
+        "total": 33,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 24,
+        "exam": 9,
+        "total": 33,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 20,
+        "exam": 2,
+        "total": 22,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 22,
+        "exam": 35,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 14,
+        "exam": 22,
+        "total": 36,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 24,
+        "exam": 40,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 21,
+        "exam": 32,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 12,
+        "exam": 15,
+        "total": 27,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 369,
+    "percentage": 46.1,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80406",
+    "name": "Harshit Aulliya",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 49,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 27,
+        "exam": 33,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 59,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 30,
+        "total": 55,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 27,
+        "exam": 57,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 23,
+        "total": 38,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 47,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 58,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 16,
+        "exam": 24,
+        "total": 40,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 594,
+    "percentage": 74.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80407",
+    "name": "Ravindra Kanadje",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 43,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 36,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 57,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 23,
+        "total": 40,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 40,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 55,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 17,
+        "exam": 23,
+        "total": 40,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 593,
+    "percentage": 74.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80408",
+    "name": "Khwahish Sahare",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 26,
+        "total": 51,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 26,
+        "exam": 52,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 28,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 34,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 51,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 24,
+        "total": 39,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 42,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 53,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 15,
+        "exam": 20,
+        "total": 35,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 534,
+    "percentage": 66.8,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80412",
+    "name": "Nitin Kuril",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 27,
+        "exam": 53,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 26,
+        "exam": 35,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 48,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 22,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 49,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 20,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 47,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 62,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 16,
+        "exam": 25,
+        "total": 41,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 576,
+    "percentage": 72.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80413",
+    "name": "Paragi Dixit",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 48,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 47,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 27,
+        "exam": 53,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 20,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 52,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 54,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 17,
+        "exam": 23,
+        "total": 40,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 629,
+    "percentage": 78.6,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80414",
+    "name": "Pooja Jatav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 48,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 27,
+        "exam": 32,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 45,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 25,
+        "total": 51,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 27,
+        "exam": 55,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 21,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 47,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 55,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 16,
+        "exam": 24,
+        "total": 40,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 569,
+    "percentage": 71.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80415",
+    "name": "Pradhumna ****",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 24,
+        "exam": 19,
+        "total": 43,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 20,
+        "exam": 10,
+        "total": 30,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 24,
+        "exam": 27,
+        "total": 51,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 21,
+        "exam": 0,
+        "total": 21,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 23,
+        "exam": 42,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 7,
+        "total": 22,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 24,
+        "exam": 41,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 47,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 14,
+        "exam": 17,
+        "total": 31,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 397,
+    "percentage": 49.6,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80416",
+    "name": "Preeti Prajapati",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 37,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 64,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 45,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 25,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 48,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 51,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 16,
+        "exam": 20,
+        "total": 36,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 626,
+    "percentage": 78.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80417",
+    "name": "Purvansh Ahirwal",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 9,
+        "total": 34,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 21,
+        "exam": 1,
+        "total": 22,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 30,
+        "total": 55,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 3,
+        "total": 25,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 23,
+        "exam": 35,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 15,
+        "exam": 8,
+        "total": 23,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 41,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 30,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 12,
+        "exam": 21,
+        "total": 33,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 368,
+    "percentage": 46.0,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80418",
+    "name": "Ritu Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 27,
+        "exam": 52,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 35,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 27,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 62,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 18,
+        "exam": 25,
+        "total": 43,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 672,
+    "percentage": 84.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80419",
+    "name": "Rohan Chouhan",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 24,
+        "exam": 46,
+        "total": 70,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 0,
+        "total": 25,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 26,
+        "exam": 23,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 38,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 24,
+        "exam": 35,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 13,
+        "exam": 18,
+        "total": 31,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 26,
+        "exam": 41,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 22,
+        "exam": 35,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 10,
+        "exam": 17,
+        "total": 27,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 446,
+    "percentage": 55.8,
+    "result": "P+C"
+  },
+  {
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 29,
+        "exam": 59,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 28,
+        "exam": 53,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 65,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 55,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 29,
+        "exam": 61,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 22,
+        "total": 39,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 53,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 18,
+        "exam": 27,
+        "total": 45,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 688,
+    "percentage": 86.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80421",
+    "name": "Samarth Salgat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 25,
+        "exam": 36,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 58,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 23,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 26,
+        "exam": 56,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 18,
+        "exam": 14,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 50,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 51,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 14,
+        "exam": 20,
+        "total": 34,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 575,
+    "percentage": 71.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80424",
+    "name": "Gauri Sonttake",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 29,
+        "exam": 62,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 28,
+        "exam": 37,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 27,
+        "exam": 65,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 28,
+        "exam": 55,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 29,
+        "exam": 60,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 18,
+        "exam": 15,
+        "total": 33,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 27,
+        "exam": 53,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 27,
+        "exam": 59,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 19,
+        "exam": 26,
+        "total": 45,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 664,
+    "percentage": 83.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80425",
+    "name": "Suleman Syed",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 25,
+        "exam": 23,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 23,
+        "exam": 34,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 25,
+        "exam": 25,
+        "total": 50,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 24,
+        "exam": 28,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 23,
+        "exam": 43,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 17,
+        "exam": 12,
+        "total": 29,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 25,
+        "exam": 41,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 23,
+        "exam": 42,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 14,
+        "exam": 18,
+        "total": 32,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 465,
+    "percentage": 58.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80427",
+    "name": "Shivam Yadav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "2",
+    "subjects": [
+      {
+        "code": "C2.1",
+        "name": "Programming in C",
+        "sessional": 26,
+        "exam": 27,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.2",
+        "name": "Environmental Engg. & Safety",
+        "sessional": 24,
+        "exam": 21,
+        "total": 45,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.3",
+        "name": "Digital Techniques",
+        "sessional": 24,
+        "exam": 5,
+        "total": 29,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.4",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 26,
+        "exam": 4,
+        "total": 30,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.5",
+        "name": "Programming in C Lab",
+        "sessional": 25,
+        "exam": 36,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.6",
+        "name": "Environmental Engg. & Safety Lab",
+        "sessional": 16,
+        "exam": 23,
+        "total": 39,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.7",
+        "name": "Digital Techniques Lab",
+        "sessional": 24,
+        "exam": 41,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.8",
+        "name": "Basics of Electrical, Electronics &",
+        "sessional": 25,
+        "exam": 40,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C2.9",
+        "name": "Electronics Workshop Lab",
+        "sessional": 15,
+        "exam": 15,
+        "total": 30,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 417,
+    "percentage": 52.1,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+
+  [
+  {
+    "roll": "80401",
+    "name": "Aditya Tomar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 37,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 59,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 27,
+        "exam": 47,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 59,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 29,
+        "exam": 56,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 28,
+        "exam": 55,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 26,
+        "exam": 61,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 27,
+        "exam": 45,
+        "total": 72,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 638,
+    "percentage": 79.8,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 29,
+        "exam": 40,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 29,
+        "exam": 62,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 28,
+        "exam": 59,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 29,
+        "exam": 61,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 28,
+        "exam": 67,
+        "total": 95,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 29,
+        "exam": 55,
+        "total": 84,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 701,
+    "percentage": 87.6,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80403",
+    "name": "Aditya Bawaskar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 27,
+        "exam": 8,
+        "total": 35,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 26,
+        "exam": 18,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 24,
+        "exam": 25,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 25,
+        "exam": 32,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 26,
+        "exam": 35,
+        "total": 61,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 26,
+        "exam": 40,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 25,
+        "exam": 35,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 25,
+        "exam": 35,
+        "total": 60,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 432,
+    "percentage": 54.0,
+    "result": "P+G"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80404",
+    "name": "Hansraj Salawat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 26,
+        "exam": 30,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 54,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 26,
+        "exam": 50,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 24,
+        "exam": 59,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 27,
+        "exam": 62,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 26,
+        "exam": 57,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 25,
+        "exam": 62,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 40,
+        "total": 66,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 621,
+    "percentage": 77.6,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80405",
+    "name": "Hardik Tripathi",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 25,
+        "exam": 22,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 24,
+        "exam": 18,
+        "total": 43,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 25,
+        "exam": 22,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 24,
+        "exam": 36,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 26,
+        "exam": 18,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 25,
+        "exam": 40,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 23,
+        "exam": 54,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 24,
+        "exam": 32,
+        "total": 56,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 430,
+    "percentage": 53.8,
+    "result": "P+G"
+  },
+
+
+
+
+
+  {
+    "roll": "80406",
+    "name": "Harshit Aulliya",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 31,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 61,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 64,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 26,
+        "exam": 66,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 53,
+        "total": 79,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 665,
+    "percentage": 83.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80407",
+    "name": "Ravindra Kanadje",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 48,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 28,
+        "exam": 61,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 24,
+        "exam": 54,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 52,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 28,
+        "exam": 61,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 24,
+        "exam": 52,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 27,
+        "exam": 51,
+        "total": 78,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 659,
+    "percentage": 82.4,
+    "result": "P"
+  },
+  {
+    "roll": "80408",
+    "name": "Khwahish Sahare",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 22,
+        "total": 50,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 36,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 24,
+        "exam": 48,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 25,
+        "exam": 52,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 25,
+        "exam": 57,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 579,
+    "percentage": 72.4,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80412",
+    "name": "Nitin Kuril",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 46,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 25,
+        "exam": 54,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 28,
+        "exam": 64,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 26,
+        "exam": 60,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 692,
+    "percentage": 86.5,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80413",
+    "name": "Paragi Dixit",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 29,
+        "exam": 27,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 56,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 26,
+        "exam": 41,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 55,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 29,
+        "exam": 58,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 27,
+        "exam": 55,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 27,
+        "exam": 61,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 622,
+    "percentage": 77.8,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80414",
+    "name": "Pooja Jatav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 37,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 52,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 25,
+        "exam": 49,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 54,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 56,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 27,
+        "exam": 57,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 25,
+        "exam": 59,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 27,
+        "exam": 57,
+        "total": 84,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 635,
+    "percentage": 79.4,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80415",
+    "name": "Pradhumna ****",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 26,
+        "exam": 22,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 25,
+        "exam": 26,
+        "total": 51,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 24,
+        "exam": 24,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 26,
+        "exam": 30,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 26,
+        "exam": 33,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 25,
+        "exam": 35,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 23,
+        "exam": 42,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 31,
+        "total": 57,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 444,
+    "percentage": 55.5,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80416",
+    "name": "Preeti Prajapati",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 45,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 26,
+        "exam": 54,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 26,
+        "exam": 56,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 61,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 26,
+        "exam": 65,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 45,
+        "total": 71,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 648,
+    "percentage": 81.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80417",
+    "name": "Purvansh Ahirwal",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 26,
+        "exam": 18,
+        "total": 44,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 25,
+        "exam": 37,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 23,
+        "exam": 36,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 24,
+        "exam": 44,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 25,
+        "exam": 18,
+        "total": 43,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 25,
+        "exam": 37,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 24,
+        "exam": 49,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 48,
+        "total": 74,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 485,
+    "percentage": 60.6,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80418",
+    "name": "Ritu Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 29,
+        "exam": 47,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 29,
+        "exam": 64,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 29,
+        "exam": 67,
+        "total": 96,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 29,
+        "exam": 64,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 725,
+    "percentage": 90.6,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80419",
+    "name": "Rohan Chouhan",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 30,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 23,
+        "exam": 43,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 63,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 59,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 24,
+        "exam": 64,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 51,
+        "total": 77,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 641,
+    "percentage": 80.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 29,
+        "exam": 54,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 29,
+        "exam": 64,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 29,
+        "exam": 64,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 731,
+    "percentage": 91.4,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80421",
+    "name": "Samarth Salgat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 28,
+        "exam": 42,
+        "total": 70,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 25,
+        "exam": 46,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 27,
+        "exam": 51,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 28,
+        "exam": 59,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 26,
+        "exam": 63,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 657,
+    "percentage": 82.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80424",
+    "name": "Gauri Sonttake",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 29,
+        "exam": 57,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 29,
+        "exam": 67,
+        "total": 96,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 29,
+        "exam": 64,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 28,
+        "exam": 66,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 738,
+    "percentage": 92.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80425",
+    "name": "Suleman Syed",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 26,
+        "exam": 31,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 27,
+        "exam": 42,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 25,
+        "exam": 40,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 24,
+        "exam": 49,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 26,
+        "exam": 46,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 27,
+        "exam": 54,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 24,
+        "exam": 46,
+        "total": 70,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 26,
+        "exam": 47,
+        "total": 73,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 560,
+    "percentage": 70.0,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80427",
+    "name": "Shivam Yadav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 24,
+        "exam": null,
+        "total": 24,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 25,
+        "exam": null,
+        "total": 25,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 24,
+        "exam": null,
+        "total": 24,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 21,
+        "exam": null,
+        "total": 21,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 25,
+        "exam": null,
+        "total": 25,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 25,
+        "exam": null,
+        "total": 25,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 24,
+        "exam": null,
+        "total": 24,
+        "status": "ABSENT"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 24,
+        "exam": null,
+        "total": 24,
+        "status": "ABSENT"
+      }
+    ],
+    "pa": "D",
+    "grandTotal": 192,
+    "percentage": 24.0,
+    "result": "*"
+  },
+
+
+
+  {
+    "roll": "80422",
+    "name": "",
+    "course": "computer",
+    "batch": "4",
+    "semester": "3",
+    "subjects": [
+      {
+        "code": "C3.1",
+        "name": "Operating System",
+        "sessional": 25,
+        "exam": 10,
+        "total": 35,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.2",
+        "name": "Data Structure and Algorithms",
+        "sessional": 25,
+        "exam": 23,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.3",
+        "name": "Computer Architecture",
+        "sessional": 24,
+        "exam": 33,
+        "total": 57,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.4",
+        "name": "Data Communication",
+        "sessional": 23,
+        "exam": 48,
+        "total": 71,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.5",
+        "name": "Operating System Lab",
+        "sessional": 24,
+        "exam": 32,
+        "total": 56,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.6",
+        "name": "Data Structure and Algorithms Lab",
+        "sessional": 24,
+        "exam": 40,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.7",
+        "name": "Programming with C++ Lab",
+        "sessional": 23,
+        "exam": 52,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C3.8",
+        "name": "Visual Basic Programming Lab",
+        "sessional": 23,
+        "exam": 38,
+        "total": 61,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 467,
+    "percentage": 58.4,
+    "result": "P+G"
+  },
+
+
+
+
+
+
+
+
+
+  [
+  {
+    "roll": "80401",
+    "name": "Aditya Tomar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 26,
+        "exam": 51,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 28,
+        "exam": 52,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 24,
+        "exam": 18,
+        "total": 42,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 28,
+        "exam": 45,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 27,
+        "exam": 54,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 61,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 25,
+        "exam": 50,
+        "total": 75,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 689,
+    "percentage": 76.6,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80402",
+    "name": "Ajay Parmar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 28,
+        "exam": 51,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 60,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 27,
+        "exam": 38,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 28,
+        "exam": 45,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 27,
+        "exam": 62,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 62,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 26,
+        "exam": 62,
+        "total": 88,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 745,
+    "percentage": 82.8,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80403",
+    "name": "Aditya Bawaskar",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 28,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 26,
+        "exam": 11,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 25,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 25,
+        "exam": 7,
+        "total": 32,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 23,
+        "exam": 31,
+        "total": 54,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 26,
+        "exam": 49,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 40,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 24,
+        "exam": 40,
+        "total": 64,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 511,
+    "percentage": 56.8,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80404",
+    "name": "Hansraj Salawat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 39,
+        "total": 63,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 27,
+        "exam": 51,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 34,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 24,
+        "exam": 13,
+        "total": 37,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 26,
+        "exam": 39,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 26,
+        "exam": 52,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 23,
+        "exam": 45,
+        "total": 68,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 624,
+    "percentage": 69.3,
+    "result": "P+G"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80405",
+    "name": "Hardik Tripathi",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 17,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 26,
+        "exam": 22,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 25,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 23,
+        "exam": 4,
+        "total": 27,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 22,
+        "exam": 23,
+        "total": 45,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 25,
+        "exam": 27,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 26,
+        "exam": 39,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 40,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 21,
+        "exam": 33,
+        "total": 54,
+        "status": "PASS"
+      }
+    ],
+    "pa": "C",
+    "grandTotal": 451,
+    "percentage": 50.1,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80406",
+    "name": "Harshit Aulliya",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 26,
+        "exam": 53,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 28,
+        "exam": 45,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 64,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 25,
+        "exam": 30,
+        "total": 55,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 27,
+        "exam": 49,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 27,
+        "exam": 56,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 27,
+        "exam": 61,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 62,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 25,
+        "exam": 49,
+        "total": 74,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 710,
+    "percentage": 78.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80407",
+    "name": "Ravindra Kanadje",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 27,
+        "exam": 48,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 29,
+        "exam": 48,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 61,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 26,
+        "exam": 39,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 26,
+        "exam": 39,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 28,
+        "exam": 64,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 26,
+        "exam": 53,
+        "total": 79,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 722,
+    "percentage": 80.2,
+    "result": "P"
+  },
+  {
+    "roll": "80408",
+    "name": "Khwahish Sahare",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 24,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 27,
+        "exam": 25,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 40,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 25,
+        "exam": 16,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 26,
+        "exam": 50,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 27,
+        "exam": 56,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 56,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 25,
+        "exam": 44,
+        "total": 69,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 597,
+    "percentage": 66.3,
+    "result": "P"
+  },
+
+
+
+
+
+  {
+    "roll": "80412",
+    "name": "Nitin Kuril",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 26,
+        "exam": 65,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 29,
+        "exam": 59,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 67,
+        "total": 96,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 24,
+        "exam": 38,
+        "total": 62,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 27,
+        "exam": 54,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 28,
+        "exam": 64,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 29,
+        "exam": 65,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 24,
+        "exam": 49,
+        "total": 73,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 769,
+    "percentage": 85.4,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80413",
+    "name": "Paragi Dixit",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 26,
+        "exam": 40,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 27,
+        "exam": 22,
+        "total": 49,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 45,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 26,
+        "exam": 22,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 28,
+        "exam": 38,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 26,
+        "exam": 54,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 27,
+        "exam": 50,
+        "total": 77,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 45,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 26,
+        "exam": 54,
+        "total": 80,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 611,
+    "percentage": 67.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80414",
+    "name": "Pooja Jatav",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 26,
+        "exam": 53,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 28,
+        "exam": 52,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 59,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 26,
+        "exam": 32,
+        "total": 58,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 28,
+        "exam": 36,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 27,
+        "exam": 55,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 57,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 25,
+        "exam": 50,
+        "total": 75,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 701,
+    "percentage": 77.9,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80415",
+    "name": "Pradhumna ****",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 23,
+        "total": 47,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 26,
+        "exam": 0,
+        "total": 26,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 26,
+        "exam": 22,
+        "total": 48,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 22,
+        "exam": 7,
+        "total": 29,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 20,
+        "exam": 21,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 24,
+        "exam": 35,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 27,
+        "exam": 49,
+        "total": 76,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 26,
+        "exam": 40,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 21,
+        "exam": 32,
+        "total": 53,
+        "status": "PASS"
+      }
+    ],
+    "pa": "D",
+    "grandTotal": 445,
+    "percentage": 49.4,
+    "result": "P+C"
+  },
+
+
+
+
+
+
+
+  {
+    "roll": "80416",
+    "name": "Preeti Prajapati",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 25,
+        "exam": 48,
+        "total": 73,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 28,
+        "exam": 57,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 25,
+        "exam": 35,
+        "total": 60,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 29,
+        "exam": 54,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 27,
+        "exam": 58,
+        "total": 85,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 58,
+        "total": 86,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 24,
+        "exam": 45,
+        "total": 69,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 713,
+    "percentage": 79.2,
+    "result": "P"
+  },
+  {
+    "roll": "80417",
+    "name": "Purvansh Ahirwal",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 29,
+        "total": 53,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 26,
+        "exam": 39,
+        "total": 65,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 32,
+        "total": 59,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 23,
+        "exam": 18,
+        "total": 41,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 25,
+        "exam": 21,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 24,
+        "exam": 40,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 26,
+        "exam": 56,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 41,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 22,
+        "exam": 50,
+        "total": 72,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 550,
+    "percentage": 61.1,
+    "result": "P"
+  },
+  {
+    "roll": "80418",
+    "name": "Ritu Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 27,
+        "exam": 60,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 29,
+        "exam": 58,
+        "total": 87,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 65,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 28,
+        "exam": 40,
+        "total": 68,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 27,
+        "exam": 45,
+        "total": 72,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 29,
+        "exam": 67,
+        "total": 96,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 65,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 26,
+        "exam": 58,
+        "total": 84,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 775,
+    "percentage": 86.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80419",
+    "name": "Rohan Chouhan",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 26,
+        "exam": 57,
+        "total": 83,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 29,
+        "exam": 61,
+        "total": 90,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 64,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 26,
+        "exam": 40,
+        "total": 66,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 29,
+        "exam": 52,
+        "total": 81,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 63,
+        "total": 92,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 25,
+        "exam": 64,
+        "total": 89,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 780,
+    "percentage": 86.7,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "roll": "80420",
+    "name": "Saloni Rajput",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 27,
+        "exam": 62,
+        "total": 89,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 29,
+        "exam": 62,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 66,
+        "total": 95,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 28,
+        "exam": 39,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 27,
+        "exam": 48,
+        "total": 75,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 29,
+        "exam": 67,
+        "total": 96,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 62,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 25,
+        "exam": 63,
+        "total": 88,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 785,
+    "percentage": 87.2,
+    "result": "P"
+  },
+  {
+    "roll": "80421",
+    "name": "Samarth Salgat",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 27,
+        "exam": 53,
+        "total": 80,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 28,
+        "exam": 50,
+        "total": 78,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 60,
+        "total": 88,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 24,
+        "exam": 22,
+        "total": 46,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 26,
+        "exam": 38,
+        "total": 64,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 63,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 56,
+        "total": 84,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 23,
+        "exam": 50,
+        "total": 73,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 694,
+    "percentage": 77.1,
+    "result": "P"
+  },
+
+
+
+
+
+
+  {
+    "roll": "80424",
+    "name": "Gauri Sonttake",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 27,
+        "exam": 64,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 29,
+        "exam": 62,
+        "total": 91,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 66,
+        "total": 95,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 28,
+        "exam": 46,
+        "total": 74,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 29,
+        "exam": 50,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 29,
+        "exam": 67,
+        "total": 96,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 28,
+        "exam": 65,
+        "total": 93,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 29,
+        "exam": 65,
+        "total": 94,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 27,
+        "exam": 64,
+        "total": 91,
+        "status": "PASS"
+      }
+    ],
+    "pa": "A",
+    "grandTotal": 804,
+    "percentage": 89.3,
+    "result": "P"
+  },
+
+
+
+
+
+
+
+
+  {
+    "roll": "80425",
+    "name": "Suleman Syed",
+    "course": "computer",
+    "batch": "4",
+    "semester": "4",
+    "subjects": [
+      {
+        "code": "C4.1",
+        "name": "Computer Network",
+        "sessional": 24,
+        "exam": 27,
+        "total": 51,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.2",
+        "name": "Database Management System",
+        "sessional": 27,
+        "exam": 25,
+        "total": 52,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.3",
+        "name": "Linux and Shell Programming",
+        "sessional": 27,
+        "exam": 40,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.4",
+        "name": "Microprocessor & Interface",
+        "sessional": 21,
+        "exam": 8,
+        "total": 29,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.5",
+        "name": "Entrepreneurship",
+        "sessional": 21,
+        "exam": 46,
+        "total": 67,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.6",
+        "name": "Computer Network Lab",
+        "sessional": 24,
+        "exam": 45,
+        "total": 69,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.7",
+        "name": "Database Management System Lab",
+        "sessional": 26,
+        "exam": 56,
+        "total": 82,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.8",
+        "name": "Linux and Shell Programming",
+        "sessional": 28,
+        "exam": 51,
+        "total": 79,
+        "status": "PASS"
+      },
+      {
+        "code": "C4.9",
+        "name": "Microprocessor & Interface Lab",
+        "sessional": 19,
+        "exam": 44,
+        "total": 63,
+        "status": "PASS"
+      }
+    ],
+    "pa": "B",
+    "grandTotal": 559,
+    "percentage": 62.1,
+    "result": "P+C"
+  }
+]
+]
+
+]
+]
+
+
+
+
+
+
+
+  
+] 

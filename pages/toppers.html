@@ -1,0 +1,822 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Toppers List | IGTR Student Hub</title> 
+ 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: Arial, Helvetica, sans-serif; 
+        } 
+ 
+        body { 
+            min-height: 100vh; 
+            background: #f8fafc; 
+            color: #0f172a; 
+        } 
+ 
+        /* HEADER */ 
+        .header { 
+            background: #ffffff; 
+            border-bottom: 1px solid #e2e8f0; 
+            padding: 18px 7%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        } 
+ 
+        .logo { 
+            font-size: 21px; 
+            font-weight: 700; 
+            color: #0f172a; 
+        } 
+ 
+        .logo span { 
+            color: #0284c7; 
+        } 
+ 
+        .home-btn { 
+            text-decoration: none; 
+            color: #0f172a; 
+            font-size: 14px; 
+            font-weight: 600; 
+            padding: 9px 17px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 7px; 
+            transition: 0.3s; 
+        } 
+ 
+        .home-btn:hover { 
+            background: #0284c7; 
+            color: white; 
+            border-color: #0284c7; 
+        } 
+ 
+        /* MAIN */ 
+        .main { 
+            width: 90%; 
+            max-width: 1050px; 
+            margin: 45px auto; 
+        } 
+ 
+        .heading { 
+            text-align: center; 
+            margin-bottom: 35px; 
+        } 
+ 
+        .heading h1 { 
+            font-size: 32px; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .heading p { 
+            color: #64748b; 
+            font-size: 15px; 
+        } 
+ 
+        /* SELECTION BOX */ 
+        .selection-box { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 14px; 
+            padding: 30px; 
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06); 
+        } 
+ 
+        .form-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 22px; 
+        } 
+ 
+        .form-group label { 
+            display: block; 
+            font-size: 14px; 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+        } 
+ 
+        .form-group select { 
+            width: 100%; 
+            padding: 13px 14px; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 8px; 
+            background: white; 
+            color: #0f172a; 
+            font-size: 14px; 
+            outline: none; 
+            cursor: pointer; 
+        } 
+ 
+        .form-group select:focus { 
+            border-color: #0284c7; 
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1); 
+        } 
+ 
+        .view-btn { 
+            display: block; 
+            width: 100%; 
+            margin-top: 25px; 
+            padding: 14px; 
+            border: none; 
+            border-radius: 8px; 
+            background: #0f172a; 
+            color: white; 
+            font-size: 15px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: 0.3s; 
+        } 
+ 
+        .view-btn:hover { 
+            background: #0284c7; 
+            transform: translateY(-2px); 
+            box-shadow: 0 8px 18px rgba(2, 132, 199, 0.22); 
+        } 
+ 
+        /* RESULT */ 
+        .result-section { 
+            display: none; 
+            margin-top: 40px; 
+        } 
+ 
+        .result-heading { 
+            text-align: center; 
+            margin-bottom: 25px; 
+        } 
+ 
+        .result-heading h2 { 
+            font-size: 25px; 
+            margin-bottom: 8px; 
+        } 
+ 
+        .result-heading p { 
+            color: #64748b; 
+            font-size: 14px; 
+        } 
+ 
+        /* TOPPER CARDS */ 
+        .topper-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 22px; 
+        } 
+ 
+        .topper-card { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 14px; 
+            padding: 28px 20px; 
+            text-align: center; 
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06); 
+            transition: 0.3s; 
+        } 
+ 
+        .topper-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.1); 
+        } 
+ 
+        .rank { 
+            font-size: 38px; 
+            margin-bottom: 12px; 
+        } 
+ 
+        .rank-number { 
+            font-size: 13px; 
+            font-weight: 700; 
+            color: #64748b; 
+            text-transform: uppercase; 
+            margin-bottom: 7px; 
+        } 
+ 
+        .topper-name { 
+            font-size: 20px; 
+            font-weight: 700; 
+            margin-bottom: 8px; 
+        } 
+ 
+        .roll { 
+            font-size: 13px; 
+            color: #64748b; 
+            margin-bottom: 20px; 
+        } 
+ 
+        .marks-info { 
+            border-top: 1px solid #e2e8f0; 
+            padding-top: 15px; 
+        } 
+ 
+        .percentage { 
+            font-size: 25px; 
+            font-weight: 700; 
+            color: #0284c7; 
+        } 
+ 
+        .percentage-label { 
+            font-size: 12px; 
+            color: #64748b; 
+            margin-top: 3px; 
+        } 
+ 
+        .grand-total { 
+            margin-top: 10px; 
+            font-size: 13px; 
+            color: #475569; 
+        } 
+ 
+        /* MESSAGE */ 
+        .message { 
+            display: none; 
+            text-align: center; 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            padding: 25px; 
+            border-radius: 12px; 
+            margin-top: 30px; 
+            color: #64748b; 
+        } 
+ 
+        /* RESPONSIVE */ 
+        @media (max-width: 800px) { 
+ 
+            .form-grid { 
+                grid-template-columns: 1fr; 
+            } 
+ 
+            .topper-grid { 
+                grid-template-columns: 1fr; 
+            } 
+ 
+            .heading h1 { 
+                font-size: 26px; 
+            } 
+ 
+            .main { 
+                width: 92%; 
+                margin: 30px auto; 
+            } 
+ 
+            .selection-box { 
+                padding: 22px; 
+            } 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+ 
+    <!-- HEADER --> 
+    <header class="header"> 
+ 
+        <div class="logo"> 
+            IGTR <span>Student Hub</span> 
+        </div> 
+ 
+        <a href="../index.html" class="home-btn"> 
+            ← Home 
+        </a> 
+ 
+    </header> 
+ 
+ 
+    <!-- MAIN --> 
+    <main class="main"> 
+ 
+        <div class="heading"> 
+ 
+            <h1>🏆 Toppers List</h1> 
+ 
+            <p> 
+                Select course, academic year, batch and semester 
+                to view the toppers. 
+            </p> 
+ 
+        </div> 
+ 
+ 
+        <!-- SELECTION --> 
+        <section class="selection-box"> 
+ 
+            <div class="form-grid"> 
+ 
+                <!-- COURSE --> 
+                <div class="form-group"> 
+ 
+                    <label for="course"> 
+                        Select Course 
+                    </label> 
+ 
+                    <select id="course"> 
+ 
+                        <option value=""> 
+                            -- Select Course -- 
+                        </option> 
+ 
+                        <option value="computer"> 
+                            Diploma in Computer Science 
+                        </option> 
+ 
+                        <option value="mechatronics"> 
+                            Diploma in Mechatronics 
+                        </option> 
+ 
+                        <option value="tool"> 
+                            Diploma in Advanced Tool & Die Making 
+                        </option> 
+ 
+                        <option value="vocational"> 
+                            Diploma in Vocational 
+                        </option> 
+ 
+                    </select> 
+ 
+                </div> 
+ 
+ 
+                <!-- YEAR --> 
+                <div class="form-group"> 
+ 
+                    <label for="year"> 
+                        Academic Year 
+                    </label> 
+ 
+                    <select id="year"> 
+ 
+                        <option value=""> 
+                            -- Select Academic Year -- 
+                        </option> 
+ 
+                        <option value="2025-26"> 
+                            2025–26 
+                        </option> 
+ 
+                        <option value="2024-25"> 
+                            2024–25 
+                        </option> 
+ 
+                        <option value="2023-24"> 
+                            2023–24 
+                        </option> 
+ 
+                    </select> 
+ 
+                </div> 
+ 
+ 
+                <!-- BATCH --> 
+                <div class="form-group"> 
+ 
+                    <label for="batch"> 
+                        Select Batch 
+                    </label> 
+ 
+                    <select id="batch"> 
+ 
+                        <option value=""> 
+                            -- Select Batch -- 
+                        </option> 
+ 
+                    </select> 
+ 
+                </div> 
+ 
+ 
+                <!-- SEMESTER --> 
+                <div class="form-group"> 
+ 
+                    <label for="semester"> 
+                        Select Semester 
+                    </label> 
+ 
+                    <select id="semester"> 
+ 
+                        <option value=""> 
+                            -- Select Semester -- 
+                        </option> 
+ 
+                        <option value="1"> 
+                            1st Semester 
+                        </option> 
+ 
+                        <option value="2"> 
+                            2nd Semester 
+                        </option> 
+ 
+                        <option value="3"> 
+                            3rd Semester 
+                        </option> 
+ 
+                        <option value="4"> 
+                            4th Semester 
+                        </option> 
+ 
+                        <option value="5"> 
+                            5th Semester 
+                        </option> 
+ 
+                        <option value="6"> 
+                            6th Semester 
+                        </option> 
+ 
+                    </select> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <button class="view-btn" onclick="showToppers()"> 
+                VIEW TOPPERS 
+            </button> 
+ 
+        </section> 
+ 
+ 
+        <!-- MESSAGE --> 
+        <div id="message" class="message"></div> 
+ 
+ 
+        <!-- RESULT --> 
+        <section id="resultSection" class="result-section"> 
+ 
+            <div class="result-heading"> 
+ 
+                <h2>🏆 Top Performers</h2> 
+ 
+                <p id="selectedDetails"></p> 
+ 
+            </div> 
+ 
+ 
+            <div id="topperGrid" class="topper-grid"></div> 
+ 
+        </section> 
+ 
+    </main> 
+ 
+ 
+    <script> 
+ 
+        const courseSelect = 
+            document.getElementById("course"); 
+ 
+        const batchSelect = 
+            document.getElementById("batch"); 
+ 
+        const yearSelect = 
+            document.getElementById("year"); 
+ 
+        const semesterSelect = 
+            document.getElementById("semester"); 
+ 
+        const resultSection = 
+            document.getElementById("resultSection"); 
+ 
+        const topperGrid = 
+            document.getElementById("topperGrid"); 
+ 
+        const message = 
+            document.getElementById("message"); 
+ 
+ 
+        /* -------------------------------- 
+           COURSE → BATCH 
+        -------------------------------- */ 
+ 
+        courseSelect.addEventListener("change", function () { 
+ 
+            const course = this.value; 
+ 
+            batchSelect.innerHTML = ` 
+                <option value=""> 
+                    -- Select Batch -- 
+                </option> 
+            `; 
+ 
+            if (!course) return; 
+ 
+ 
+            let totalBatches = 0; 
+ 
+ 
+            if (course === "computer") { 
+ 
+                totalBatches = 5; 
+ 
+            } 
+ 
+            else if (course === "mechatronics") { 
+ 
+                totalBatches = 7; 
+ 
+            } 
+ 
+            else { 
+ 
+                message.style.display = "block"; 
+ 
+                message.textContent = 
+                    "Batch information for this course will be added soon."; 
+ 
+                return; 
+ 
+            } 
+ 
+ 
+            message.style.display = "none"; 
+ 
+ 
+            for (let i = 1; i <= totalBatches; i++) { 
+ 
+                const option = 
+                    document.createElement("option"); 
+ 
+                option.value = i; 
+ 
+                option.textContent = 
+                    `${i}${getOrdinal(i)} Batch`; 
+ 
+                batchSelect.appendChild(option); 
+ 
+            } 
+ 
+        }); 
+ 
+ 
+        /* -------------------------------- 
+           ORDINAL 
+        -------------------------------- */ 
+ 
+        function getOrdinal(number) { 
+ 
+            if (number === 1) return "st"; 
+ 
+            if (number === 2) return "nd"; 
+ 
+            if (number === 3) return "rd"; 
+ 
+            return "th"; 
+ 
+        } 
+ 
+ 
+        /* -------------------------------- 
+           VIEW TOPPERS 
+        -------------------------------- */ 
+ 
+        async function showToppers() { 
+ 
+            const course = 
+                courseSelect.value; 
+ 
+            const year = 
+                yearSelect.value; 
+ 
+            const batch = 
+                batchSelect.value; 
+ 
+            const semester = 
+                semesterSelect.value; 
+ 
+ 
+            if (!course || !year || !batch || !semester) { 
+ 
+                resultSection.style.display = "none"; 
+ 
+                message.style.display = "block"; 
+ 
+                message.textContent = 
+                    "Please select Course, Academic Year, Batch and Semester."; 
+ 
+                return; 
+ 
+            } 
+ 
+ 
+            message.style.display = "none"; 
+ 
+ 
+            try { 
+ 
+                const response = await fetch("../data/toppers.json?t=" + Date.now(), {
+                    cache: "no-store"
+                }); 
+ 
+                if (!response.ok) { 
+ 
+                    throw new Error( 
+                        "Unable to load toppers data." 
+                    ); 
+ 
+                } 
+ 
+ 
+                const toppers = 
+                    await response.json(); 
+ 
+ 
+                const filteredToppers = 
+                    toppers.filter(function (topper) { 
+ 
+                        return ( 
+ 
+                            String(topper.course).trim() === 
+                            String(course).trim() 
+ 
+                            && 
+ 
+                            String(topper.year).trim() === 
+                            String(year).trim() 
+ 
+                            && 
+ 
+                            String(topper.batch).trim() === 
+                            String(batch).trim() 
+ 
+                            && 
+ 
+                            String(topper.semester).trim() === 
+                            String(semester).trim() 
+ 
+                        ); 
+ 
+                    }); 
+ 
+ 
+                topperGrid.innerHTML = ""; 
+ 
+ 
+                if (filteredToppers.length === 0) { 
+ 
+                    resultSection.style.display = "none"; 
+ 
+                    message.style.display = "block"; 
+ 
+                    message.textContent = 
+                        "No topper data found for the selected Course, Year, Batch and Semester."; 
+ 
+                    return; 
+ 
+                } 
+ 
+ 
+                /* SORT BY RANK */ 
+ 
+                filteredToppers.sort(function (a, b) { 
+ 
+                    return Number(a.rank) - Number(b.rank); 
+ 
+                }); 
+ 
+ 
+                /* DETAILS */ 
+ 
+                const courseName = 
+                    courseSelect.options[ 
+                        courseSelect.selectedIndex 
+                    ].textContent; 
+ 
+ 
+                const yearName = 
+                    yearSelect.options[ 
+                        yearSelect.selectedIndex 
+                    ].textContent; 
+ 
+ 
+                const batchName = 
+                    batchSelect.options[ 
+                        batchSelect.selectedIndex 
+                    ].textContent; 
+ 
+ 
+                const semesterName = 
+                    semesterSelect.options[ 
+                        semesterSelect.selectedIndex 
+                    ].textContent; 
+ 
+ 
+                document.getElementById( 
+                    "selectedDetails" 
+                ).textContent = 
+                    `${courseName} • ${yearName} • ${batchName} • ${semesterName}`; 
+ 
+ 
+                /* -------------------------------- 
+                   MAXIMUM MARKS 
+                   1st Semester = 700 
+                   2nd Semester = 800 
+                -------------------------------- */ 
+ 
+                const maximumMarks = 
+                    String(semester).trim() === "1" 
+                        ? 700 
+                        : 800; 
+ 
+ 
+                /* CREATE CARDS */ 
+ 
+                filteredToppers.forEach(function (topper) { 
+ 
+                    let medal = "🏆"; 
+ 
+ 
+                    if (Number(topper.rank) === 1) { 
+                        medal = "🥇"; 
+                    } 
+ 
+                    else if (Number(topper.rank) === 2) { 
+                        medal = "🥈"; 
+                    } 
+ 
+                    else if (Number(topper.rank) === 3) { 
+                        medal = "🥉"; 
+                    } 
+ 
+ 
+                    const card = 
+                        document.createElement("div"); 
+ 
+                    card.className = 
+                        "topper-card"; 
+ 
+ 
+                    card.innerHTML = ` 
+ 
+                        <div class="rank"> 
+                            ${medal} 
+                        </div> 
+ 
+                        <div class="rank-number"> 
+                            Rank ${topper.rank} 
+                        </div> 
+ 
+                        <div class="topper-name"> 
+                            ${topper.name} 
+                        </div> 
+ 
+                        <div class="roll"> 
+                            Roll No. ${topper.roll} 
+                        </div> 
+ 
+                        <div class="marks-info"> 
+ 
+                            <div class="percentage"> 
+                                ${topper.percentage}% 
+                            </div> 
+ 
+                            <div class="percentage-label"> 
+                                Percentage 
+                            </div> 
+ 
+                            <div class="grand-total"> 
+                                Grand Total: 
+                                <strong> 
+                                    ${topper.grandTotal} / ${maximumMarks} 
+                                </strong> 
+                            </div> 
+ 
+                        </div> 
+ 
+                    `; 
+ 
+ 
+                    topperGrid.appendChild(card); 
+ 
+                }); 
+ 
+ 
+                resultSection.style.display = "block"; 
+ 
+ 
+                resultSection.scrollIntoView({ 
+                    behavior: "smooth" 
+                }); 
+ 
+            } 
+ 
+ 
+            catch (error) { 
+ 
+                console.error(error); 
+ 
+                resultSection.style.display = "none"; 
+ 
+                message.style.display = "block"; 
+ 
+                message.textContent = 
+                    "Unable to load topper data. Please check toppers.json."; 
+ 
+            } 
+ 
+        } 
+ 
+    </script> 
+ 
+</body> 
+</html>
