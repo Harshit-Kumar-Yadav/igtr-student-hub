@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <title>Student Dashboard | IGTR</title>
+
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
             background: #f4f7fb;
-            color: #172033
+            color: #172033;
         }
 
         .top {
@@ -24,7 +26,7 @@
             padding: 11px 5%;
             font-size: 12px;
             display: flex;
-            justify-content: space-between
+            justify-content: space-between;
         }
 
         .nav {
@@ -36,7 +38,7 @@
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 20
+            z-index: 20;
         }
 
         .brand {
@@ -45,7 +47,7 @@
             gap: 10px;
             text-decoration: none;
             color: #172033;
-            font-weight: 800
+            font-weight: 800;
         }
 
         .brand-icon {
@@ -55,13 +57,13 @@
             background: #123c69;
             color: #fff;
             display: grid;
-            place-items: center
+            place-items: center;
         }
 
         .navlinks {
             display: flex;
             gap: 8px;
-            flex-wrap: wrap
+            flex-wrap: wrap;
         }
 
         .navlinks a {
@@ -71,12 +73,12 @@
             border-radius: 8px;
             text-decoration: none;
             font-size: 12px;
-            font-weight: 700
+            font-weight: 700;
         }
 
         .wrap {
             width: min(1180px, 92%);
-            margin: 32px auto
+            margin: 32px auto;
         }
 
         .hero {
@@ -85,31 +87,31 @@
             padding: 35px;
             border-radius: 18px;
             box-shadow: 0 12px 30px rgba(15, 23, 42, .12);
-            margin-bottom: 24px
+            margin-bottom: 24px;
         }
 
         .hero .eyebrow {
             font-size: 11px;
             letter-spacing: 1.6px;
             color: #b9dcfb;
-            font-weight: 800
+            font-weight: 800;
         }
 
         .hero h1 {
             font-size: clamp(28px, 4vw, 44px);
-            margin: 10px 0
+            margin: 10px 0;
         }
 
         .hero p {
             color: #dbeafe;
             line-height: 1.7;
-            max-width: 780px
+            max-width: 780px;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 18px
+            gap: 18px;
         }
 
         .card {
@@ -118,28 +120,28 @@
             border-radius: 15px;
             padding: 22px;
             box-shadow: 0 5px 18px rgba(0, 0, 0, .05);
-            transition: .2s
+            transition: .2s;
         }
 
         .card:hover {
             transform: translateY(-3px);
-            border-color: #2563eb
+            border-color: #2563eb;
         }
 
         .card .icon {
             font-size: 30px;
-            margin-bottom: 12px
+            margin-bottom: 12px;
         }
 
         .card h3 {
             font-size: 18px;
-            margin-bottom: 7px
+            margin-bottom: 7px;
         }
 
         .card p {
             font-size: 13px;
             color: #64748b;
-            line-height: 1.6
+            line-height: 1.6;
         }
 
         .btn {
@@ -152,12 +154,12 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 13px;
-            cursor: pointer
+            cursor: pointer;
         }
 
         .secondary {
             background: #eef4fa !important;
-            color: #123c69 !important
+            color: #123c69 !important;
         }
 
         .section {
@@ -165,23 +167,23 @@
             border: 1px solid #e5e7eb;
             border-radius: 15px;
             padding: 22px;
-            margin-top: 20px
+            margin-top: 20px;
         }
 
         .section h2 {
             font-size: 21px;
-            margin-bottom: 15px
+            margin-bottom: 15px;
         }
 
         .muted {
             color: #64748b;
-            font-size: 13px
+            font-size: 13px;
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 14px
+            gap: 14px;
         }
 
         .field label {
@@ -189,7 +191,7 @@
             font-size: 12px;
             font-weight: 700;
             margin-bottom: 7px;
-            color: #475569
+            color: #475569;
         }
 
         .field input {
@@ -198,17 +200,17 @@
             border: 1px solid #dbe2ea;
             border-radius: 8px;
             outline: none;
-            background: #fff
+            background: #fff;
         }
 
         .table-wrap {
-            overflow: auto
+            overflow: auto;
         }
 
         .table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 13px
+            font-size: 13px;
         }
 
         .table th,
@@ -216,12 +218,12 @@
             padding: 11px;
             border-bottom: 1px solid #e5e7eb;
             text-align: left;
-            white-space: nowrap
+            white-space: nowrap;
         }
 
         .table th {
             background: #f8fafc;
-            color: #334155
+            color: #334155;
         }
 
         .empty {
@@ -229,7 +231,7 @@
             text-align: center;
             color: #64748b;
             border: 1px dashed #cbd5e1;
-            border-radius: 12px
+            border-radius: 12px;
         }
 
         .pill {
@@ -239,7 +241,7 @@
             background: #eff6ff;
             color: #1d4ed8;
             font-size: 11px;
-            font-weight: 800
+            font-weight: 800;
         }
 
         .footer {
@@ -248,48 +250,54 @@
             background: #0b1220;
             color: #94a3b8;
             margin-top: 40px;
-            font-size: 12px
+            font-size: 12px;
         }
 
         @media(max-width:850px) {
+
             .grid {
-                grid-template-columns: repeat(2, 1fr)
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .form-grid {
-                grid-template-columns: 1fr 1fr
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media(max-width:600px) {
+
             .top {
-                display: none
+                display: none;
             }
 
             .nav {
                 padding: 12px 4%;
                 flex-direction: column;
-                gap: 10px
+                gap: 10px;
             }
 
             .wrap {
                 width: 92%;
-                margin: 22px auto
+                margin: 22px auto;
             }
 
             .grid,
             .form-grid {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
             }
 
             .hero {
-                padding: 25px
+                padding: 25px;
             }
 
             .hero h1 {
-                font-size: 28px
+                font-size: 28px;
             }
         }
+
+        /* =========================
+           DASHBOARD NAVBAR
+        ========================= */
 
         .navbar {
             height: 70px;
@@ -301,7 +309,7 @@
             padding: 0 5%;
             position: sticky;
             top: 0;
-            z-index: 100
+            z-index: 100;
         }
 
         .logo {
@@ -309,7 +317,7 @@
             align-items: center;
             gap: 12px;
             font-size: 20px;
-            font-weight: bold
+            font-weight: bold;
         }
 
         .logo-icon {
@@ -318,18 +326,18 @@
             background: #2563eb;
             border-radius: 10px;
             display: grid;
-            place-items: center
+            place-items: center;
         }
 
         .nav-right {
             display: flex;
             gap: 15px;
-            align-items: center
+            align-items: center;
         }
 
         .welcome {
             font-size: 13px;
-            color: #cbd5e1
+            color: #cbd5e1;
         }
 
         .logout {
@@ -339,7 +347,7 @@
             padding: 10px 16px;
             border-radius: 8px;
             cursor: pointer;
-            font-weight: 700
+            font-weight: 700;
         }
 
         .dashhero {
@@ -347,17 +355,17 @@
             color: #fff;
             padding: 35px;
             border-radius: 18px;
-            margin-bottom: 22px
+            margin-bottom: 22px;
         }
 
         .dashhero h1 {
             font-size: 30px;
-            margin-bottom: 8px
+            margin-bottom: 8px;
         }
 
         .dashhero p {
             color: #dbeafe;
-            line-height: 1.6
+            line-height: 1.6;
         }
 
         .studentid {
@@ -366,42 +374,42 @@
             background: rgba(255, 255, 255, .15);
             padding: 9px 14px;
             border-radius: 8px;
-            font-size: 13px
+            font-size: 13px;
         }
 
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
-            margin-bottom: 22px
+            margin-bottom: 22px;
         }
 
         .stat {
             background: #fff;
             padding: 19px;
             border-radius: 14px;
-            border: 1px solid #e5e7eb
+            border: 1px solid #e5e7eb;
         }
 
         .stat b {
             font-size: 25px;
             display: block;
-            margin-top: 5px
+            margin-top: 5px;
         }
 
         .stat span {
             font-size: 12px;
-            color: #64748b
+            color: #64748b;
         }
 
         .action {
-            cursor: pointer
+            cursor: pointer;
         }
 
         .profilegrid {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 20px
+            gap: 20px;
         }
 
         .row {
@@ -409,11 +417,11 @@
             justify-content: space-between;
             padding: 12px 0;
             border-bottom: 1px solid #e5e7eb;
-            font-size: 13px
+            font-size: 13px;
         }
 
         .row span {
-            color: #64748b
+            color: #64748b;
         }
 
         .notice {
@@ -422,304 +430,777 @@
             background: #f8fafc;
             margin-bottom: 10px;
             border-radius: 6px;
-            font-size: 13px
+            font-size: 13px;
+        }
+
+        /* =========================
+           REVIEW CARD
+        ========================= */
+
+        .review-card {
+            border: 1px solid #dbeafe;
+            background: linear-gradient(135deg, #ffffff, #f8fbff);
+        }
+
+        .review-card:hover {
+            border-color: #f5b301;
         }
 
         @media(max-width:900px) {
+
             .stats {
-                grid-template-columns: repeat(2, 1fr)
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .profilegrid {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
             }
         }
 
         @media(max-width:600px) {
+
             .navbar {
-                padding: 0 4%
+                padding: 0 4%;
             }
 
             .welcome {
-                display: none
+                display: none;
             }
 
             .logo {
-                font-size: 16px
+                font-size: 16px;
             }
 
             .stats {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
     <nav class="navbar">
+
         <div class="logo">
-            <div class="logo-icon">🎓</div><span>IGTR Student Hub</span>
+            <div class="logo-icon">🎓</div>
+            <span>IGTR Student Hub</span>
         </div>
-        <div class="nav-right"><span class="welcome" id="welcome">Welcome</span><button class="logout"
-                onclick="logout()">Logout</button></div>
+
+        <div class="nav-right">
+
+            <span class="welcome" id="welcome">
+                Welcome
+            </span>
+
+            <button class="logout" onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
     </nav>
+
+
     <main class="wrap">
+
+        <!-- =========================
+             DASHBOARD HERO
+        ========================= -->
+
         <section class="dashhero">
-           <h1 id="welcomeMessage">Welcome 👋</h1>
-            <p>Manage academics, results, study resources, planning and career preparation from one place.</p>
-            <div class="studentid">Roll No: <strong id="roll">—</strong> • <span id="course">—</span></div>
+
+            <h1 id="welcomeMessage">
+                Welcome 👋
+            </h1>
+
+            <p>
+                Manage academics, results, study resources,
+                planning and career preparation from one place.
+            </p>
+
+            <div class="studentid">
+
+                Roll No:
+                <strong id="roll">—</strong>
+
+                •
+
+                <span id="course">—</span>
+
+            </div>
+
         </section>
+
+
+        <!-- =========================
+             STATS
+        ========================= -->
+
         <section class="stats">
-            <div class="stat"><span>📚 My Course</span><b>1</b></div>
-            <div class="stat"><span>📊 Result Records</span><b id="records">—</b></div>
-            <div class="stat"><span>🏆 Best Percentage</span><b id="best">—</b></div>
-            <div class="stat"><span>📅 Pending Tasks</span><b id="tasks">0</b></div>
+
+            <div class="stat">
+                <span>📚 My Course</span>
+                <b>1</b>
+            </div>
+
+            <div class="stat">
+                <span>📊 Result Records</span>
+                <b id="records">—</b>
+            </div>
+
+            <div class="stat">
+                <span>🏆 Best Percentage</span>
+                <b id="best">—</b>
+            </div>
+
+            <div class="stat">
+                <span>📅 Pending Tasks</span>
+                <b id="tasks">0</b>
+            </div>
+
         </section>
-        <h2 style="margin:24px 0 15px">Academic Access</h2>
+
+
+        <!-- =========================
+             ACADEMIC ACCESS
+        ========================= -->
+
+        <h2 style="margin:24px 0 15px">
+            Academic Access
+        </h2>
+
         <section class="grid">
-            <div class="card action" onclick="location.href='courses.html'">
+
+            <div class="card action"
+                onclick="location.href='courses.html'">
+
                 <div class="icon">📚</div>
-                <h3>My Courses</h3>
-                <p>Open your assigned course and subjects.</p>
+
+                <h3>
+                    My Courses
+                </h3>
+
+                <p>
+                    Open your assigned course and subjects.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='notes.html'">
+
+
+            <div class="card action"
+                onclick="location.href='notes.html'">
+
                 <div class="icon">📝</div>
-                <h3>Study Notes</h3>
-                <p>Open subject units and available resources.</p>
+
+                <h3>
+                    Study Notes
+                </h3>
+
+                <p>
+                    Open subject units and available resources.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='result-analytics.html'">
+
+
+            <div class="card action"
+                onclick="location.href='result-analytics.html'">
+
                 <div class="icon">📊</div>
-                <h3>Result Analytics</h3>
-                <p>View semester-wise academic performance.</p>
+
+                <h3>
+                    Result Analytics
+                </h3>
+
+                <p>
+                    View semester-wise academic performance.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='igtr_calculator.html'">
+
+
+            <div class="card action"
+                onclick="location.href='igtr_calculator.html'">
+
                 <div class="icon">🧮</div>
-                <h3>Result Calculator</h3>
-                <p>Open the existing course calculation module.</p>
+
+                <h3>
+                    Result Calculator
+                </h3>
+
+                <p>
+                    Open the existing course calculation module.
+                </p>
+
             </div>
+
         </section>
-        <h2 style="margin:28px 0 15px">Student Tools</h2>
+
+
+        <!-- =========================
+             STUDENT TOOLS
+        ========================= -->
+
+        <h2 style="margin:28px 0 15px">
+            Student Tools
+        </h2>
+
         <section class="grid">
-            <div class="card action" onclick="location.href='student-tools.html'">
+
+            <div class="card action"
+                onclick="location.href='student-tools.html'">
+
                 <div class="icon">🛠️</div>
-                <h3>All Student Tools</h3>
-                <p>Open the complete tools hub.</p>
+
+                <h3>
+                    All Student Tools
+                </h3>
+
+                <p>
+                    Open the complete tools hub.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='assignments.html'">
+
+
+            <div class="card action"
+                onclick="location.href='assignments.html'">
+
                 <div class="icon">📝</div>
-                <h3>Assignments</h3>
-                <p>Track your own pending work.</p>
+
+                <h3>
+                    Assignments
+                </h3>
+
+                <p>
+                    Track your own pending work.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='attendance.html'">
+
+
+            <div class="card action"
+                onclick="location.href='attendance.html'">
+
                 <div class="icon">📈</div>
-                <h3>Attendance</h3>
-                <p>Calculate and track attendance.</p>
+
+                <h3>
+                    Attendance
+                </h3>
+
+                <p>
+                    Calculate and track attendance.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='exam-countdown.html'">
+
+
+            <div class="card action"
+                onclick="location.href='exam-countdown.html'">
+
                 <div class="icon">⏳</div>
-                <h3>Exam Countdown</h3>
-                <p>Keep an exam date visible.</p>
+
+                <h3>
+                    Exam Countdown
+                </h3>
+
+                <p>
+                    Keep an exam date visible.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='cgpa-calculator.html'">
+
+
+            <div class="card action"
+                onclick="location.href='cgpa-calculator.html'">
+
                 <div class="icon">🎯</div>
-                <h3>CGPA Calculator</h3>
-                <p>Calculate weighted grade points.</p>
+
+                <h3>
+                    CGPA Calculator
+                </h3>
+
+                <p>
+                    Calculate weighted grade points.
+                </p>
+
             </div>
-            <div class="card action" onclick="location.href='career-hub.html'">
+
+
+            <div class="card action"
+                onclick="location.href='career-hub.html'">
+
                 <div class="icon">💼</div>
-                <h3>Career Hub</h3>
-                <p>Organize career and skill preparation.</p>
+
+                <h3>
+                    Career Hub
+                </h3>
+
+                <p>
+                    Organize career and skill preparation.
+                </p>
+
             </div>
+
+
+            <!-- =========================
+                 GIVE REVIEW
+            ========================= -->
+
+            <div class="card action review-card"
+                onclick="location.href='review.html'">
+
+                <div class="icon">⭐</div>
+
+                <h3>
+                    Give Review
+                </h3>
+
+                <p>
+                    Share your feedback and rate your
+                    experience with IGTR Student Hub.
+                </p>
+
+            </div>
+
         </section>
+
+
+        <!-- =========================
+             ATTENDANCE
+        ========================= -->
+
         <section style="margin-top:22px">
+
             <div class="section">
-                <h2>📈 My Attendance</h2>
-                <div class="row"><span>Current Attendance</span><b id="dashAtt">0.00%</b></div>
-                <div class="row"><span>Attended</span><b id="dashAttCount">0 / 0</b></div><br><a class="btn"
-                    href="attendance.html">Update Attendance →</a>
+
+                <h2>
+                    📈 My Attendance
+                </h2>
+
+                <div class="row">
+
+                    <span>
+                        Current Attendance
+                    </span>
+
+                    <b id="dashAtt">
+                        0.00%
+                    </b>
+
+                </div>
+
+                <div class="row">
+
+                    <span>
+                        Attended
+                    </span>
+
+                    <b id="dashAttCount">
+                        0 / 0
+                    </b>
+
+                </div>
+
+                <br>
+
+                <a class="btn"
+                    href="attendance.html">
+
+                    Update Attendance →
+
+                </a>
+
             </div>
+
         </section>
-        <section class="profilegrid" style="margin-top:22px">
+
+
+        <!-- =========================
+             PROFILE + UPDATES
+        ========================= -->
+
+        <section class="profilegrid"
+            style="margin-top:22px">
+
             <div class="section">
-                <h2>My Profile</h2>
-                <div class="row"><span>Student ID</span><b id="pid">—</b></div>
-                <div class="row"><span>Name</span><b id="pname">—</b></div>
-                <div class="row"><span>Course</span><b id="pcourse">—</b></div><br><a class="btn"
-                    href="profile.html">View Full Profile →</a>
+
+                <h2>
+                    My Profile
+                </h2>
+
+                <div class="row">
+
+                    <span>
+                        Student ID
+                    </span>
+
+                    <b id="pid">
+                        —
+                    </b>
+
+                </div>
+
+                <div class="row">
+
+                    <span>
+                        Name
+                    </span>
+
+                    <b id="pname">
+                        —
+                    </b>
+
+                </div>
+
+                <div class="row">
+
+                    <span>
+                        Course
+                    </span>
+
+                    <b id="pcourse">
+                        —
+                    </b>
+
+                </div>
+
+                <br>
+
+                <a class="btn"
+                    href="profile.html">
+
+                    View Full Profile →
+
+                </a>
+
             </div>
+
+
             <div class="section">
-                <h2>Portal Updates</h2>
-                <div class="notice">📚 Study material can be opened from your course.</div>
-                <div class="notice">🏆 Toppers List is available from the main portal.</div>
-                <div class="notice">📢 Verify official notices before relying on them.</div><a class="btn secondary"
-                    href="notices.html">Open Notice Board</a>
+
+                <h2>
+                    Portal Updates
+                </h2>
+
+                <div class="notice">
+                    📚 Study material can be opened from your course.
+                </div>
+
+                <div class="notice">
+                    🏆 Toppers List is available from the main portal.
+                </div>
+
+                <div class="notice">
+                    📢 Verify official notices before relying on them.
+                </div>
+
+                <a class="btn secondary"
+                    href="notices.html">
+
+                    Open Notice Board
+
+                </a>
+
             </div>
+
         </section>
+
     </main>
-    <footer class="footer">© 2026 IGTR Student Hub | Student Academic Portal</footer>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="footer">
+
+        © 2026 IGTR Student Hub |
+        Student Academic Portal
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT FILES
+    ========================= -->
+
     <script src="../js/auth.js"></script>
     <script src="../js/attendance.js"></script>
+
+
     <script>
-async function init() {
+
+        // ==========================================
+        // STUDENT DASHBOARD
+        // ==========================================
+
+        async function init() {
+
+            const st = await requireLogin(
+                'student-login.html'
+            );
+
+            if (!st) return;
 
 
+            // ==========================================
+            // STUDENT WELCOME
+            // ==========================================
 
-    async function init() {
+            const welcomeElement =
+                document.getElementById('welcome');
 
-    const st = await requireLogin('student-login.html');
+            const welcomeMessage =
+                document.getElementById('welcomeMessage');
 
-    if (!st) return;
+            if (welcomeElement) {
 
-    welcome.textContent = 'Welcome, ' + st.name + ' 👋';
+                welcomeElement.textContent =
+                    'Welcome, ' + st.name + ' 👋';
 
-    welcomeHeading.textContent =
-        'Welcome, ' + st.name + ' 👋';
+            }
 
-    roll.textContent = st.rollNo;
-    course.textContent = st.course;
+            if (welcomeMessage) {
 
-    pid.textContent = st.rollNo;
-    pname.textContent = st.name;
-    pcourse.textContent = st.course;
+                welcomeMessage.textContent =
+                    'Welcome, ' + st.name + ' 👋';
 
-    const att = getAttendance(st);
+            }
 
-    dashAtt.textContent =
-        attendancePercentage(att).toFixed(2) + '%';
 
-    dashAttCount.textContent =
-        (att.present || 0) + ' / ' + (att.total || 0);
+            // ==========================================
+            // STUDENT BASIC DETAILS
+            // ==========================================
 
-    // baaki tumhara existing code...
-}
+            document.getElementById('roll').textContent =
+                st.rollNo || '—';
 
-    const st = await requireLogin('student-login.html');
-    if (!st) return;
+            document.getElementById('course').textContent =
+                st.course || '—';
 
-    // =========================
-    // STUDENT WELCOME
-    // =========================
-    welcome.textContent = 'Welcome, ' + st.name + ' 👋';
+            document.getElementById('pid').textContent =
+                st.rollNo || '—';
 
-    // =========================
-    // STUDENT BASIC DETAILS
-    // =========================
-    roll.textContent = st.rollNo;
-    course.textContent = st.course;
+            document.getElementById('pname').textContent =
+                st.name || '—';
 
-    pid.textContent = st.rollNo;
-    pname.textContent = st.name;
-    pcourse.textContent = st.course;
+            document.getElementById('pcourse').textContent =
+                st.course || '—';
 
-    // =========================
-    // ATTENDANCE
-    // =========================
-    const att = getAttendance(st);
 
-    dashAtt.textContent =
-        attendancePercentage(att).toFixed(2) + '%';
+            // ==========================================
+            // ATTENDANCE
+            // ==========================================
 
-    dashAttCount.textContent =
-        (att.present || 0) + ' / ' + (att.total || 0);
+            try {
 
-    // =========================
-    // RESULT DATA
-    // =========================
-    try {
+                const att = getAttendance(st);
 
-        const data = await (
-            await fetch(
-                '../data/results.json?t=' + Date.now(),
-                {
-                    cache: 'no-store'
-                }
-            )
-        ).json();
+                document.getElementById('dashAtt').textContent =
+                    attendancePercentage(att).toFixed(2) + '%';
 
-        const all = Array.isArray(data)
-            ? data.flat(Infinity)
-            : [];
+                document.getElementById('dashAttCount').textContent =
+                    (att.present || 0) +
+                    ' / ' +
+                    (att.total || 0);
 
-        // Course normalization
-        const map = c => {
+            } catch (error) {
 
-            const x = String(c || '').toLowerCase();
+                console.error(
+                    'Attendance loading error:',
+                    error
+                );
 
-            return x.includes('computer')
-                ? 'computer'
-                : x.includes('mechatronics')
-                ? 'mechatronics'
-                : x.includes('tool')
-                ? 'tool'
-                : x.includes('vocational')
-                ? 'vocational'
-                : x;
-        };
+                document.getElementById('dashAtt').textContent =
+                    '0.00%';
 
-        // Find student's result
-        const rec = all.filter(x =>
-            x &&
-            String(x.roll || '').trim() ===
-                String(st.rollNo).trim() &&
+                document.getElementById('dashAttCount').textContent =
+                    '0 / 0';
 
-            String(x.course || '')
-                .trim()
-                .toLowerCase() ===
-                map(st.course)
-        );
+            }
 
-        // Total semester records
-        records.textContent = rec.length;
 
-        // Best percentage
-        const p = rec
-            .map(x => Number(x.percentage))
-            .filter(Number.isFinite);
+            // ==========================================
+            // RESULT DATA
+            // ==========================================
 
-        best.textContent = p.length
-            ? Math.max(...p).toFixed(1) + '%'
-            : '—';
+            try {
 
-    } catch (e) {
+                const response = await fetch(
+                    '../data/results.json?t=' + Date.now(),
+                    {
+                        cache: 'no-store'
+                    }
+                );
 
-        console.error(
-            'Result data loading error:',
-            e
-        );
+                const data = await response.json();
 
-        records.textContent = '—';
-    }
+                const all = Array.isArray(data)
+                    ? data.flat(Infinity)
+                    : [];
 
-    // =========================
-    // ASSIGNMENTS
-    // =========================
-    try {
 
-        tasks.textContent =
-            JSON.parse(
-                localStorage.getItem(
-                    'igtrAssignments'
-                ) || '[]'
-            ).filter(x => !x.done).length;
+                // Course normalization
+                const map = function (c) {
 
-    } catch (e) {
+                    const x =
+                        String(c || '').toLowerCase();
 
-        tasks.textContent = '0';
-    }
-}
+                    if (x.includes('computer')) {
+                        return 'computer';
+                    }
 
-// =========================
-// LOGOUT
-// =========================
-async function logout() {
-    await studentLogout();
-}
+                    if (x.includes('mechatronics')) {
+                        return 'mechatronics';
+                    }
 
-// =========================
-// START DASHBOARD
-// =========================
-init();
-</script>
+                    if (x.includes('tool')) {
+                        return 'tool';
+                    }
+
+                    if (x.includes('vocational')) {
+                        return 'vocational';
+                    }
+
+                    return x;
+
+                };
+
+
+                // Find student's result
+                const rec = all.filter(function (x) {
+
+                    if (!x) return false;
+
+                    const rollMatch =
+                        String(x.roll || '').trim() ===
+                        String(st.rollNo || '').trim();
+
+                    const courseMatch =
+                        String(x.course || '')
+                            .trim()
+                            .toLowerCase() ===
+                        map(st.course);
+
+                    return rollMatch && courseMatch;
+
+                });
+
+
+                // Total semester records
+                document.getElementById(
+                    'records'
+                ).textContent = rec.length;
+
+
+                // Best percentage
+                const percentages = rec
+                    .map(function (x) {
+                        return Number(x.percentage);
+                    })
+                    .filter(function (x) {
+                        return Number.isFinite(x);
+                    });
+
+
+                document.getElementById(
+                    'best'
+                ).textContent = percentages.length
+                    ? Math.max(...percentages)
+                        .toFixed(1) + '%'
+                    : '—';
+
+
+            } catch (error) {
+
+                console.error(
+                    'Result data loading error:',
+                    error
+                );
+
+                document.getElementById(
+                    'records'
+                ).textContent = '—';
+
+                document.getElementById(
+                    'best'
+                ).textContent = '—';
+
+            }
+
+
+            // ==========================================
+            // ASSIGNMENTS
+            // ==========================================
+
+            try {
+
+                const assignments =
+                    JSON.parse(
+                        localStorage.getItem(
+                            'igtrAssignments'
+                        ) || '[]'
+                    );
+
+                document.getElementById(
+                    'tasks'
+                ).textContent =
+                    assignments.filter(function (x) {
+                        return !x.done;
+                    }).length;
+
+            } catch (error) {
+
+                console.error(
+                    'Assignment loading error:',
+                    error
+                );
+
+                document.getElementById(
+                    'tasks'
+                ).textContent = '0';
+
+            }
+
+        }
+
+
+        // ==========================================
+        // LOGOUT
+        // ==========================================
+
+        async function logout() {
+
+            try {
+
+                await studentLogout();
+
+            } catch (error) {
+
+                console.error(
+                    'Logout error:',
+                    error
+                );
+
+            }
+
+        }
+
+
+        // ==========================================
+        // START DASHBOARD
+        // ==========================================
+
+        init();
+
+    </script>
+
 </body>
 
 </html>

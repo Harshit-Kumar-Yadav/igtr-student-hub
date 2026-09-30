@@ -6,6 +6,7 @@ const crypto = require('crypto');
 
 const root = __dirname;
 
+
 /* =========================================================
    FILE PATHS
 ========================================================= */
@@ -34,6 +35,12 @@ const noticesPath = path.join(
     'notices.json'
 );
 
+const reviewsPath = path.join(
+    root,
+    'data',
+    'reviews.json'
+);
+
 
 /* =========================================================
    LOAD DATA
@@ -56,12 +63,6 @@ const teachers = JSON.parse(
 
 /* =========================================================
    ATTENDANCE BATCH MAPPING
-
-   Existing students.json is NOT changed.
-
-   Batch 4 = 804xx CS students
-   Batch 5 = 805xx CS students
-   Batch 6 = currently empty
 ========================================================= */
 
 const attendanceBatchMap = {
@@ -91,26 +92,26 @@ const attendanceBatchMap = {
             "80425"
         ],
 
-       "5": [
-    "80502",
-    "80503",
-    "80504",
-    "80505",
-    "80506",
-    "80508",
-    "80509",
-    "80510",
-    "80511",
-    "80512",
-    "80513",
-    "80514",
-    "80516",
-    "80517",
-    "80518L",
-    "80519L",
-    "80520L",
-    "80521L"
-],
+        "5": [
+            "80502",
+            "80503",
+            "80504",
+            "80505",
+            "80506",
+            "80508",
+            "80509",
+            "80510",
+            "80511",
+            "80512",
+            "80513",
+            "80514",
+            "80516",
+            "80517",
+            "80518L",
+            "80519L",
+            "80520L",
+            "80521L"
+        ],
 
         "6": [
             "80401",
@@ -133,7 +134,7 @@ const attendanceBatchMap = {
             "80421",
             "80422",
             "80424",
-            "80425",
+            "80425"
         ]
 
     }
@@ -200,6 +201,7 @@ function send(
     );
 
     res.end(body);
+
 }
 
 
@@ -654,8 +656,6 @@ function saveAttendance(
 }
 
 
-
-
 /* =========================================================
    NOTICE BOARD
 ========================================================= */
@@ -743,6 +743,99 @@ function saveNotices(
     fs.renameSync(
         tempPath,
         noticesPath
+    );
+
+}
+
+
+/* =========================================================
+   REVIEW SYSTEM - FILE
+========================================================= */
+
+function loadReviews() {
+
+    try {
+
+        if (
+            !fs.existsSync(
+                reviewsPath
+            )
+        ) {
+
+            const initialData = {
+                reviews: []
+            };
+
+            fs.writeFileSync(
+                reviewsPath,
+                JSON.stringify(
+                    initialData,
+                    null,
+                    2
+                ),
+                'utf8'
+            );
+
+            return initialData;
+
+        }
+
+        const raw =
+            fs.readFileSync(
+                reviewsPath,
+                'utf8'
+            );
+
+        const data =
+            JSON.parse(raw);
+
+        if (
+            !data ||
+            !Array.isArray(
+                data.reviews
+            )
+        ) {
+
+            return {
+                reviews: []
+            };
+
+        }
+
+        return data;
+
+    } catch (error) {
+
+        return {
+            reviews: []
+        };
+
+    }
+
+}
+
+
+function saveReviews(
+    data
+) {
+
+    const tempPath =
+        reviewsPath +
+        '.tmp';
+
+    fs.writeFileSync(
+        tempPath,
+        JSON.stringify(
+            data,
+            null,
+            2
+        ),
+        'utf8'
+    );
+
+    fs.renameSync(
+        tempPath,
+        reviewsPath
     );
 
 }
@@ -1085,7 +1178,9 @@ const server =
 
                         &&
 
-                       !/^80\d+L?$/.test(rollNo)
+                        !/^80\d+L?$/.test(
+                            rollNo
+                        )
                     ) {
 
                         return json(
@@ -1482,327 +1577,330 @@ const server =
             }
 
 
+            /* =================================================
+               NOTICE BOARD - GET
+            ================================================= */
+
+            if (
+                u.pathname ===
+                    '/api/notices'
+
+                &&
+
+                req.method ===
+                    'GET'
+            ) {
+
+                const noticeData =
+                    loadNotices();
+
+                const notices =
+                    Array.isArray(
+                        noticeData.notices
+                    )
+                        ? noticeData.notices
+                        : [];
+
+                return json(
+                    res,
+                    200,
+                    {
+                        notices
+                    }
+                );
+
+            }
 
 
-            
+            /* =================================================
+               NOTICE BOARD - CREATE
+            ================================================= */
+
+            if (
+                u.pathname ===
+                    '/api/teacher/notices'
+
+                &&
+
+                req.method ===
+                    'POST'
+            ) {
+
+                const session =
+                    requireTeacher(
+                        req,
+                        res
+                    );
+
+                if (!session) {
+                    return;
+                }
+
+
+                try {
+
+                    const body =
+                        await readRequestBody(
+                            req
+                        );
+
+                    const data =
+                        JSON.parse(
+                            body || '{}'
+                        );
+
+
+                    const title =
+                        normalize(
+                            data.title
+                        );
+
+                    const category =
+                        normalize(
+                            data.category
+                        ) || 'General';
+
+                    const message =
+                        normalize(
+                            data.message
+                        );
+
+
+                    if (!title) {
+
+                        return json(
+                            res,
+                            400,
+                            {
+                                error:
+                                    'Notice title is required.'
+                            }
+                        );
+
+                    }
+
+
+                    if (!message) {
+
+                        return json(
+                            res,
+                            400,
+                            {
+                                error:
+                                    'Notice message is required.'
+                            }
+                        );
+
+                    }
+
+
+                    const noticeData =
+                        loadNotices();
+
+
+                    if (
+                        !Array.isArray(
+                            noticeData.notices
+                        )
+                    ) {
+
+                        noticeData.notices = [];
+
+                    }
+
+
+                    const notice = {
+
+                        id:
+                            crypto
+                                .randomBytes(8)
+                                .toString('hex'),
+
+                        title,
+
+                        category,
+
+                        message,
+
+                        postedBy:
+                            session.teacher.name,
+
+                        postedByUsername:
+                            session.teacher.username,
+
+                        date:
+                            todayString(),
+
+                        createdAt:
+                            new Date()
+                                .toISOString()
+
+                    };
+
+
+                    noticeData.notices.unshift(
+                        notice
+                    );
+
+
+                    saveNotices(
+                        noticeData
+                    );
+
+
+                    return json(
+                        res,
+                        201,
+                        {
+
+                            success: true,
+
+                            message:
+                                'Notice posted successfully.',
+
+                            notice
+
+                        }
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Notice create error:',
+                        error
+                    );
+
+
+                    return json(
+                        res,
+                        400,
+                        {
+                            error:
+                                'Invalid notice request.'
+                        }
+                    );
+
+                }
+
+            }
+
+
+            /* =================================================
+               NOTICE BOARD - DELETE
+            ================================================= */
+
+            if (
+                u.pathname ===
+                    '/api/teacher/notices'
+
+                &&
+
+                req.method ===
+                    'DELETE'
+            ) {
+
+                const session =
+                    requireTeacher(
+                        req,
+                        res
+                    );
+
+                if (!session) {
+                    return;
+                }
+
+
+                const noticeId =
+                    normalize(
+                        u.query.id
+                    );
+
+
+                if (!noticeId) {
+
+                    return json(
+                        res,
+                        400,
+                        {
+                            error:
+                                'Notice ID is required.'
+                        }
+                    );
+
+                }
+
+
+                const noticeData =
+                    loadNotices();
+
+
+                if (
+                    !Array.isArray(
+                        noticeData.notices
+                    )
+                ) {
+
+                    noticeData.notices = [];
+
+                }
+
+
+                const noticeIndex =
+                    noticeData.notices.findIndex(
+                        notice =>
+                            String(
+                                notice.id
+                            ) === noticeId
+                    );
+
+
+                if (
+                    noticeIndex === -1
+                ) {
+
+                    return json(
+                        res,
+                        404,
+                        {
+                            error:
+                                'Notice not found.'
+                        }
+                    );
+
+                }
+
+
+                noticeData.notices.splice(
+                    noticeIndex,
+                    1
+                );
+
+
+                saveNotices(
+                    noticeData
+                );
+
+
+                return json(
+                    res,
+                    200,
+                    {
+
+                        success: true,
+
+                        message:
+                            'Notice deleted successfully.'
+
+                    }
+                );
+
+            }
 
 
             /* =================================================
                TEACHER STUDENTS
             ================================================= */
-
-
-
-            /* =================================================
-   NOTICE BOARD - GET NOTICES
-   Public: Students can view notices
-================================================= */
-
-if (
-    u.pathname === '/api/notices'
-    &&
-    req.method === 'GET'
-) {
-
-    const noticeData =
-        loadNotices();
-
-    const notices =
-        Array.isArray(
-            noticeData.notices
-        )
-            ? noticeData.notices
-            : [];
-
-    return json(
-        res,
-        200,
-        {
-            notices
-        }
-    );
-
-}
-
-
-/* =================================================
-   NOTICE BOARD - CREATE NOTICE
-   Teacher Only
-================================================= */
-
-if (
-    u.pathname === '/api/teacher/notices'
-    &&
-    req.method === 'POST'
-) {
-
-    const session =
-        requireTeacher(
-            req,
-            res
-        );
-
-    if (!session) {
-        return;
-    }
-
-
-    try {
-
-        const body =
-            await readRequestBody(
-                req
-            );
-
-        const data =
-            JSON.parse(
-                body || '{}'
-            );
-
-
-        const title =
-            normalize(
-                data.title
-            );
-
-        const category =
-            normalize(
-                data.category
-            ) || 'General';
-
-        const message =
-            normalize(
-                data.message
-            );
-
-
-        if (!title) {
-
-            return json(
-                res,
-                400,
-                {
-                    error:
-                        'Notice title is required.'
-                }
-            );
-
-        }
-
-
-        if (!message) {
-
-            return json(
-                res,
-                400,
-                {
-                    error:
-                        'Notice message is required.'
-                }
-            );
-
-        }
-
-
-        const noticeData =
-            loadNotices();
-
-
-        if (
-            !Array.isArray(
-                noticeData.notices
-            )
-        ) {
-
-            noticeData.notices = [];
-
-        }
-
-
-        const notice = {
-
-            id:
-                crypto
-                    .randomBytes(8)
-                    .toString('hex'),
-
-            title,
-
-            category,
-
-            message,
-
-            postedBy:
-                session.teacher.name,
-
-            postedByUsername:
-                session.teacher.username,
-
-            date:
-                todayString(),
-
-            createdAt:
-                new Date()
-                    .toISOString()
-
-        };
-
-
-        noticeData.notices.unshift(
-            notice
-        );
-
-
-        saveNotices(
-            noticeData
-        );
-
-
-        return json(
-            res,
-            201,
-            {
-
-                success: true,
-
-                message:
-                    'Notice posted successfully.',
-
-                notice
-
-            }
-        );
-
-
-    } catch (error) {
-
-        console.error(
-            'Notice create error:',
-            error
-        );
-
-
-        return json(
-            res,
-            400,
-            {
-                error:
-                    'Invalid notice request.'
-            }
-        );
-
-    }
-
-}
-
-
-/* =================================================
-   NOTICE BOARD - DELETE NOTICE
-   Teacher Only
-================================================= */
-
-if (
-    u.pathname === '/api/teacher/notices'
-    &&
-    req.method === 'DELETE'
-) {
-
-    const session =
-        requireTeacher(
-            req,
-            res
-        );
-
-    if (!session) {
-        return;
-    }
-
-
-    const noticeId =
-        normalize(
-            u.query.id
-        );
-
-
-    if (!noticeId) {
-
-        return json(
-            res,
-            400,
-            {
-                error:
-                    'Notice ID is required.'
-            }
-        );
-
-    }
-
-
-    const noticeData =
-        loadNotices();
-
-
-    if (
-        !Array.isArray(
-            noticeData.notices
-        )
-    ) {
-
-        noticeData.notices = [];
-
-    }
-
-
-    const noticeIndex =
-        noticeData.notices.findIndex(
-            notice =>
-                String(
-                    notice.id
-                ) === noticeId
-        );
-
-
-    if (
-        noticeIndex === -1
-    ) {
-
-        return json(
-            res,
-            404,
-            {
-                error:
-                    'Notice not found.'
-            }
-        );
-
-    }
-
-
-    noticeData.notices.splice(
-        noticeIndex,
-        1
-    );
-
-
-    saveNotices(
-        noticeData
-    );
-
-
-    return json(
-        res,
-        200,
-        {
-
-            success: true,
-
-            message:
-                'Notice deleted successfully.'
-
-        }
-    );
-
-}
 
             if (
                 u.pathname ===
@@ -2388,6 +2486,7 @@ if (
                         error
                     );
 
+
                     return json(
                         res,
                         400,
@@ -2398,6 +2497,411 @@ if (
                     );
 
                 }
+
+            }
+
+
+            /* =================================================
+               STUDENT REVIEW - SUBMIT
+            ================================================= */
+
+            if (
+                u.pathname ===
+                    '/api/reviews'
+
+                &&
+
+                req.method ===
+                    'POST'
+            ) {
+
+                const session =
+                    requireSession(
+                        req,
+                        res
+                    );
+
+                if (!session) {
+                    return;
+                }
+
+
+                try {
+
+                    const body =
+                        await readRequestBody(
+                            req
+                        );
+
+                    const data =
+                        JSON.parse(
+                            body || '{}'
+                        );
+
+
+                    const rollNo =
+                        normalize(
+                            data.rollNo
+                        );
+
+                    const rating =
+                        Number(
+                            data.rating
+                        );
+
+                    const review =
+                        normalize(
+                            data.review
+                        );
+
+
+                    if (!rollNo) {
+
+                        return json(
+                            res,
+                            400,
+                            {
+                                error:
+                                    'Roll Number is required.'
+                            }
+                        );
+
+                    }
+
+
+                    const loggedInRoll =
+                        normalize(
+                            session.student.rollNo
+                        );
+
+
+                    if (
+                        rollNo !==
+                        loggedInRoll
+                    ) {
+
+                        return json(
+                            res,
+                            403,
+                            {
+                                error:
+                                    'Roll Number does not match the logged-in student.'
+                            }
+                        );
+
+                    }
+
+
+                    if (
+                        !Number.isInteger(
+                            rating
+                        )
+                        ||
+                        rating < 1
+                        ||
+                        rating > 5
+                    ) {
+
+                        return json(
+                            res,
+                            400,
+                            {
+                                error:
+                                    'Rating must be between 1 and 5 stars.'
+                            }
+                        );
+
+                    }
+
+
+                    if (!review) {
+
+                        return json(
+                            res,
+                            400,
+                            {
+                                error:
+                                    'Please write your review.'
+                            }
+                        );
+
+                    }
+
+
+                    if (
+                        review.length >
+                        1000
+                    ) {
+
+                        return json(
+                            res,
+                            400,
+                            {
+                                error:
+                                    'Review cannot exceed 1000 characters.'
+                            }
+                        );
+
+                    }
+
+
+                    const reviewData =
+                        loadReviews();
+
+
+                    if (
+                        !Array.isArray(
+                            reviewData.reviews
+                        )
+                    ) {
+
+                        reviewData.reviews =
+                            [];
+
+                    }
+
+
+                    const existingReview =
+                        reviewData.reviews.find(
+                            item =>
+                                normalize(
+                                    item.rollNo
+                                ) ===
+                                    rollNo
+                        );
+
+
+                    if (existingReview) {
+
+                        return json(
+                            res,
+                            409,
+                            {
+                                error:
+                                    'You have already submitted a review.'
+                            }
+                        );
+
+                    }
+
+
+                    const newReview = {
+
+                        id:
+                            crypto
+                                .randomBytes(8)
+                                .toString('hex'),
+
+                        rollNo,
+
+                        name:
+                            session.student.name
+                            ||
+                            'Student',
+
+                        course:
+                            session.student.course
+                            ||
+                            '',
+
+                        rating,
+
+                        review,
+
+                        date:
+                            todayString(),
+
+                        createdAt:
+                            new Date()
+                                .toISOString()
+
+                    };
+
+
+                    reviewData.reviews.unshift(
+                        newReview
+                    );
+
+
+                    saveReviews(
+                        reviewData
+                    );
+
+
+                    return json(
+                        res,
+                        201,
+                        {
+
+                            success:
+                                true,
+
+                            message:
+                                'Your review has been submitted successfully.',
+
+                            review: {
+
+                                rating:
+                                    newReview.rating,
+
+                                review:
+                                    newReview.review,
+
+                                date:
+                                    newReview.date
+
+                            }
+
+                        }
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Review submit error:',
+                        error
+                    );
+
+
+                    return json(
+                        res,
+                        400,
+                        {
+                            error:
+                                'Invalid review request.'
+                        }
+                    );
+
+                }
+
+            }
+
+
+            /* =================================================
+               STUDENT REVIEW - MY REVIEW
+            ================================================= */
+
+            if (
+                u.pathname ===
+                    '/api/reviews/my'
+
+                &&
+
+                req.method ===
+                    'GET'
+            ) {
+
+                const session =
+                    requireSession(
+                        req,
+                        res
+                    );
+
+                if (!session) {
+                    return;
+                }
+
+
+                const loggedInRoll =
+                    normalize(
+                        session.student.rollNo
+                    );
+
+
+                const reviewData =
+                    loadReviews();
+
+
+                const review =
+                    reviewData.reviews.find(
+                        item =>
+                            normalize(
+                                item.rollNo
+                            ) ===
+                                loggedInRoll
+                    );
+
+
+                return json(
+                    res,
+                    200,
+                    {
+
+                        success:
+                            true,
+
+                        submitted:
+                            Boolean(
+                                review
+                            ),
+
+                        review:
+                            review
+                                ? {
+
+                                    rating:
+                                        review.rating,
+
+                                    review:
+                                        review.review,
+
+                                    date:
+                                        review.date
+
+                                }
+                                : null
+
+                    }
+                );
+
+            }
+
+
+            /* =================================================
+               TEACHER - VIEW ALL REVIEWS
+            ================================================= */
+
+            if (
+                u.pathname ===
+                    '/api/teacher/reviews'
+
+                &&
+
+                req.method ===
+                    'GET'
+            ) {
+
+                const session =
+                    requireTeacher(
+                        req,
+                        res
+                    );
+
+                if (!session) {
+                    return;
+                }
+
+
+                const reviewData =
+                    loadReviews();
+
+
+                const reviews =
+                    Array.isArray(
+                        reviewData.reviews
+                    )
+                        ? reviewData.reviews
+                        : [];
+
+
+                return json(
+                    res,
+                    200,
+                    {
+                        reviews
+                    }
+                );
 
             }
 
@@ -2454,6 +2958,7 @@ if (
                             batch
                         );
 
+
                     if (
                         rolls.includes(
                             rollNo
@@ -2500,6 +3005,7 @@ if (
                                                 rollNo
                                             ]
                                         );
+
 
                                     return {
 
@@ -2729,6 +3235,7 @@ if (
 
                 let parts;
 
+
                 try {
 
                     parts =
@@ -2918,6 +3425,7 @@ if (
 
             let pathname;
 
+
             try {
 
                 pathname =
@@ -2947,20 +3455,21 @@ if (
             }
 
 
-            /*
-               Protect sensitive JSON files
-               from direct browser access.
-            */
+            /* =================================================
+               PROTECT SENSITIVE JSON FILES
+            ================================================= */
 
             const sensitiveFiles = [
 
-    '/data/teachers.json',
+                '/data/teachers.json',
 
-    '/data/attendance.json',
+                '/data/attendance.json',
 
-    '/data/notices.json'
+                '/data/notices.json',
 
-];
+                '/data/reviews.json'
+
+            ];
 
 
             if (
@@ -3106,7 +3615,9 @@ if (
    START SERVER
 ========================================================= */
 
-const PORT = process.env.PORT || 3000;
+const PORT =
+    process.env.PORT || 3000;
+
 
 server.listen(
     PORT,

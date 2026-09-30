@@ -434,96 +434,261 @@
 
     }
 
+
     /* =========================
-   NOTICE BOARD
-========================= */
+       NOTICE BOARD
+    ========================== */
 
-.notice-board-section {
-  margin-top: 40px;
-}
+    .notice-board-section {
+      margin-top: 40px;
+    }
 
-.notice-board-container {
-  display: grid;
-  gap: 16px;
-  margin-top: 25px;
-}
+    .notice-board-container {
+      display: grid;
+      gap: 16px;
+      margin-top: 25px;
+    }
 
-.notice-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-left: 5px solid #0b63f6;
-  border-radius: 14px;
-  padding: 20px 22px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-  transition: 0.25s ease;
-}
+    .notice-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-left: 5px solid #0b63f6;
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      transition: 0.25s ease;
+    }
 
-.notice-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
-}
+    .notice-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+    }
 
-.notice-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 10px;
-}
+    .notice-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
 
-.notice-category {
-  display: inline-block;
-  background: #eff6ff;
-  color: #2563eb;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
+    .notice-category {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
 
-.notice-date {
-  color: #64748b;
-  font-size: 12px;
-}
+    .notice-date {
+      color: #64748b;
+      font-size: 12px;
+    }
 
-.notice-card h3 {
-  margin: 0 0 8px;
-  color: #0f172a;
-  font-size: 20px;
-}
+    .notice-card h3 {
+      margin: 0 0 8px;
+      color: #0f172a;
+      font-size: 20px;
+    }
 
-.notice-card p {
-  margin: 0;
-  color: #475569;
-  line-height: 1.7;
-}
+    .notice-card p {
+      margin: 0;
+      color: #475569;
+      line-height: 1.7;
+    }
 
-.notice-posted-by {
-  margin-top: 12px;
-  font-size: 12px;
-  color: #94a3b8;
-}
+    .notice-posted-by {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
 
-.notice-empty,
-.notice-loading,
-.notice-error {
-  background: #f8fafc;
-  border: 1px dashed #cbd5e1;
-  border-radius: 12px;
-  padding: 28px;
-  text-align: center;
-  color: #64748b;
-}
+    .notice-empty,
+    .notice-loading,
+    .notice-error {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 28px;
+      text-align: center;
+      color: #64748b;
+    }
 
-@media (max-width: 700px) {
+    @media (max-width: 700px) {
 
-  .notice-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+      .notice-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-}
+    }
+
+
+    /* =========================
+       THREE DOT MENU
+    ========================== */
+
+    .more-menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .more-menu-btn {
+      width: 44px;
+      height: 44px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #0f172a;
+      color: #ffffff;
+
+      border: 1px solid #0f172a;
+      border-radius: 8px;
+
+      font-size: 25px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: all 0.3s ease;
+    }
+
+    .more-menu-btn:hover {
+      background: #0284c7;
+      border-color: #0284c7;
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 18px rgba(2, 132, 199, 0.25);
+    }
+
+    .more-menu-btn:active {
+      transform: translateY(0);
+    }
+
+    .more-dropdown {
+      position: absolute;
+
+      top: calc(100% + 10px);
+      right: 0;
+
+      width: 250px;
+
+      background: #ffffff;
+
+      border: 1px solid #e5e7eb;
+
+      border-radius: 12px;
+
+      padding: 8px;
+
+      box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.18);
+
+      display: none;
+
+      z-index: 9999;
+    }
+
+    .more-dropdown.show {
+      display: block;
+      animation: menuFade .18s ease;
+    }
+
+    @keyframes menuFade {
+
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+    .more-dropdown a {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 12px 14px;
+
+      color: #0f172a;
+
+      text-decoration: none;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: all 0.2s ease;
+    }
+
+    .more-dropdown a:hover {
+      background: #eff6ff;
+
+      color: #0284c7;
+
+      transform: translateX(2px);
+    }
+
+    .more-dropdown a.login-menu {
+      background: #0f172a;
+
+      color: #ffffff;
+
+      margin-top: 5px;
+    }
+
+    .more-dropdown a.login-menu:hover {
+      background: #0284c7;
+
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       MOBILE THREE DOT MENU
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .more-menu {
+        margin-left: 5px;
+      }
+
+      .more-dropdown {
+        right: 0;
+        width: 230px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .more-menu-btn {
+        width: 42px;
+        height: 42px;
+      }
+
+      .more-dropdown {
+        width: 220px;
+      }
+
+    }
 
   </style>
 
@@ -605,31 +770,66 @@
         Campus
       </a>
 
+      <a href="pages/review.html">
+    ⭐ Reviews & Feedback
+</a>
+
     </nav>
 
 
-    <button
-      class="yes"
-      onclick="window.location.href='pages/previous-result-courses.html'"
-    >
-      Check Previous Year Result
-    </button>
+    <!-- =========================
+         THREE DOT MENU
+    ========================== -->
+
+    <div class="more-menu">
+
+      <button
+        class="more-menu-btn"
+        id="moreMenuBtn"
+        type="button"
+        aria-label="More options"
+        aria-expanded="false"
+      >
+        ⋮
+      </button>
 
 
-    <a
-      href="pages/toppers.html"
-      class="previous-result-btn"
-    >
-      🏆 Toppers List
-    </a>
+      <div
+        class="more-dropdown"
+        id="moreDropdown"
+      >
+
+        <a
+          href="pages/previous-result-courses.html"
+        >
+          📊 Previous Year Result
+        </a>
 
 
-    <a
-      class="login"
-      href="#"
-    >
-      Student Login
-    </a>
+        <a
+          href="pages/toppers.html"
+        >
+          🏆 Toppers List
+        </a>
+
+
+        <a
+          href="pages/about-us.html"
+        >
+          ℹ️ About Us
+        </a>
+
+
+        <a
+          href="pages/student-login.html"
+          class="login-menu"
+        >
+          👨‍🎓 Student Login
+        </a>
+
+      </div>
+
+    </div>
 
   </header>
 
@@ -654,6 +854,7 @@
         </span>
 
         <h1>
+
           Your Academic Journey,
           <br>
 
@@ -788,6 +989,7 @@
 
       <div class="cards">
 
+
         <a
           class="card"
           href="pages/courses.html"
@@ -916,6 +1118,7 @@
 
             <div class="attendance-points">
 
+
               <div class="attendance-point">
 
                 <strong>
@@ -1027,6 +1230,7 @@
 
             <div class="attendance-mini-grid">
 
+
               <div class="attendance-mini-box">
 
                 <span>
@@ -1091,50 +1295,49 @@
 
 
     <!-- =========================
-         CAREER
+         NOTICE BOARD
     ========================== -->
 
+    <section
+      class="section notice-board-section"
+      id="notices"
+    >
+
+      <div class="heading">
+
+        <span>
+          NOTICE BOARD
+        </span>
+
+        <h2>
+          Latest <strong>Notices</strong>
+        </h2>
+
+        <p>
+          Important announcements, academic updates
+          and institute information.
+        </p>
+
+      </div>
+
+
+      <div
+        id="noticeContainer"
+        class="notice-board-container"
+      >
+
+        <div class="notice-loading">
+          Loading notices...
+        </div>
+
+      </div>
+
+    </section>
 
 
     <!-- =========================
-     NOTICE BOARD
-========================== -->
-
-<section
-  class="section notice-board-section"
-  id="notices"
->
-
-  <div class="heading">
-
-    <span>
-      NOTICE BOARD
-    </span>
-
-    <h2>
-      Latest <strong>Notices</strong>
-    </h2>
-
-    <p>
-      Important announcements, academic updates
-      and institute information.
-    </p>
-
-  </div>
-
-
-  <div
-    id="noticeContainer"
-    class="notice-board-container"
-  >
-
-    <div class="notice-loading">
-      Loading notices...
-    </div>
-
-  </div>
-
-</section>
+         CAREER
+    ========================== -->
 
     <section
       class="section light"
@@ -1166,6 +1369,7 @@
 
 
         <div class="mini-list">
+
 
           <div>
 
@@ -1334,238 +1538,309 @@
   </div>
 
 
-  <!-- STUDENT LOGIN -->
+  <!-- =========================
+       THREE DOT MENU JAVASCRIPT
+  ========================== -->
 
   <script>
 
-    document
-      .querySelectorAll(".login")
-      .forEach(
+    const moreMenuBtn =
+      document.getElementById("moreMenuBtn");
 
-        a =>
+    const moreDropdown =
+      document.getElementById("moreDropdown");
 
-          a.addEventListener(
 
-            "click",
+    /* OPEN / CLOSE MENU */
 
-            e => {
+    moreMenuBtn.addEventListener(
+      "click",
+      function(event) {
 
-              e.preventDefault();
+        event.stopPropagation();
 
-              location.href =
-                "pages/student-login.html";
+        const isOpen =
+          moreDropdown.classList.toggle("show");
 
-            }
+        moreMenuBtn.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
 
-          )
+      }
+    );
 
-      );
+
+    /* CLOSE WHEN CLICKING OUTSIDE */
+
+    document.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          !moreDropdown.contains(event.target) &&
+          !moreMenuBtn.contains(event.target)
+        ) {
+
+          moreDropdown.classList.remove("show");
+
+          moreMenuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+
+      }
+    );
+
+
+    /* CLOSE MENU AFTER CLICKING A LINK */
+
+    moreDropdown
+      .querySelectorAll("a")
+      .forEach(function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            moreDropdown.classList.remove("show");
+
+            moreMenuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      });
 
   </script>
 
 
+  <!-- =========================
+       MAIN SCRIPT
+  ========================== -->
+
   <script src="js/script.js"></script>
 
 
+  <!-- =========================
+       HOME NOTICE BOARD
+  ========================== -->
+
   <script>
 
-/* =========================
-   LOAD HOME NOTICES
-========================== */
+    async function loadHomeNotices() {
 
-async function loadHomeNotices() {
-
-  const container =
-    document.getElementById(
-      "noticeContainer"
-    );
-
-  if (!container) {
-    return;
-  }
+      const container =
+        document.getElementById(
+          "noticeContainer"
+        );
 
 
-  try {
-
-    const response =
-      await fetch(
-        "/api/notices"
-      );
+      if (!container) {
+        return;
+      }
 
 
-    if (!response.ok) {
-      throw new Error(
-        "Failed to load notices"
-      );
-    }
+      try {
+
+        const response =
+          await fetch(
+            "/api/notices"
+          );
 
 
-    const data =
-      await response.json();
+        if (!response.ok) {
+
+          throw new Error(
+            "Failed to load notices"
+          );
+
+        }
 
 
-    const notices =
-      Array.isArray(
-        data.notices
-      )
-        ? data.notices
-        : [];
+        const data =
+          await response.json();
 
 
-    if (notices.length === 0) {
-
-      container.innerHTML = `
-
-        <div class="notice-empty">
-
-          <strong>
-            No notices available
-          </strong>
-
-          <br>
-
-          New announcements will
-          appear here.
-
-        </div>
-
-      `;
-
-      return;
-    }
+        const notices =
+          Array.isArray(
+            data.notices
+          )
+            ? data.notices
+            : [];
 
 
-    container.innerHTML =
-      notices
-        .slice(0, 5)
-        .map(notice => {
+        if (notices.length === 0) {
 
-          return `
+          container.innerHTML = `
 
-            <div class="notice-card">
+            <div class="notice-empty">
 
-              <div class="notice-top">
+              <strong>
+                No notices available
+              </strong>
 
-                <span class="notice-category">
-                  ${escapeNoticeText(
-                    notice.category ||
-                    "General"
-                  )}
-                </span>
+              <br>
 
-                <span class="notice-date">
-                  ${escapeNoticeText(
-                    notice.date || ""
-                  )}
-                </span>
-
-              </div>
-
-
-              <h3>
-                ${escapeNoticeText(
-                  notice.title ||
-                  "Notice"
-                )}
-              </h3>
-
-
-              <p>
-                ${escapeNoticeText(
-                  notice.message ||
-                  ""
-                )}
-              </p>
-
-
-              <div class="notice-posted-by">
-
-                Posted by:
-                ${escapeNoticeText(
-                  notice.postedBy ||
-                  "IGTR"
-                )}
-
-              </div>
+              New announcements will
+              appear here.
 
             </div>
 
           `;
 
-        })
-        .join("");
+          return;
 
-  }
+        }
 
-  catch (error) {
 
-    console.error(
-      "Notice loading error:",
-      error
+        container.innerHTML =
+          notices
+            .slice(0, 5)
+            .map(notice => {
+
+              return `
+
+                <div class="notice-card">
+
+                  <div class="notice-top">
+
+                    <span class="notice-category">
+
+                      ${escapeNoticeText(
+                        notice.category ||
+                        "General"
+                      )}
+
+                    </span>
+
+                    <span class="notice-date">
+
+                      ${escapeNoticeText(
+                        notice.date ||
+                        ""
+                      )}
+
+                    </span>
+
+                  </div>
+
+
+                  <h3>
+
+                    ${escapeNoticeText(
+                      notice.title ||
+                      "Notice"
+                    )}
+
+                  </h3>
+
+
+                  <p>
+
+                    ${escapeNoticeText(
+                      notice.message ||
+                      ""
+                    )}
+
+                  </p>
+
+
+                  <div class="notice-posted-by">
+
+                    Posted by:
+
+                    ${escapeNoticeText(
+                      notice.postedBy ||
+                      "IGTR"
+                    )}
+
+                  </div>
+
+                </div>
+
+              `;
+
+            })
+            .join("");
+
+      }
+
+
+      catch (error) {
+
+        console.error(
+          "Notice loading error:",
+          error
+        );
+
+
+        container.innerHTML = `
+
+          <div class="notice-error">
+
+            Unable to load notices right now.
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    /* =========================
+       SECURITY HELPER
+    ========================== */
+
+    function escapeNoticeText(value) {
+
+      return String(value)
+
+        .replace(
+          /&/g,
+          "&amp;"
+        )
+
+        .replace(
+          /</g,
+          "&lt;"
+        )
+
+        .replace(
+          />/g,
+          "&gt;"
+        )
+
+        .replace(
+          /"/g,
+          "&quot;"
+        )
+
+        .replace(
+          /'/g,
+          "&#039;"
+        );
+
+    }
+
+
+    /* =========================
+       START NOTICE BOARD
+    ========================== */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      loadHomeNotices
     );
 
-
-    container.innerHTML = `
-
-      <div class="notice-error">
-        Unable to load notices right now.
-      </div>
-
-    `;
-
-  }
-
-}
-
-
-/* =========================
-   SECURITY HELPER
-========================== */
-
-function escapeNoticeText(
-  value
-) {
-
-  return String(value)
-
-    .replace(
-      /&/g,
-      "&amp;"
-    )
-
-    .replace(
-      /</g,
-      "&lt;"
-    )
-
-    .replace(
-      />/g,
-      "&gt;"
-    )
-
-    .replace(
-      /"/g,
-      "&quot;"
-    )
-
-    .replace(
-      /'/g,
-      "&#039;"
-    );
-
-}
-
-
-/* =========================
-   START
-========================== */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  loadHomeNotices
-);
-
-</script>
+  </script>
 
 
 </body>

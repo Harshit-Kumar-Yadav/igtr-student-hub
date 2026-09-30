@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Reviews & Feedback | IGTR Student Hub</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #eef4ff, #f8fbff);
+            color: #172033;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background: linear-gradient(135deg, #0b1f3a, #123f73);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .header h1 {
+            font-size: 25px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 17px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            width: 92%;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 8px;
+            color: #0b2b50;
+            font-size: 30px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #667085;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           STUDENT INFO
+        ========================= */
+
+        .student-info {
+            background: #f1f6ff;
+            border-left: 5px solid #1769aa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .student-info strong {
+            color: #123f73;
+        }
+
+        /* =========================
+           RATING
+        ========================= */
+
+        .rating-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .star {
+            font-size: 45px;
+            color: #d0d5dd;
+            cursor: pointer;
+            transition: 0.2s;
+            user-select: none;
+        }
+
+        .star:hover {
+            transform: scale(1.12);
+        }
+
+        .star.active {
+            color: #f5b301;
+        }
+
+        /* =========================
+           TEXTAREA
+        ========================= */
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 9px;
+            color: #344054;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            resize: vertical;
+            padding: 15px;
+            border: 1px solid #d0d5dd;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        textarea:focus {
+            border-color: #1769aa;
+            box-shadow: 0 0 0 3px rgba(23,105,170,0.10);
+        }
+
+        .counter {
+            text-align: right;
+            color: #667085;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           SUBMIT BUTTON
+        ========================= */
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #1769aa, #0b4f8a);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(23,105,170,0.25);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* =========================
+           MESSAGE
+        ========================= */
+
+        .message {
+            display: none;
+            margin-top: 18px;
+            padding: 13px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .message.success {
+            display: block;
+            background: #e8f7ee;
+            color: #147a43;
+        }
+
+        .message.error {
+            display: block;
+            background: #fdecec;
+            color: #b42318;
+        }
+
+        /* =========================
+           ALREADY REVIEWED
+        ========================= */
+
+        .already-reviewed {
+            display: none;
+            text-align: center;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .already-reviewed .big-star {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .already-reviewed h2 {
+            color: #15803d;
+            margin-bottom: 8px;
+        }
+
+        .already-reviewed p {
+            color: #475467;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           LOADING
+        ========================= */
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #667085;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .header {
+                padding: 17px;
+                gap: 10px;
+            }
+
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .back-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .container {
+                width: 94%;
+                margin: 25px auto;
+            }
+
+            .review-card {
+                padding: 23px 17px;
+            }
+
+            .title {
+                font-size: 25px;
+            }
+
+            .star {
+                font-size: 38px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <h1>🎓 IGTR Student Hub</h1>
+
+        <a
+            href="../index.html"
+            class="back-btn"
+        >
+            ← Home
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="container">
+
+        <div class="review-card">
+
+            <h2 class="title">
+                ⭐ Reviews & Feedback
+            </h2>
+
+            <p class="subtitle">
+                Your feedback helps us improve the IGTR Student Hub.
+            </p>
+
+
+            <!-- =========================
+                 LOADING
+            ========================= -->
+
+            <div
+                id="loading"
+                class="loading"
+            >
+                Checking your login...
+            </div>
+
+
+            <!-- =========================
+                 REVIEW FORM
+            ========================= -->
+
+            <div
+                id="reviewForm"
+                style="display:none;"
+            >
+
+                <div class="student-info">
+
+                    Logged in as:
+
+                    <strong id="studentName">
+                        Student
+                    </strong>
+
+                </div>
+
+
+                <!-- RATING -->
+
+                <div class="rating-title">
+                    How would you rate the IGTR Student Hub?
+                </div>
+
+                <div
+                    class="stars"
+                    id="stars"
+                >
+
+                    <span
+                        class="star"
+                        data-rating="1"
+                    >
+                        ★
+                    </span>
+
+                    <span
+                        class="star"
+                        data-rating="2"
+                    >
+                        ★
+                    </span>
+
+                    <span
+                        class="star"
+                        data-rating="3"
+                    >
+                        ★
+                    </span>
+
+                    <span
+                        class="star"
+                        data-rating="4"
+                    >
+                        ★
+                    </span>
+
+                    <span
+                        class="star"
+                        data-rating="5"
+                    >
+                        ★
+                    </span>
+
+                </div>
+
+
+                <!-- REVIEW -->
+
+                <label for="reviewText">
+                    Write your feedback
+                </label>
+
+                <textarea
+                    id="reviewText"
+                    maxlength="1000"
+                    placeholder="Tell us about your experience with IGTR Student Hub..."
+                ></textarea>
+
+                <div class="counter">
+
+                    <span id="charCount">
+                        0
+                    </span>/1000
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    class="submit-btn"
+                    id="submitBtn"
+                    type="button"
+                >
+                    Submit Review ⭐
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="message"
+                    class="message"
+                ></div>
+
+            </div>
+
+
+            <!-- =========================
+                 ALREADY REVIEWED
+            ========================= -->
+
+            <div
+                id="alreadyReviewed"
+                class="already-reviewed"
+            >
+
+                <div class="big-star">
+                    ⭐
+                </div>
+
+                <h2>
+                    Thank You!
+                </h2>
+
+                <p>
+                    You have already submitted your review.
+                    <br>
+                    Your feedback has been recorded successfully.
+                </p>
+
+                <div
+                    id="previousReview"
+                    style="margin-top:15px;"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /*
+        =====================================================
+        GLOBAL VARIABLES
+        =====================================================
+        */
+
+        let selectedRating = 0;
+
+        let loggedInStudent = null;
+
+
+        /*
+        =====================================================
+        CHECK LOGIN
+        =====================================================
+        */
+
+        async function checkSession() {
+
+            try {
+
+                const response = await fetch(
+                    '/api/session',
+                    {
+                        credentials: 'include'
+                    }
+                );
+
+
+                const data = await response.json();
+
+
+                /*
+                ---------------------------------------------
+                USER NOT LOGGED IN
+                ---------------------------------------------
+                */
+
+                if (!data.loggedIn) {
+
+                    window.location.href =
+                        'student-login.html';
+
+                    return;
+
+                }
+
+
+                /*
+                ---------------------------------------------
+                SAVE LOGGED-IN STUDENT
+                ---------------------------------------------
+                */
+
+                const student =
+                    data.student || {};
+
+
+                loggedInStudent =
+                    student;
+
+
+                /*
+                ---------------------------------------------
+                SHOW STUDENT NAME
+                ---------------------------------------------
+                */
+
+                document.getElementById(
+                    'studentName'
+                ).textContent =
+                    student.name || 'Student';
+
+
+                /*
+                ---------------------------------------------
+                CHECK EXISTING REVIEW
+                ---------------------------------------------
+                */
+
+                await checkExistingReview();
+
+
+            } catch (error) {
+
+                console.error(
+                    'Session error:',
+                    error
+                );
+
+                document.getElementById(
+                    'loading'
+                ).style.display = 'none';
+
+                showMessage(
+                    'Unable to connect to server. Please make sure the server is running.',
+                    'error'
+                );
+
+            }
+
+        }
+
+
+        /*
+        =====================================================
+        CHECK EXISTING REVIEW
+        =====================================================
+        */
+
+        async function checkExistingReview() {
+
+            try {
+
+                const response = await fetch(
+                    '/api/reviews/my',
+                    {
+                        credentials: 'include'
+                    }
+                );
+
+
+                const data =
+                    await response.json();
+
+
+                /*
+                ---------------------------------------------
+                HIDE LOADING
+                ---------------------------------------------
+                */
+
+                document.getElementById(
+                    'loading'
+                ).style.display = 'none';
+
+
+                /*
+                ---------------------------------------------
+                ALREADY REVIEWED
+                ---------------------------------------------
+                */
+
+                if (data.submitted) {
+
+                    document.getElementById(
+                        'alreadyReviewed'
+                    ).style.display = 'block';
+
+
+                    const review =
+                        data.review;
+
+
+                    if (review) {
+
+                        const stars =
+                            '★'.repeat(
+                                Number(review.rating)
+                            )
+                            +
+                            '☆'.repeat(
+                                5 - Number(review.rating)
+                            );
+
+
+                        document.getElementById(
+                            'previousReview'
+                        ).innerHTML = `
+
+                            <div style="
+                                font-size:28px;
+                                color:#f5b301;
+                                margin-bottom:8px;
+                            ">
+                                ${stars}
+                            </div>
+
+                            <div style="
+                                color:#475467;
+                                line-height:1.6;
+                            ">
+                                "${escapeHTML(review.review)}"
+                            </div>
+
+                            <div style="
+                                margin-top:8px;
+                                color:#98a2b3;
+                                font-size:13px;
+                            ">
+                                Submitted on ${escapeHTML(
+                                    String(review.date || '')
+                                )}
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                /*
+                ---------------------------------------------
+                SHOW REVIEW FORM
+                ---------------------------------------------
+                */
+
+                document.getElementById(
+                    'reviewForm'
+                ).style.display = 'block';
+
+
+            } catch (error) {
+
+                console.error(
+                    'Review check error:',
+                    error
+                );
+
+                document.getElementById(
+                    'loading'
+                ).textContent =
+                    'Unable to load review system. Please refresh the page.';
+
+            }
+
+        }
+
+
+        /*
+        =====================================================
+        STAR RATING
+        =====================================================
+        */
+
+        const stars =
+            document.querySelectorAll('.star');
+
+
+        stars.forEach(
+            star => {
+
+                star.addEventListener(
+                    'click',
+                    () => {
+
+                        selectedRating =
+                            Number(
+                                star.dataset.rating
+                            );
+
+
+                        updateStars();
+
+                    }
+                );
+
+            }
+        );
+
+
+        /*
+        =====================================================
+        UPDATE STARS
+        =====================================================
+        */
+
+        function updateStars() {
+
+            stars.forEach(
+                star => {
+
+                    const rating =
+                        Number(
+                            star.dataset.rating
+                        );
+
+
+                    if (
+                        rating <=
+                        selectedRating
+                    ) {
+
+                        star.classList.add(
+                            'active'
+                        );
+
+                    } else {
+
+                        star.classList.remove(
+                            'active'
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /*
+        =====================================================
+        CHARACTER COUNTER
+        =====================================================
+        */
+
+        const reviewText =
+            document.getElementById(
+                'reviewText'
+            );
+
+
+        const charCount =
+            document.getElementById(
+                'charCount'
+            );
+
+
+        reviewText.addEventListener(
+            'input',
+            () => {
+
+                charCount.textContent =
+                    reviewText.value.length;
+
+            }
+        );
+
+
+        /*
+        =====================================================
+        SUBMIT REVIEW
+        =====================================================
+        */
+
+        document.getElementById(
+            'submitBtn'
+        ).addEventListener(
+            'click',
+            async () => {
+
+
+                /*
+                ---------------------------------------------
+                CHECK LOGIN DATA
+                ---------------------------------------------
+                */
+
+                if (
+                    !loggedInStudent ||
+                    !loggedInStudent.rollNo
+                ) {
+
+                    showMessage(
+                        'Student login information not found. Please login again.',
+                        'error'
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                ---------------------------------------------
+                GET REVIEW TEXT
+                ---------------------------------------------
+                */
+
+                const review =
+                    reviewText.value.trim();
+
+
+                /*
+                ---------------------------------------------
+                CHECK RATING
+                ---------------------------------------------
+                */
+
+                if (
+                    selectedRating === 0
+                ) {
+
+                    showMessage(
+                        'Please select a star rating.',
+                        'error'
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                ---------------------------------------------
+                CHECK REVIEW TEXT
+                ---------------------------------------------
+                */
+
+                if (!review) {
+
+                    showMessage(
+                        'Please write your feedback.',
+                        'error'
+                    );
+
+                    reviewText.focus();
+
+                    return;
+
+                }
+
+
+                /*
+                ---------------------------------------------
+                BUTTON
+                ---------------------------------------------
+                */
+
+                const submitBtn =
+                    document.getElementById(
+                        'submitBtn'
+                    );
+
+
+                submitBtn.disabled = true;
+
+                submitBtn.textContent =
+                    'Submitting...';
+
+
+                try {
+
+                    /*
+                    -----------------------------------------
+                    SEND DATA TO SERVER
+                    -----------------------------------------
+                    */
+
+                    const response =
+                        await fetch(
+                            '/api/reviews',
+                            {
+                                method: 'POST',
+
+                                headers: {
+                                    'Content-Type':
+                                        'application/json'
+                                },
+
+                                credentials:
+                                    'include',
+
+                                body:
+                                    JSON.stringify({
+
+                                        /*
+                                        IMPORTANT:
+                                        Backend requires rollNo
+                                        */
+
+                                        rollNo:
+                                            loggedInStudent.rollNo,
+
+                                        rating:
+                                            selectedRating,
+
+                                        review:
+                                            review
+
+                                    })
+
+                            }
+                        );
+
+
+                    /*
+                    -----------------------------------------
+                    GET SERVER RESPONSE
+                    -----------------------------------------
+                    */
+
+                    const data =
+                        await response.json();
+
+
+                    /*
+                    -----------------------------------------
+                    ERROR
+                    -----------------------------------------
+                    */
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            data.error ||
+                            data.message ||
+                            'Unable to submit review.'
+                        );
+
+                    }
+
+
+                    /*
+                    -----------------------------------------
+                    SUCCESS
+                    -----------------------------------------
+                    */
+
+                    document.getElementById(
+                        'reviewForm'
+                    ).style.display = 'none';
+
+
+                    document.getElementById(
+                        'alreadyReviewed'
+                    ).style.display = 'block';
+
+
+                    document.getElementById(
+                        'previousReview'
+                    ).innerHTML = `
+
+                        <div style="
+                            font-size:28px;
+                            color:#f5b301;
+                            margin-bottom:8px;
+                        ">
+                            ${'★'.repeat(
+                                selectedRating
+                            )}
+
+                            ${'☆'.repeat(
+                                5 - selectedRating
+                            )}
+                        </div>
+
+                        <div style="
+                            color:#475467;
+                            line-height:1.6;
+                        ">
+                            "${escapeHTML(review)}"
+                        </div>
+
+                        <div style="
+                            margin-top:8px;
+                            color:#98a2b3;
+                            font-size:13px;
+                        ">
+                            Review submitted successfully.
+                        </div>
+
+                    `;
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Submit review error:',
+                        error
+                    );
+
+
+                    showMessage(
+                        error.message ||
+                        'Unable to submit review.',
+                        'error'
+                    );
+
+
+                    submitBtn.disabled =
+                        false;
+
+
+                    submitBtn.textContent =
+                        'Submit Review ⭐';
+
+                }
+
+            }
+        );
+
+
+        /*
+        =====================================================
+        SHOW MESSAGE
+        =====================================================
+        */
+
+        function showMessage(
+            message,
+            type
+        ) {
+
+            const box =
+                document.getElementById(
+                    'message'
+                );
+
+
+            box.textContent =
+                message;
+
+
+            box.className =
+                'message ' + type;
+
+        }
+
+
+        /*
+        =====================================================
+        ESCAPE HTML
+        =====================================================
+        */
+
+        function escapeHTML(
+            text
+        ) {
+
+            const div =
+                document.createElement(
+                    'div'
+                );
+
+
+            div.textContent =
+                text;
+
+
+            return div.innerHTML;
+
+        }
+
+
+        /*
+        =====================================================
+        START
+        =====================================================
+        */
+
+        checkSession();
+
+    </script>
+
+</body>
+</html>

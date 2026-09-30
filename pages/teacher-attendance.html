@@ -1434,6 +1434,142 @@
 
         }
 
+        /* =========================
+   REVIEWS & FEEDBACK
+========================= */
+
+.review-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.review-section h2 {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.review-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.review-stat {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.review-stat span {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.review-stat strong {
+    color: #123c69;
+    font-size: 23px;
+}
+
+.review-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.review-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 17px;
+    background: #ffffff;
+}
+
+.review-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.review-student {
+    font-weight: 800;
+    color: #123c69;
+    font-size: 14px;
+}
+
+.review-meta {
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.review-stars {
+    color: #f5b301;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.review-text {
+    margin-top: 12px;
+    color: #334155;
+    font-size: 13px;
+    line-height: 1.7;
+    background: #f8fafc;
+    border-radius: 9px;
+    padding: 12px;
+}
+
+.review-date {
+    margin-top: 9px;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.rating-breakdown {
+    margin-top: 18px;
+    display: grid;
+    gap: 8px;
+}
+
+.rating-row {
+    display: grid;
+    grid-template-columns: 45px 1fr 35px;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.rating-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    background: #f5b301;
+    border-radius: 999px;
+}
+
+@media(max-width:600px) {
+
+    .review-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card-top {
+        flex-direction: column;
+    }
+
+}
+
     </style>
 
 </head>
@@ -1493,6 +1629,11 @@
             <a href="#notices">
                 Notice Board
             </a>
+
+            <a href="#reviews">
+    Reviews
+</a>
+
 
 
             <a
@@ -1744,6 +1885,177 @@
             ></div>
 
         </section>
+
+
+
+        <!-- =========================
+     REVIEWS & FEEDBACK
+========================= -->
+
+<section class="review-section" id="reviews">
+
+    <h2>
+        ⭐ Student Reviews & Feedback
+    </h2>
+
+    <p class="muted">
+        View feedback submitted by students
+        through the IGTR Student Hub.
+    </p>
+
+
+    <!-- REVIEW STATS -->
+
+    <div class="review-stats">
+
+        <div class="review-stat">
+
+            <span>
+                TOTAL REVIEWS
+            </span>
+
+            <strong id="totalReviews">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="review-stat">
+
+            <span>
+                AVERAGE RATING
+            </span>
+
+            <strong id="averageRating">
+                —
+            </strong>
+
+        </div>
+
+
+        <div class="review-stat">
+
+            <span>
+                LATEST REVIEW
+            </span>
+
+            <strong id="latestReviewDate">
+                —
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- RATING BREAKDOWN -->
+
+    <div class="rating-breakdown">
+
+        <div class="rating-row">
+
+            <span>5 ⭐</span>
+
+            <div class="rating-bar">
+                <div
+                    id="rating5Bar"
+                    class="rating-fill"
+                    style="width:0%"
+                ></div>
+            </div>
+
+            <span id="rating5Count">0</span>
+
+        </div>
+
+
+        <div class="rating-row">
+
+            <span>4 ⭐</span>
+
+            <div class="rating-bar">
+                <div
+                    id="rating4Bar"
+                    class="rating-fill"
+                    style="width:0%"
+                ></div>
+            </div>
+
+            <span id="rating4Count">0</span>
+
+        </div>
+
+
+        <div class="rating-row">
+
+            <span>3 ⭐</span>
+
+            <div class="rating-bar">
+                <div
+                    id="rating3Bar"
+                    class="rating-fill"
+                    style="width:0%"
+                ></div>
+            </div>
+
+            <span id="rating3Count">0</span>
+
+        </div>
+
+
+        <div class="rating-row">
+
+            <span>2 ⭐</span>
+
+            <div class="rating-bar">
+                <div
+                    id="rating2Bar"
+                    class="rating-fill"
+                    style="width:0%"
+                ></div>
+            </div>
+
+            <span id="rating2Count">0</span>
+
+        </div>
+
+
+        <div class="rating-row">
+
+            <span>1 ⭐</span>
+
+            <div class="rating-bar">
+                <div
+                    id="rating1Bar"
+                    class="rating-fill"
+                    style="width:0%"
+                ></div>
+            </div>
+
+            <span id="rating1Count">0</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- REVIEW LIST -->
+
+    <div
+        id="teacherReviewList"
+        class="review-list"
+    >
+
+        <div class="empty">
+
+            Loading reviews...
+
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- =========================
@@ -2296,6 +2608,387 @@
 
 
         /* ==========================================
+   LOAD TEACHER REVIEWS
+========================================== */
+
+async function loadTeacherReviews() {
+
+    const list =
+        $('teacherReviewList');
+
+
+    if (!list) {
+
+        return;
+
+    }
+
+
+    list.innerHTML = `
+
+        <div class="empty">
+
+            Loading reviews...
+
+        </div>
+
+    `;
+
+
+    try {
+
+        const data =
+            await api(
+                '/api/teacher/reviews'
+            );
+
+
+        const reviews =
+            Array.isArray(
+                data.reviews
+            )
+                ? data.reviews
+                : [];
+
+
+        /* =========================
+           NO REVIEWS
+        ========================== */
+
+        if (!reviews.length) {
+
+            $('totalReviews')
+                .textContent = '0';
+
+            $('averageRating')
+                .textContent = '—';
+
+            $('latestReviewDate')
+                .textContent = '—';
+
+
+            list.innerHTML = `
+
+                <div class="empty">
+
+                    <strong>
+                        No reviews yet.
+                    </strong>
+
+                    Student feedback will
+                    appear here after submission.
+
+                </div>
+
+            `;
+
+
+            updateRatingBreakdown([]);
+
+            return;
+
+        }
+
+
+        /* =========================
+           STATISTICS
+        ========================== */
+
+        const total =
+            reviews.length;
+
+
+        const ratingSum =
+            reviews.reduce(
+                (
+                    sum,
+                    item
+                ) =>
+                    sum +
+                    Number(
+                        item.rating || 0
+                    ),
+                0
+            );
+
+
+        const average =
+            ratingSum / total;
+
+
+        $('totalReviews')
+            .textContent =
+            total;
+
+
+        $('averageRating')
+            .textContent =
+            average.toFixed(1) + ' ⭐';
+
+
+        $('latestReviewDate')
+            .textContent =
+            reviews[0].date || '—';
+
+
+        updateRatingBreakdown(
+            reviews
+        );
+
+
+        /* =========================
+           REVIEW CARDS
+        ========================== */
+
+        list.innerHTML =
+
+            reviews
+                .map(
+                    review => {
+
+                        const rating =
+                            Math.max(
+                                1,
+                                Math.min(
+                                    5,
+                                    Number(
+                                        review.rating
+                                    ) || 1
+                                )
+                            );
+
+
+                        const stars =
+                            '★'.repeat(
+                                rating
+                            )
+                            +
+                            '☆'.repeat(
+                                5 - rating
+                            );
+
+
+                        return `
+
+                            <div
+                                class="review-card"
+                            >
+
+                                <div
+                                    class="review-card-top"
+                                >
+
+                                    <div>
+
+                                        <div
+                                            class="review-student"
+                                        >
+
+                                            👤
+                                            ${escapeHtml(
+                                                review.name ||
+                                                'Student'
+                                            )}
+
+                                        </div>
+
+
+                                        <div
+                                            class="review-meta"
+                                        >
+
+                                            Roll No:
+                                            ${escapeHtml(
+                                                review.rollNo ||
+                                                '—'
+                                            )}
+
+                                            •
+
+                                            ${escapeHtml(
+                                                review.course ||
+                                                'Diploma in Computer Science'
+                                            )}
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="review-stars"
+                                    >
+
+                                        ${stars}
+
+                                    </div>
+
+                                </div>
+
+
+                                <div
+                                    class="review-text"
+                                >
+
+                                    ${escapeHtml(
+                                        review.review ||
+                                        ''
+                                    )}
+
+                                </div>
+
+
+                                <div
+                                    class="review-date"
+                                >
+
+                                    📅
+                                    ${escapeHtml(
+                                        review.date ||
+                                        ''
+                                    )}
+
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    }
+                )
+                .join('');
+
+
+    } catch (error) {
+
+        console.error(
+            'Review loading error:',
+            error
+        );
+
+
+        list.innerHTML = `
+
+            <div class="empty">
+
+                <strong>
+                    Unable to load reviews.
+                </strong>
+
+                ${escapeHtml(
+                    error.message ||
+                    'Please try again.'
+                )}
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* ==========================================
+   RATING BREAKDOWN
+========================================== */
+
+function updateRatingBreakdown(
+    reviews
+) {
+
+    const counts = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0
+    };
+
+
+    reviews.forEach(
+        review => {
+
+            const rating =
+                Number(
+                    review.rating
+                );
+
+
+            if (
+                rating >= 1 &&
+                rating <= 5
+            ) {
+
+                counts[rating]++;
+
+            }
+
+        }
+    );
+
+
+    const total =
+        reviews.length;
+
+
+    for (
+        let rating = 1;
+        rating <= 5;
+        rating++
+    ) {
+
+        const count =
+            counts[rating];
+
+
+        const percentage =
+            total > 0
+                ? (
+                    count /
+                    total
+                ) * 100
+                : 0;
+
+
+        const countElement =
+            $(
+                'rating' +
+                rating +
+                'Count'
+            );
+
+
+        const barElement =
+            $(
+                'rating' +
+                rating +
+                'Bar'
+            );
+
+
+        if (countElement) {
+
+            countElement
+                .textContent =
+                count;
+
+        }
+
+
+        if (barElement) {
+
+            barElement.style.width =
+                percentage + '%';
+
+        }
+
+    }
+
+}
+
+
+        /* ==========================================
            INIT
         ========================================== */
 
@@ -2395,6 +3088,7 @@
                 ====================================== */
 
                 await loadTeacherNotices();
+                await loadTeacherReviews();
 
 
             } catch (error) {

@@ -1,0 +1,14 @@
+{
+  "reviews": [
+    {
+      "id": "9dce1bae57edc9d3",
+      "rollNo": "80503",
+      "name": "Harshit Kumar",
+      "course": "Diploma in Computer Science",
+      "rating": 5,
+      "review": "GREAT WEBSITE",
+      "date": "2026-10-01",
+      "createdAt": "2026-09-30T20:32:15.112Z"
+    }
+  ]
+}
