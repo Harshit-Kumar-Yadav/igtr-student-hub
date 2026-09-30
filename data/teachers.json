@@ -6,7 +6,7 @@
     "batches": [
       "4"
     ],
-    "passwordHash": "a66f116adca2da6c25793ae0c9224f52580d7c92e2cfb8f4007a4c75cb2fbf04"
+     "passwordHash": "6945b12dc60f602f66aeecdde96466c9609efe873b8639930d539c78353cac03"
   },
   {
     "username": "batch5incharge",
@@ -15,7 +15,7 @@
     "batches": [
       "5"
     ],
-    "passwordHash": "a8e4a9bdf8736294e90887e01b92602bc000c816cc6b6d3b9728845db7a745c5"
+    "passwordHash": "d1f58252a2242e7f7df14e7347c500b69d3c338f2b696f81d46adcc743817558"
   },
   {
     "username": "batch6incharge",
@@ -24,6 +24,6 @@
     "batches": [
       "6"
     ],
-    "passwordHash": "c67e35906a06d2c0de899192956621ea6aa33b6441c93238c0704f81037068f0"
+    "passwordHash": "d1f58252a2242e7f7df14e7347c500b69d3c338f2b696f81d46adcc743817558"
   }
 ]
