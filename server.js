@@ -4,6 +4,20 @@ const path = require('path');
 const url = require('url');
 const crypto = require('crypto');
 
+// Optional PostgreSQL attendance storage. Without DATABASE_URL, the original
+// JSON-file storage remains active.
+let attendancePool = null;
+let attendanceDbReady = null;
+if (process.env.DATABASE_URL) {
+    const { Pool } = require('pg');
+    attendancePool = new Pool({
+        connectionString: process.env.DATABASE_URL,
+        ssl: process.env.DATABASE_SSL === 'false' ? false : { rejectUnauthorized: false }
+    });
+}
+
+
+
 const root = __dirname;
 
 
@@ -653,6 +667,95 @@ function saveAttendance(
         attendancePath
     );
 
+}
+
+
+// Create the table if needed and import legacy records without overwriting any
+// database row. The source JSON file is read-only during this process.
+async function ensureAttendanceDatabase() {
+    if (!attendancePool) return;
+    if (!attendanceDbReady) {
+        attendanceDbReady = (async () => {
+            await attendancePool.query(`
+                CREATE TABLE IF NOT EXISTS attendance_records (
+                    date TEXT NOT NULL,
+                    batch TEXT NOT NULL,
+                    marked_by TEXT,
+                    marked_by_name TEXT,
+                    marked_at TEXT,
+                    entries JSONB NOT NULL DEFAULT '{}'::jsonb,
+                    PRIMARY KEY (date, batch)
+                )
+            `);
+            let legacy = { records: [] };
+            try {
+                if (fs.existsSync(attendancePath)) {
+                    const parsed = JSON.parse(fs.readFileSync(attendancePath, 'utf8'));
+                    if (parsed && Array.isArray(parsed.records)) legacy = parsed;
+                }
+            } catch (error) {
+                console.error('Legacy attendance import skipped:', error.message);
+            }
+            for (const record of legacy.records) {
+                if (!record || !record.date || record.batch === undefined || !record.entries) continue;
+                await attendancePool.query(
+                    `INSERT INTO attendance_records
+                     (date, batch, marked_by, marked_by_name, marked_at, entries)
+                     VALUES ($1, $2, $3, $4, $5, $6::jsonb)
+                     ON CONFLICT (date, batch) DO NOTHING`,
+                    [String(record.date), String(record.batch), record.markedBy || null,
+                     record.markedByName || null, record.markedAt || null,
+                     JSON.stringify(record.entries)]
+                );
+            }
+        })().catch(error => {
+            attendanceDbReady = null;
+            throw error;
+        });
+    }
+    await attendanceDbReady;
+}
+
+async function getAttendanceData() {
+    if (!attendancePool) return loadAttendance();
+    await ensureAttendanceDatabase();
+    const result = await attendancePool.query(
+        `SELECT date, batch, marked_by, marked_by_name, marked_at, entries
+         FROM attendance_records ORDER BY date DESC`
+    );
+    return { records: result.rows.map(row => ({
+        date: row.date, batch: row.batch, markedBy: row.marked_by,
+        markedByName: row.marked_by_name, markedAt: row.marked_at,
+        entries: row.entries || {}
+    })) };
+}
+
+async function persistAttendanceRecord(record) {
+    if (!attendancePool) {
+        const attendance = loadAttendance();
+        const index = attendance.records.findIndex(item =>
+            String(item.batch) === String(record.batch) && item.date === record.date
+        );
+        if (index >= 0) attendance.records[index] = record;
+        else attendance.records.push(record);
+        attendance.records.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+        saveAttendance(attendance);
+        return;
+    }
+    await ensureAttendanceDatabase();
+    await attendancePool.query(
+        `INSERT INTO attendance_records
+         (date, batch, marked_by, marked_by_name, marked_at, entries)
+         VALUES ($1, $2, $3, $4, $5, $6::jsonb)
+         ON CONFLICT (date, batch) DO UPDATE SET
+           marked_by = EXCLUDED.marked_by,
+           marked_by_name = EXCLUDED.marked_by_name,
+           marked_at = EXCLUDED.marked_at,
+           entries = EXCLUDED.entries`,
+        [String(record.date), String(record.batch), record.markedBy || null,
+         record.markedByName || null, record.markedAt || null,
+         JSON.stringify(record.entries || {})]
+    );
 }
 
 
@@ -2055,8 +2158,7 @@ const server =
                 }
 
 
-                const attendance =
-                    loadAttendance();
+                const attendance = await getAttendanceData();
 
 
                 let records =
@@ -2344,87 +2446,21 @@ const server =
 
                     }
 
-
-                    const attendance =
-                        loadAttendance();
-
-
-                    const existingIndex =
-                        attendance.records
-                            .findIndex(
-                                record =>
-                                    String(
-                                        record.batch
-                                    ) ===
-                                        String(batch)
-
-                                    &&
-
-                                    record.date ===
-                                        date
-                            );
-
-
                     const record = {
-
                         date,
-
                         batch,
-
-                        markedBy:
-                            session.teacher
-                                .username,
-
-                        markedByName:
-                            session.teacher
-                                .name,
-
-                        markedAt:
-                            new Date()
-                                .toISOString(),
-
-                        entries:
-                            cleanEntries
-
+                        markedBy: session.teacher.username,
+                        markedByName: session.teacher.name,
+                        markedAt: new Date().toISOString(),
+                        entries: cleanEntries
                     };
 
-
-                    if (
-                        existingIndex >=
-                        0
-                    ) {
-
-                        attendance.records[
-                            existingIndex
-                        ] = record;
-
-                    } else {
-
-                        attendance.records.push(
-                            record
-                        );
-
-                    }
-
-
-                    attendance.records.sort(
-                        (
-                            a,
-                            b
-                        ) =>
-                            String(
-                                b.date
-                            ).localeCompare(
-                                String(
-                                    a.date
-                                )
-                            )
+                    const existingAttendance = await getAttendanceData();
+                    const existingIndex = existingAttendance.records.findIndex(item =>
+                        String(item.batch) === String(batch) && item.date === date
                     );
 
-
-                    saveAttendance(
-                        attendance
-                    );
+                    await persistAttendanceRecord(record);
 
 
                     const present =
@@ -2975,8 +3011,7 @@ const server =
                 }
 
 
-                const attendance =
-                    loadAttendance();
+                const attendance = await getAttendanceData();
 
 
                 let history =
